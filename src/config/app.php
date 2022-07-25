@@ -24,5 +24,11 @@ return [
     'modules' => [
         'my-module' => \modules\Module::class,
     ],
+    'components' => [
+        'deprecator' => [
+          // Throw exceptions on deprecation warnings
+          'throwExceptions' => App::parseBooleanEnv('HARD_MODE') ?? false,
+        ],
+      ],
     //'bootstrap' => ['my-module'],
 ];
