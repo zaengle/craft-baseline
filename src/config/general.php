@@ -9,15 +9,15 @@
  *
  * **NOTE**
  *
- * In general it's often better to set values that will vary 
- * between environments via via an environment variable 
+ * In general it's often better to set values that will vary
+ * between environments via via an environment variable
  * override, rather than adding explicit config here.
- * 
+ *
  * That will also permit changing settings in development
  * without having to change a checked in file
  *
  * .env.example sets these by default:
- * 
+ *
  * - CRAFT_ALLOW_ADMIN_CHANGES
  * - CRAFT_ALLOW_UPDATES
  * - CRAFT_DEV_MODE
@@ -67,7 +67,7 @@ return [
     'aliases' => [
         '@web' => App::env('DEFAULT_SITE_URL'),
         '@webroot' => dirname(__DIR__) . '/web',
-    ];
+    ],
 
     /**
      * Search
@@ -85,7 +85,7 @@ return [
     'enableGql' => false,
     'preventUserEnumeration' => true,
     'sendPoweredByHeader' => false,
-    
+
     /**
      * Users
      */
