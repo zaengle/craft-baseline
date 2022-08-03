@@ -1,17 +1,17 @@
 /.env
 /.idea
-/vendor
 .DS_Store
 /storage
-
-# Craft
-!/storage/rebrand
 
 # FE build artefacts
 
 web/dist/*
 web/mix-manifest.json
 
-# vendor
+# Craft
+/src/storage/*
+!/src/storage/rebrand
+
+# Vendor / Packages
+/vendor
 node_modules/
-vendor/
