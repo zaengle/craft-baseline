@@ -2,9 +2,8 @@
 
 use craft\helpers\App;
 
-$assetPort = 3000;
 $assetUrl = parse_url(App::env('PRIMARY_SITE_URL'));
-$assetBaseUrl = 'http://' . $assetUrl['host'] . ':' . $assetPort;
+$assetBaseUrl = $assetUrl['scheme'] . '://' . $assetUrl['host'] . ':' . App::env('BROWSERSYNC_PORT');
 
 return [
     // Global settings
@@ -21,7 +20,6 @@ return [
        // Manifest file names
         'manifest' => [
             'legacy' => 'mix-manifest.json',
-            // 'modern' => 'manifest.json',
         ],
         // Public server config
         'server' => [

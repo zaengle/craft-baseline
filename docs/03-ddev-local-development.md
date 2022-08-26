@@ -40,6 +40,8 @@ bin/craft help
 ## Useful commands
 
 
+- `ddev craft <command>` run a `craft` CLI command
+- `ddev npm <command>` run a `npm` CLI command, e.g. `ddev npm run dev`
 - `ddev config` configures a project's type and docroot.
 - `ddev start` starts up a project.
 - `ddev launch` opens a web browser showing the project.

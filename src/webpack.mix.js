@@ -4,11 +4,6 @@ const mix = require('laravel-mix');
 const path = require('path');
 const tailwindcss = require('tailwindcss');
 
-
-const urlObject = new URL(process.env.PRIMARY_SITE_URL);
-const hostName = urlObject.hostname;
-
-
 const PATHS = {
   INPUT: './assets',
   OUTPUT: './web/dist',
@@ -47,18 +42,19 @@ mix
   .setPublicPath('web')
   .sourceMaps()
   .browserSync({
-    proxy: hostName,
-    host: hostName,
-    port: 3000,
-    open:  false,
-    ui: false,
-    cors: true,
-    files: [
-      './web/**/*.html',
-      './templates/**/*.twig',
+    open : false,
+    ui : false,
+    watch : true,
+    files : [
+      './modules/**/*.php',
+      './templates/**/*',
+      './web/dist/**/*',
     ],
-  });
-
+    host: process.env.DDEV_HOSTNAME,
+    proxy: {
+        target: "localhost",
+    },
+  })
 
 if (mix.inProduction()) {
   mix.version();
