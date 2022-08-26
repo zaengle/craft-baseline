@@ -1,4 +1,5 @@
 <?php
+
 namespace modules;
 
 use Craft;
@@ -25,7 +26,7 @@ class Module extends \yii\base\Module
     /**
      * Initializes the module.
      */
-    public function init()
+    public function init(): void
     {
         // Set a @modules alias pointed to the modules/ directory
         Craft::setAlias('@modules', __DIR__);

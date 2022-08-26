@@ -1,5 +1,7 @@
 /.env
 /.idea
-/vendor
+
 .DS_Store
-/storage
+# Vendor / Packages
+/vendor
+/build

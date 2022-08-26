@@ -13,6 +13,5 @@ web/hot
 /src/storage/*
 !/src/storage/rebrand
 
-# Vendor / Packages
-/vendor
+
 node_modules/
