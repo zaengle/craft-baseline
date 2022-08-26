@@ -1,6 +1,6 @@
 /**
  * Tailwind Typography Configuration
- * 
+ *
  * @see https://github.com/tailwindlabs/tailwindcss-typography
  */
 module.exports = {

@@ -1,7 +1,6 @@
 /.env
 /.idea
 .DS_Store
-/storage
 
 # FE build artefacts
 
@@ -10,8 +9,6 @@ web/mix-manifest.json
 web/hot
 
 # Craft
-/src/storage/*
-!/src/storage/rebrand
+/storage/*
+!/storage/rebrand
 
-
-node_modules/

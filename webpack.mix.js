@@ -5,8 +5,8 @@ const path = require('path');
 const tailwindcss = require('tailwindcss');
 
 const PATHS = {
-  INPUT: './assets',
-  OUTPUT: './web/dist',
+  INPUT: './src/assets',
+  OUTPUT: './src/web/dist',
 };
 
 const inPath = (path) => `${PATHS.INPUT}/${path}`;
@@ -39,16 +39,16 @@ mix
   // .copy(inPath('fonts/'), outPath('fonts/'))
   .copy(inPath('img/'), outPath('img/'))
   .copy(inPath('svg/'), outPath('svg/'))
-  .setPublicPath('web')
+  .setPublicPath('src/web')
   .sourceMaps()
   .browserSync({
     open : false,
     ui : false,
     watch : true,
     files : [
-      './modules/**/*.php',
-      './templates/**/*',
-      './web/dist/**/*',
+      './src/modules/**/*.php',
+      './src/templates/**/*',
+      `./src/web/dist/**/*`,
     ],
     host: process.env.DDEV_HOSTNAME,
     proxy: {

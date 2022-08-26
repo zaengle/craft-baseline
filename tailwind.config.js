@@ -13,8 +13,8 @@ module.exports = {
   //
   // See https://github.com/tailwindlabs/tailwindcss/issues/4701 for more
   content: [
-    "./assets/**/*.{html,js,svg}",
-    './templates/**/*.twig',
+    "./src/assets/**/*.{html,js,svg}",
+    './src/templates/**/*.twig',
   ],
   safelist: [],
   theme: {
