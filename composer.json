@@ -7,13 +7,22 @@
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
+    "craftcms/ecs": "dev-main",
+    "phpstan/phpstan": "^1.7",
+    "symplify/easy-coding-standard": "^10.2",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {
     "psr-4": {
-      "modules\\": "modules/"
+      "modules\\": "src/modules/"
     }
   },
+  "authors": [
+    {
+      "name": "Zaengle Corp",
+      "homepage": "https://zaengle.com/"
+    }
+  ],
   "config": {
     "allow-plugins": {
       "craftcms/plugin-installer": true,
@@ -26,11 +35,14 @@
     }
   },
   "scripts": {
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix",
+    "phpstan": "vendor/bin/phpstan analyse",
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
     "post-create-project-cmd": [
-      "@php craft setup/welcome"
+      "@php src/craft setup/welcome"
     ],
     "craft-update": [
       "@pre-craft-update",
@@ -39,8 +51,8 @@
     "pre-craft-update": [],
     "post-craft-update": [
       "Composer\\Config::disableProcessTimeout",
-      "@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
-      "@php craft install/check && php craft up --interactive=0 || exit 0"
+      "@php src/craft install/check && php src/craft clear-caches/all --interactive=0 || exit 0",
+      "@php src/craft install/check && php src/craft up --interactive=0 || exit 0"
     ],
     "pre-update-cmd": "@pre-craft-update",
     "pre-install-cmd": "@pre-craft-update",
