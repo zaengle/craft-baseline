@@ -11,19 +11,16 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install dependencies
-      working-directory: ./src
       uses: php-actions/composer@v6
       with:
         php_version: latest
         args: --profile --ignore-platform-reqs
     - name: Run phpstan
-      working-directory: ./src
       uses: php-actions/composer@v6
       with:
         command: run-script phpstan
         php_version: latest
     - name: Run Check ECS
-      working-directory: ./src
       uses: php-actions/composer@v6
       with:
         command: run-script check-cs
