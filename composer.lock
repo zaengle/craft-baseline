@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41a2893afd1cfc193b69f872770bfa0c",
+    "content-hash": "1dfc5e6aa288188358079c0129ee5a5e",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -6920,6 +6920,72 @@
                 }
             ],
             "time": "2022-02-10T13:42:46+00:00"
+        },
+        {
+            "name": "zaengle/craft-conventions",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zaengle/craft-conventions.git",
+                "reference": "c808797210ef22b062d46ffbfdc138ffe056da2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zaengle/craft-conventions/zipball/c808797210ef22b062d46ffbfdc138ffe056da2a",
+                "reference": "c808797210ef22b062d46ffbfdc138ffe056da2a",
+                "shasum": ""
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.0",
+                "craftcms/cms": "^4.1.0",
+                "craftcms/ecs": "dev-main",
+                "phpstan/phpstan": "^1.7",
+                "symplify/easy-coding-standard": "^10.2",
+                "vlucas/phpdotenv": "^5.4.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Conventions",
+                "handle": "conventions",
+                "developer": "Zaengle Corp",
+                "developerUrl": "https://zaengle.com/",
+                "documentationUrl": "https://github.com/zaengle/craft-conventions/blob/master/README.md",
+                "changelogUrl": "https://raw.githubusercontent.com/zaengle/craft-conventions/master/CHANGELOG.md",
+                "components": {
+                    "pattern": "zaengle\\conventions\\services\\Pattern",
+                    "scaffold": "zaengle\\conventions\\services\\Scaffold"
+                },
+                "class": "zaengle\\conventions\\Conventions"
+            },
+            "autoload": {
+                "psr-4": {
+                    "zaengle\\conventions\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zaengle Corp",
+                    "homepage": "https://zaengle.com/"
+                }
+            ],
+            "description": "Craft Conventions",
+            "keywords": [
+                "Craft",
+                "cms",
+                "conventions",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/zaengle/craft-conventions/blob/master/README.md",
+                "issues": "https://github.com/zaengle/craft-conventions/issues",
+                "source": "https://github.com/zaengle/craft-conventions/tree/1.0.0"
+            },
+            "time": "2022-08-25T15:11:37+00:00"
         }
     ],
     "packages-dev": [
