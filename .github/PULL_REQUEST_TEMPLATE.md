@@ -1,6 +1,8 @@
 # Templates
 
+**OPEN PREVIEW TAB TO SELECT A PR TEMPLATE**
 
+- [Default / general](?template=default.md)
 
 ## Bugs
 
@@ -21,4 +23,3 @@
 - [Documentation](?template=documentation.md)
 - [Refactor](?template=refactor.md)
 - [Config / env changes](?template=config.md)
-- [Default / general](?template=default.md)
