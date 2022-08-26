@@ -1,13 +1,18 @@
-dateModified: 1658755007
+dateModified: 1661430751
 email:
   fromEmail: dev@zaengle.com
   fromName: 'Craft Baseline'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    e0ba3b8c-6105-4307-b1a3-89fed57d7634: 'Craft Baseline'
-    eca95408-b0a3-4474-b90b-a4f0cabeab76: Common
-    ee02dcac-6340-465d-8a93-9594e9e5b8d9: 'Craft Baseline'
+    e0ba3b8c-6105-4307-b1a3-89fed57d7634: 'Craft Baseline' # Craft Baseline
+    eca95408-b0a3-4474-b90b-a4f0cabeab76: Common # Common
+    ee02dcac-6340-465d-8a93-9594e9e5b8d9: 'Craft Baseline' # Craft Baseline
+plugins:
+  twigpack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

@@ -1,2 +1,0 @@
-#!/bin/bash
-ddev exec php src/craft "$@"

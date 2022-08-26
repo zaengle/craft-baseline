@@ -65,7 +65,7 @@ return [
      * Environment
      */
     'aliases' => [
-        '@web' => App::env('DEFAULT_SITE_URL'),
+        '@web' => App::env('PRIMARY_SITE_URL'),
         '@webroot' => dirname(__DIR__) . '/web',
     ],
 
