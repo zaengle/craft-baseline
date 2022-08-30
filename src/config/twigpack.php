@@ -20,6 +20,7 @@ return [
        // Manifest file names
         'manifest' => [
             'legacy' => 'mix-manifest.json',
+            'modern' => 'mix-manifest.json',
         ],
         // Public server config
         'server' => [
