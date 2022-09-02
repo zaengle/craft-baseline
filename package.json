@@ -28,6 +28,7 @@
     "browser-sync-webpack-plugin": "^2.3.0",
     "dotenv": "^16.0.1",
     "laravel-mix": "^6.0.49",
+    "laravel-mix-svg-sprite": "^2.0.0",
     "postcss": "^8.4.16",
     "postcss-focus-visible": "^7.1.0",
     "postcss-import": "^14.1.0",

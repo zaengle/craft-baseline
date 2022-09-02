@@ -1,4 +1,14 @@
 require('dotenv').config();
+require('laravel-mix-svg-sprite');
+
+if (process.env.NODE_ENV !== 'production' && !process.env.DDEV_HOSTNAME) {
+  throw new Error(`
+==================================================
+| !You need to run this command from within ddev |
+==================================================
+`);
+}
+
 
 const mix = require('laravel-mix');
 const path = require('path');
@@ -21,7 +31,7 @@ mix
       alias: {
         '@': path.resolve('./node_modules'),
       },
-    }
+    },
   })
   .postCss(
     inPath('css/app.css'),
@@ -39,12 +49,17 @@ mix
   // .copy(inPath('fonts/'), outPath('fonts/'))
   .copy(inPath('img/'), outPath('img/'))
   .copy(inPath('svg/'), outPath('svg/'))
+  .svgSprite(
+    inPath('svg/sprite'),
+    'dist/svg/sprite.svg',
+  )
   .setPublicPath('src/web')
   .sourceMaps()
   .browserSync({
     open : false,
     ui : false,
     watch : true,
+    cors: true,
     files : [
       './src/modules/**/*.php',
       './src/templates/**/*',
@@ -52,7 +67,7 @@ mix
     ],
     host: process.env.DDEV_HOSTNAME,
     proxy: {
-        target: "localhost",
+        target: 'localhost',
     },
   })
 
