@@ -52,6 +52,10 @@ mix
   .svgSprite(
     inPath('svg/sprite'),
     'dist/svg/sprite.svg',
+    {
+      extract: true,
+      symbolId: (filePath) => `sprite-${path.basename(filePath)}`,
+    },
   )
   .setPublicPath('src/web')
   .sourceMaps()
