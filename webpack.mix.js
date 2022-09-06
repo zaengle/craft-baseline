@@ -30,6 +30,7 @@ mix
     resolve: {
       alias: {
         '@': path.resolve('./node_modules'),
+        '~': path.resolve('./src/assets/js'),
       },
     },
   })
