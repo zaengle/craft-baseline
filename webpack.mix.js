@@ -55,7 +55,7 @@ mix
     'dist/svg/sprite.svg',
     {
       extract: true,
-      symbolId: (filePath) => `sprite-${path.basename(filePath)}`,
+      symbolId: (filePath) => `sprite-${path.parse(filePath).name}`,
     },
   )
   .setPublicPath('src/web')
