@@ -7046,16 +7046,16 @@
         },
         {
             "name": "zaengle/craft-toolbelt",
-            "version": "1.1.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zaengle/craft-toolbelt.git",
-                "reference": "07e20c038d9f921375395ffb874f64d6ddfdd3a6"
+                "reference": "50de3d23b084b8026a4ebad8037ef79d447c35c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zaengle/craft-toolbelt/zipball/07e20c038d9f921375395ffb874f64d6ddfdd3a6",
-                "reference": "07e20c038d9f921375395ffb874f64d6ddfdd3a6",
+                "url": "https://api.github.com/repos/zaengle/craft-toolbelt/zipball/50de3d23b084b8026a4ebad8037ef79d447c35c8",
+                "reference": "50de3d23b084b8026a4ebad8037ef79d447c35c8",
                 "shasum": ""
             },
             "require": {
@@ -7110,7 +7110,7 @@
                 "issues": "https://github.com/zaengle/craft-toolbelt/issues?state=open",
                 "source": "https://github.com/zaengle/craft-toolbelt"
             },
-            "time": "2022-09-07T11:54:36+00:00"
+            "time": "2022-09-07T14:56:56+00:00"
         }
     ],
     "packages-dev": [
