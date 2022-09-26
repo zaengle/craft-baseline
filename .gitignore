@@ -4,6 +4,5 @@
 .DS_Store
 
 # Vendor / Packages
-/vendor
 /build
 /node_modules/

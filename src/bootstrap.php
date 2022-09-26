@@ -6,8 +6,7 @@
 // Define path constants
 define('CRAFT_BASE_PATH', __DIR__);
 define('DOTENV_PATH', dirname(CRAFT_BASE_PATH, 1));
-define('CRAFT_COMPOSER_PATH', dirname(CRAFT_BASE_PATH, 1) . '/composer.json');
-define('CRAFT_VENDOR_PATH', dirname(CRAFT_BASE_PATH, 1) . '/vendor');
++define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH.'/vendor');
 
 // Load Composer's autoloader
 require_once CRAFT_VENDOR_PATH . '/autoload.php';
