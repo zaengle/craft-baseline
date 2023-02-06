@@ -29,6 +29,32 @@ return [
           // Throw exceptions on deprecation warnings
           'throwExceptions' => App::parseBooleanEnv('HARD_MODE') ?? false,
         ],
+        /**
+         * Use MailHog / MailTrap in dev / client testing
+         */
+        'mailer' => static function() {
+          // Get the default component config:
+          $config = App::mailerConfig();
+          if (App::env('MAIL_MAILER') == 'smtp') {
+            $adapter = MailerHelper::createTransportAdapter(
+              Smtp::class,
+              [
+                'host' => App::env('MAIL_HOST'),
+                'port' => App::env('MAIL_PORT'),
+                'useAuthentication' => true,
+                'encryptionMethod' => App::env('MAIL_ENCRYPTION') ?: null,
+                'username' => App::env('MAIL_USERNAME'),
+                'password' => App::env('MAIL_PASSWORD'),
+              ]
+            );
+
+            // Override the transport:
+            $config['transport'] = $adapter->defineTransport();
+          }
+
+          // Return the initialized component:
+          return Craft::createObject($config);
+        },
       ],
     //'bootstrap' => ['my-module'],
 ];
