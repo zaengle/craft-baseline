@@ -17,6 +17,7 @@ export default defineConfig(({ command }) => ({
     rollupOptions: {
       input: {
         app: 'src/assets/js/app.js',
+        css: 'src/assets/css/app.css',
       },
       output: {
         sourcemap: true,

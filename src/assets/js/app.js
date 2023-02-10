@@ -1,5 +1,3 @@
-import '../css/app.css'
-
 import './lib/loadSvgSprite'
 
 function init() {
