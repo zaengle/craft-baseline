@@ -1,3 +1,0 @@
-const requireAll = r => r.keys().forEach(r)
-
-requireAll(require.context('../../svg/sprite/', true, /\.svg$/))

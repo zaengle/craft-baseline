@@ -3,7 +3,8 @@ import { defineConfig } from 'vite'
 import copy from 'rollup-plugin-copy'
 import tailwindcss from 'tailwindcss'
 import ViteRestart from 'vite-plugin-restart'
-import createSvgSpritePlugin from 'vite-plugin-svg-sprite'
+import ViteSvgSpriteWrapper from 'vite-svg-sprite-wrapper'
+import ViteRequireContext from '@originjs/vite-plugin-require-context'
 
 export default defineConfig(({ command }) => ({
   base: command === 'serve' ? '' : '/dist/',
@@ -45,13 +46,14 @@ export default defineConfig(({ command }) => ({
         { src: './src/assets/svg/**/*', dest: './src/web/dist/svg' },
       ],
     }),
-    createSvgSpritePlugin({
-      symbolId: 'sprite-[name]',
-      include: './src/assets/svg/sprite/**/*',
-    }),
     ViteRestart({
       restart: ['./tailwind.config.js'],
       reload: ['src/templates/**/*', 'src/modules/**/*.php'],
+    }),
+    ViteRequireContext(),
+    ViteSvgSpriteWrapper({
+      icons: 'src/assets/svg/sprite/*.svg',
+      outputDir: 'src/web/dist/svg/sprite',
     }),
   ],
   resolve: {

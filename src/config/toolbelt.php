@@ -29,9 +29,9 @@ return [
     ],
     // The prefix to apply to symbol ids in your SVG sprite. Make sure this matches the output
     // from your front end build tool
-    'svgSpriteIdPrefix' => 'sprite-',
+    'svgSpriteIdPrefix' => '',
     // Optional path to customise the template used by `useSvgSprite()`
-    // 'svgUseSpriteTemplate' => '_toolbelt/useSvgSprite',
+    'svgUseSpriteTemplate' => '/src/templates/_toolbelt/useSvgSprite',
     'svgSpriteDefaultOpts' => [
         'width' => 32,
         'height' => 32,
