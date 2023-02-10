@@ -4,6 +4,7 @@
   "require": {
     "craftcms/cms": "^4.0.0.1",
     "nystudio107/craft-twigpack": "4.0.0-beta.4",
+    "nystudio107/craft-vite": "^4.0",
     "vlucas/phpdotenv": "^5.4.0",
     "zaengle/craft-conventions": "^1.0",
     "zaengle/craft-toolbelt": "^1.0"
