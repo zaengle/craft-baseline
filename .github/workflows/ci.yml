@@ -20,11 +20,10 @@ jobs:
           args: --profile --ignore-platform-reqs --working-dir=./src
 
       - name: 🛠 Run PHPStan
-        uses: php-actions/phpstan@v3
+        uses: php-actions/composer@v6
         with:
           php_version: latest
-          memory_limit: 512M
-          configuration: ./phpstan.neon
+          command: run-script phpstan
 
       - name: 🔬 Run Check ECS
         uses: php-actions/composer@v6
