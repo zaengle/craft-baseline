@@ -24,6 +24,7 @@ jobs:
         with:
           path: ./src
           php_version: latest
+          memory_limit: 512M
 
       - name: 🔬 Run Check ECS
         uses: php-actions/composer@v6
