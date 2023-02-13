@@ -19,12 +19,12 @@ jobs:
           php_version: latest
           args: --profile --ignore-platform-reqs --working-dir=./src
 
-      # - name: 🛠 Run PHPStan
-      #   uses: php-actions/phpstan@v3
-      #   with:
-      #     php_version: latest
-      #     memory_limit: 1G
-      #     configuration: ./phpstan.neon
+      - name: 🛠 Run PHPStan
+        uses: php-actions/phpstan@v3
+        with:
+          php_version: latest
+          memory_limit: 1G
+          configuration: ./phpstan.neon
 
       - name: 🔬 Run Check ECS
         uses: php-actions/composer@v6
