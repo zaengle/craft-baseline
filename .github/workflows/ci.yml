@@ -27,6 +27,4 @@ jobs:
           configuration: ./phpstan.neon
 
       - name: 🔬 Check ECS
-        with:
-          php_version: latest
         run: src/vendor/bin/ecs check --ansi
