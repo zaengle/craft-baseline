@@ -38,7 +38,7 @@
     }
   },
   "scripts": {
-    "check-cs": "ecs check --ansi",
+    "check-cs": "cd . && ecs check --ansi",
     "fix-cs": "ecs check --ansi --fix",
     "phpstan": "phpstan --memory-limit=1G",
     "post-root-package-install": [
