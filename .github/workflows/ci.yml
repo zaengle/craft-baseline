@@ -18,7 +18,7 @@ jobs:
       - name: Run phpstan
         uses: php-actions/composer@v6
         with:
-          command: run-script phpstan
+          command: cd . && run-script phpstan
           php_version: latest
           args: --working-dir=./src
       - name: Run Check ECS
