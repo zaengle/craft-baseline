@@ -3,8 +3,8 @@ parameters:
     paths:
         - src/modules
     scanFiles:
-        - vendor/yiisoft/yii2/Yii.php
-        - vendor/craftcms/cms/src/Craft.php
+        - src/vendor/yiisoft/yii2/Yii.php
+        - src/vendor/craftcms/cms/src/Craft.php
     stubFiles:
         - stubs/yii/BaseYii.stub
     tmpDir: build/phpstan
