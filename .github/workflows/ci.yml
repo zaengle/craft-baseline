@@ -24,7 +24,7 @@ jobs:
         with:
           php_version: latest
           command: run-script phpstan
-          args: --working-dir=./src
+          args: --working-dir=./src -c phpstan.neon
 
       - name: 🔬 Run Check ECS
         uses: php-actions/composer@v6
