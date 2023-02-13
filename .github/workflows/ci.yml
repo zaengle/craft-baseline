@@ -24,6 +24,7 @@ jobs:
         with:
           php_version: latest
           command: run-script phpstan
+          args: --working-dir=./src
 
       - name: 🔬 Run Check ECS
         uses: php-actions/composer@v6
