@@ -5,3 +5,5 @@ parameters:
     level: 0
     paths:
         - src/modules
+    scanDirectories:
+        - src/vendor
