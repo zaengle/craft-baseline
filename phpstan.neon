@@ -1,7 +1,7 @@
 parameters:
     level: 6
     paths:
-        - src/modules
+        - ./src/modules
     scanFiles:
         - vendor/yiisoft/yii2/Yii.php
         - vendor/craftcms/cms/src/Craft.php
