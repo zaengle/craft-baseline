@@ -22,9 +22,9 @@ jobs:
       - name: 🛠 Run PHPStan
         uses: php-actions/phpstan@v3
         with:
-          path: ./src
           php_version: latest
           memory_limit: 512M
+          paths_file: ./phpstan.neon
 
       - name: 🔬 Run Check ECS
         uses: php-actions/composer@v6
