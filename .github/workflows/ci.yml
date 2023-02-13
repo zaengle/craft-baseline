@@ -14,7 +14,7 @@ jobs:
         uses: php-actions/composer@v6
         with:
           php_version: latest
-          args: --profile --ignore-platform-reqs --working-dir=/src
+          args: --profile --ignore-platform-reqs --working-dir=./src
       - name: Run phpstan
         uses: php-actions/composer@v6
         with:
