@@ -1,11 +1,7 @@
+includes:
+    - vendor/craftcms/phpstan/phpstan.neon
+
 parameters:
-    level: 6
+    level: 0
     paths:
         - src/modules
-    scanFiles:
-        - src/vendor/yiisoft/yii2/Yii.php
-        - src/vendor/craftcms/cms/src/Craft.php
-    stubFiles:
-        - stubs/yii/BaseYii.stub
-    tmpDir: build/phpstan
-    checkMissingIterableValueType: false

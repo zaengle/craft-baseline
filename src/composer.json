@@ -10,6 +10,7 @@
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
+    "craftcms/phpstan": "dev-main",
     "phpstan/phpstan": "^1.7",
     "symplify/easy-coding-standard": "^10.2",
     "yiisoft/yii2-shell": "^2.0.3"
