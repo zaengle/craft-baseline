@@ -26,9 +26,7 @@ jobs:
           memory_limit: 1G
           configuration: ./phpstan.neon
 
-      - name: 🔬 Run Check ECS
-        uses: php-actions/composer@v6
+      - name: 🔬 Check ECS
         with:
-          command: run-script check-cs
           php_version: latest
-          args: --working-dir=./src
+        run: src/vendor/bin/ecs check --ansi
