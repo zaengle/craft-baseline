@@ -1,27 +1,30 @@
 name: CI
+
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - name: 🛎 Checkout
+        uses: actions/checkout@v2
 
-    - name: Install dependencies
-      uses: php-actions/composer@v6
-      with:
-        php_version: latest
-        args: --profile --ignore-platform-reqs
-    - name: Run phpstan
-      uses: php-actions/composer@v6
-      with:
-        command: run-script phpstan
-        php_version: latest
-    - name: Run Check ECS
-      uses: php-actions/composer@v6
-      with:
-        command: run-script check-cs
-        php_version: latest
+      - name: 👨‍💻 Install Dependencies
+        uses: php-actions/composer@v6
+        with:
+          php_version: latest
+          args: --profile --ignore-platform-reqs --working-dir=./src
+
+      - name: 🛠 Run PHPStan
+        uses: php-actions/phpstan@v3
+        with:
+          php_version: latest
+          memory_limit: 1G
+          configuration: ./phpstan.neon
+
+      - name: 🔬 Check ECS
+        run: src/vendor/bin/ecs check --ansi
