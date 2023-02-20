@@ -6,3 +6,6 @@
 # Vendor / Packages
 /build
 /node_modules/
+
+# Testing
+/coverage
