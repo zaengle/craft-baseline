@@ -64,4 +64,16 @@ export default defineConfig(({ command }) => ({
     host: '0.0.0.0',
     strictPort: true,
   },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    exclude: [
+      '**/vendor/**',
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/cypress/**',
+      '**/.{idea,git,cache,output,temp,vscode}/**',
+      '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,tailwind}.config.*',
+    ],
+  },
 }))
