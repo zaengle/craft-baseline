@@ -2,15 +2,13 @@
 
 ## Local development
 
-Front end build is via Laravel Mix, but runs _inside_ the ddev `web` container:
+Front end build is via Vite, which runs _inside_ the ddev `web` container:
 
 ```bash
-ddev npm run watch
-# or
-ddev npm run hot
+ddev npm run dev
 ```
 
-Browsersync is configured for your live reloading convenience
+Live reloading is configured for your development convenience
 
 ## Building for production
 
@@ -31,4 +29,4 @@ ddev npm run build
 
 ## Asset manifest / versioning
 
-Production asset filenames are hashed. Hashed filenames are injected via the [Twigpack plugin](https://nystudio107.com/docs/twigpack/)
+Production asset filenames are hashed. Hashed filenames are injected via the [Craft Vite plugin](https://github.com/nystudio107/craft-vite)
