@@ -5,7 +5,8 @@
   "main": "setup/bin/index.mjs",
   "type": "module",
   "scripts": {
-    "setup": "setup/bin/index.mjs"
+    "setup": "setup/bin/index.mjs",
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
