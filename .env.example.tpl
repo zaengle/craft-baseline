@@ -3,13 +3,13 @@
 ##
 
 # The application ID used to to uniquely store session and cache data, mutex locks, and more
-CRAFT_APP_ID=
+CRAFT_APP_ID=<% project.handle %>-craft
 # The environment Craft is currently running in (dev|staging|production)
 CRAFT_ENVIRONMENT=dev
 # The secure key Craft will use for hashing and encrypting data
-CRAFT_SECURITY_KEY=
+CRAFT_SECURITY_KEY=<% project.securityKey %>
 # The public URL of the main site
-PRIMARY_SITE_URL=
+PRIMARY_SITE_URL=https://<% project.handle %>.ddev.site
 
 ##
 # CRAFT CONFIG FLAGS
