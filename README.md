@@ -1,34 +1,17 @@
-# Zaengle Craft Baseline
+STOP!! This project template has not yet been configured.
 
-An opinionated CraftCMS + Tailwind setup
+You almost certainly want to:
 
+```
+npm i
+npm run setup
+```
 
+And follow the instructions.
 
-
-## New Projects
-
-1. Run `bin/configure` and follow the prompts
-2. Delete everything in this file from this line to the top
-
+You can run `npm run setup -- --help` for more information.
 
 ## Requirements
 
-
-TLDR; On a Mac? run `make` from the project root
-
-- A local LAMP/LEMP stack ([DDEV](./docs/ddev-local-development.md) recommended )
-- [Precommit](https://pre-commit.com/)
-
-
-```
-
-```
-
-
-## First time run
-
-1. Run `bin/setup`
-
-## Daily development
-
-See [the docs](./docs/)
+- Recent version of `node` (>=12)
+- `ddev` with mutagen enabled

@@ -1,4 +1,4 @@
-name: craft-baseline
+name: <% project.handle %>
 type: craftcms
 docroot: src/web/
 php_version: "8.1"
