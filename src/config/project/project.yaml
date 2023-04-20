@@ -13,6 +13,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  elements-panel:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   toolbelt:
     edition: standard
     enabled: true

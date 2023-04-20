@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b568d9309ee037c519256014e89856c",
+    "content-hash": "8d76ad64f91dcf380bf3556fca980656",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -3307,6 +3307,51 @@
                 "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
             },
             "time": "2021-10-29T13:26:27+00:00"
+        },
+        {
+            "name": "putyourlightson/craft-elements-panel",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/putyourlightson/craft-elements-panel.git",
+                "reference": "7775c4fb0eb996544c6365863e14a986c0159592"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/putyourlightson/craft-elements-panel/zipball/7775c4fb0eb996544c6365863e14a986c0159592",
+                "reference": "7775c4fb0eb996544c6365863e14a986c0159592",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^4.0.0",
+                "php": "^8.0.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Elements Panel",
+                "handle": "elements-panel",
+                "developer": "PutYourLightsOn",
+                "developerUrl": "https://putyourlightson.com/",
+                "documentationUrl": "https://putyourlightson.com/plugins/elements-panel",
+                "changelogUrl": "https://raw.githubusercontent.com/putyourlightson/craft-elements-panel/v2/CHANGELOG.md",
+                "class": "putyourlightson\\elementspanel\\ElementsPanel"
+            },
+            "autoload": {
+                "psr-4": {
+                    "putyourlightson\\elementspanel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "mit"
+            ],
+            "description": "Adds an Elements and an Eager-Loading panel to the debug toolbar.",
+            "support": {
+                "docs": "https://putyourlightson.com/plugins/elements-panel",
+                "issues": "https://github.com/putyourlightson/craft-elements-panel/issues",
+                "source": "https://github.com/putyourlightson/craft-elements-panel"
+            },
+            "time": "2022-05-04T18:44:34+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -7275,6 +7320,70 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.4"
             },
             "time": "2023-03-05T19:49:14+00:00"
+        },
+        {
+            "name": "nystudio107/craft-autocomplete",
+            "version": "1.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nystudio107/craft-autocomplete.git",
+                "reference": "157f6a7a10d36888f70772f9fdfc97e13a7a439c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-autocomplete/zipball/157f6a7a10d36888f70772f9fdfc97e13a7a439c",
+                "reference": "157f6a7a10d36888f70772f9fdfc97e13a7a439c",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0 || ^4.0.0-alpha"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "bootstrap": "nystudio107\\autocomplete\\Autocomplete"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\autocomplete\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                },
+                {
+                    "name": "PutYourLightsOn",
+                    "homepage": "https://putyourlightson.com"
+                }
+            ],
+            "description": "Provides Twig template IDE autocomplete of Craft CMS & plugin variables",
+            "keywords": [
+                "Craft",
+                "auto",
+                "autocomplete",
+                "cms",
+                "complete",
+                "craftcms",
+                "symfony",
+                "twig"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-autocomplete/blob/v1/README.md",
+                "issues": "https://github.com/nystudio107/craft-autocomplete/issues",
+                "source": "https://github.com/nystudio107/craft-autocomplete"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/khalwat",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-12-19T23:52:34+00:00"
         },
         {
             "name": "phpstan/phpstan",
