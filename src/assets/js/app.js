@@ -1,3 +1,6 @@
+import 'virtual:svg-icons-register'
+import.meta.glob('../img/**/*')
+
 export function init() {
   console.log('hello world!')
 }
