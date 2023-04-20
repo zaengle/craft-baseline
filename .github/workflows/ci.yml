@@ -7,12 +7,13 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  build_php:
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
+        php: [8.2]
 
     steps:
       - name: 🛎 Checkout
@@ -34,13 +35,35 @@ jobs:
       - name: 🔬 Check ECS
         run: src/vendor/bin/ecs check --ansi
 
-  test:
+  build_node:
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
+        node: [18]
+
+    steps:
+      - name: 🏗 Set Up Node Environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'npm'
+          check-latest: true
+
+      - name: 🧑‍💻 Install JS Dependencies
+        run: npm ci
+
+      - name: 👷‍ Build Front End Assets
+        run: npm run build --if-present
+
+  test_js:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [18]
 
     steps:
       - name: 🛎 Checkout
@@ -50,24 +73,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+          cache: 'npm'
           check-latest: true
 
-      - name: 🛠 Get Yarn Cache Directory Path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: 📦 Cache Node Modules
-        uses: actions/cache@v3
-        # Use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
       - name: 🧑‍💻 Install JS Dependencies
-        run: yarn install
+        run: npm ci
+
+      - name: 📋 Run ESlint
+        run: npm run eslint --if-present
 
       - name: 🧪 Run JS Tests
-        run: yarn test
+        run: npm run test --if-present
