@@ -1,4 +1,4 @@
-dateModified: 1677160354
+dateModified: 1682003083
 email:
   fromEmail: dev@zaengle.com
   fromName: 'Craft Baseline'
@@ -33,7 +33,7 @@ system:
   edition: solo
   live: true
   name: 'Craft Baseline'
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
