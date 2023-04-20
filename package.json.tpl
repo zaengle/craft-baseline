@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest run --coverage"
+    "test": "vitest run --coverage",
+    "eslint": "eslint --ext .js,.vue ./src/assets/ --fix"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "dotenv": "^16.0.1",
     "eslint": "^8.33.0",
     "eslint-plugin-vitest-globals": "^1.3.1",
+    "eslint-plugin-vue": "^9.11.0",
     "jsdom": "^21.1.0",
     "postcss": "^8.4.16",
     "postcss-focus-visible": "^7.1.0",
