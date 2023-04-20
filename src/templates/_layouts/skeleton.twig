@@ -15,20 +15,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-  {# AJAX in SVG sprite #}
-  <script>
-    (function(argument) {
-      fetch('{{ craft.vite.asset("/src/web/dist/svg/sprite/sprite.svg") }}')
-      .then((response) => response.text())
-      .then((sprite) => {
-        const div = document.createElement("div");
-        div.setAttribute('hidden', '');
-        div.setAttribute('aria-hidden', 'true');
-        div.innerHTML = sprite;
-        document.body.insertBefore(div, document.body.childNodes[0]);
-      });
-    })();
-  </script>
 </head>
 
 <body class="{{ devMode ? 'debug' }}">

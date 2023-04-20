@@ -37,7 +37,7 @@
     "tailwindcss-debug-screens": "^2.2.1",
     "vite": "^4.1.1",
     "vite-plugin-restart": "^0.3.1",
-    "vite-svg-sprite-wrapper": "^1.0.3",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vitest": "^0.28.5"
   }
 }
