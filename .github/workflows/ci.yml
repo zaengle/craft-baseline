@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [ $default-branch ]
   pull_request:
-    branches: [main]
+    branches: [ $default-branch ]
 
 jobs:
   build_php:
@@ -19,11 +19,23 @@ jobs:
       - name: 🛎 Checkout
         uses: actions/checkout@master
 
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
+
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+
       - name: 👨‍💻 Install Composer Dependencies
         uses: php-actions/composer@v6
         with:
           php_version: latest
-          args: --profile --ignore-platform-reqs --working-dir=./src
+          args: --profile --ignore-platform-reqs --working-dir=./src --prefer-dist --no-progress
 
       - name: 🛠 Run PHPStan
         uses: php-actions/phpstan@v3
