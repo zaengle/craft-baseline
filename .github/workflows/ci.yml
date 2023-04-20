@@ -47,32 +47,10 @@ jobs:
       - name: 🔬 Check ECS
         run: src/vendor/bin/ecs check --ansi
 
+      - name: Execute tests (Unit and Feature tests) via PestPHP
+        run: vendor/bin/pest --coverage-clover clover.xml
+
   build_node:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [18]
-
-    steps:
-      - name: 🛎 Checkout
-        uses: actions/checkout@master
-
-      - name: 🏗 Set Up Node Environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
-          cache: 'npm'
-          check-latest: true
-
-      - name: 🧑‍💻 Install JS Dependencies
-        run: npm ci
-
-      - name: 👷‍ Build Front End Assets
-        run: npm run build --if-present
-
-  test_js:
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -99,3 +77,6 @@ jobs:
 
       - name: 🧪 Run JS Tests
         run: npm run test --if-present
+
+      - name: 👷‍ Build Front End Assets
+        run: npm run build --if-present

@@ -3,6 +3,7 @@
   "prefer-stable": true,
   "require": {
     "craftcms/cms": "^4.0.0.1",
+    "markhuot/craft-pest": "^1.0@alpha",
     "nystudio107/craft-vite": "^4.0",
     "putyourlightson/craft-elements-panel": "^2.0",
     "vlucas/phpdotenv": "^5.4.0",
@@ -13,6 +14,7 @@
     "craftcms/ecs": "dev-main",
     "craftcms/phpstan": "dev-main",
     "nystudio107/craft-autocomplete": "^1.11",
+    "pestphp/pest": "^1.23",
     "phpstan/phpstan": "^1.7",
     "symplify/easy-coding-standard": "^10.2",
     "yiisoft/yii2-shell": "^2.0.3"
@@ -31,7 +33,8 @@
   "config": {
     "allow-plugins": {
       "craftcms/plugin-installer": true,
-      "yiisoft/yii2-composer": true
+      "yiisoft/yii2-composer": true,
+      "pestphp/pest-plugin": true
     },
     "sort-packages": true,
     "optimize-autoloader": true,
@@ -62,6 +65,8 @@
     "pre-update-cmd": "@pre-craft-update",
     "pre-install-cmd": "@pre-craft-update",
     "post-update-cmd": "@post-craft-update",
-    "post-install-cmd": "@post-craft-update"
+    "post-install-cmd": "@post-craft-update",
+    "test": "pest",
+    "coverage": "pest --coverage"
   }
 }

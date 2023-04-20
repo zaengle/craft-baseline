@@ -1,6 +1,7 @@
 /.env
 /.idea
 .DS_Store
+.phpunit.result.cache
 
 # FE build artefacts
 
