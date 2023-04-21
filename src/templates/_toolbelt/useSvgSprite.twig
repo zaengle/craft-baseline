@@ -6,9 +6,11 @@
     viewBox: viewBox,
 }  | merge(attrs) %}
 
-<svg {{ attr(attrs) }}>
+{%- if svgSlug ?? false %}
+  <svg {{ attr(attrs) }}>
     {%- if opts.title ?? false %}
-        <title>{{ opts.title }}</title>
+      <title>{{ opts.title }}</title>
     {%- endif %}
-    <use xlink:href="/dist/svg/sprite/sprite.svg#{{ opts.svgSpriteIdPrefix }}{{ svgSlug }}" />
-</svg>
+    <use xlink:href="#{{ opts.svgSpriteIdPrefix }}{{ svgSlug }}" />
+  </svg>
+{%- endif %}
