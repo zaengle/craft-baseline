@@ -7,7 +7,7 @@
  * @link      https://zaengle.com/
  * @copyright Copyright (c) 2022 Zaengle Corp
  */
-
+use nystudio107\vite\Vite;
 /**
  * Toolbelt config.php
  *
@@ -38,5 +38,13 @@ return [
     ],
     'svgSpriteDefaultAttrs' => [
         'aria-hidden' => 'true',
+    ],
+    'custom' => [
+        'functions' => [
+            'viteAsset' => static function(string $path): string
+            {
+                return Vite::getInstance()->vite->asset("src/assets/{$path}");
+            },
+        ],
     ],
 ];

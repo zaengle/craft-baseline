@@ -10,6 +10,8 @@ export default defineConfig(({ command }) => ({
   build: {
     manifest: true,
     emptyOutDir: true,
+    assetsInlineLimit: 0,
+    copyPublicDir: false,
     outDir: 'src/web/dist',
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -41,8 +43,8 @@ export default defineConfig(({ command }) => ({
     copy({
       hook: 'writeBundle',
       targets: [
-        { src: './src/assets/img/**/*', dest: './src/web/dist/img' },
-        { src: './src/assets/svg/**/*', dest: './src/web/dist/svg' },
+        { src: './src/assets/img/**/*', dest: './src/web/dist/assets/img' },
+        { src: './src/assets/svg/**/*', dest: './src/web/dist/assets/svg' },
       ],
     }),
     ViteRestart({
@@ -59,7 +61,8 @@ export default defineConfig(({ command }) => ({
   ],
   resolve: {
     alias: {
-      '@': path.resolve('./src/assets/js'),
+      '~': path.resolve('./src/assets/js'),
+      '@': path.resolve('./node_modules'),
     },
   },
   server: {

@@ -4,6 +4,7 @@
   "description": "",
   "main": "setup/bin/index.mjs",
   "type": "module",
+  "private": true,
   "scripts": {
     "setup": "setup/bin/index.mjs",
     "test": "exit 0"

@@ -1,4 +1,4 @@
-import { init } from '@/app'
+import { init } from '~/app'
 
 beforeEach(() => {
   vi.resetModules()
