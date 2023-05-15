@@ -23,7 +23,7 @@
     "colors": "^1.4.0",
     "commander": "^10.0.1",
     "glob": "^10.2.1",
-    "inquirer": "^9.1.5",
+    "inquirer": "^9.2.3",
     "replace-in-file": "^6.3.5",
     "uuid": "^9.0.0"
   }
