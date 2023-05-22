@@ -9,6 +9,9 @@ import autoprefixer from 'autoprefixer'
 import ViteRestart from 'vite-plugin-restart'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
+import exportTailwindTheme from './lib/export-tailwind-theme.js'
+
+exportTailwindTheme()
 export default defineConfig(({ command }) => ({
   base: command === 'serve' ? '' : '/dist/',
   build: {
