@@ -21,5 +21,6 @@ export default {
   plugins: [
     import('tailwindcss-debug-screens'),
     import('@tailwindcss/typography'),
+    import('@tailwindcss/forms'),
   ],
 }
