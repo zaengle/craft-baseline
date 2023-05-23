@@ -45,7 +45,7 @@ jobs:
           configuration: ./phpstan.neon
 
       - name: 🔬 Check ECS
-        run: src/vendor/bin/ecs check --ansi
+        run: src/vendor/bin/ecs check --ansi --fix --config ./ecs.php
 
       - name: Execute tests (Unit and Feature tests) via PestPHP
         run: vendor/bin/pest --coverage-clover clover.xml

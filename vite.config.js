@@ -2,9 +2,16 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import copy from 'rollup-plugin-copy'
 import tailwindcss from 'tailwindcss'
+import postcssImport from 'postcss-import'
+import tailwindNesting from 'tailwindcss/nesting'
+import postcssFocusVisible from 'postcss-focus-visible'
+import autoprefixer from 'autoprefixer'
 import ViteRestart from 'vite-plugin-restart'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
+import exportTailwindTheme from './lib/export-tailwind-theme.js'
+
+exportTailwindTheme()
 export default defineConfig(({ command }) => ({
   base: command === 'serve' ? '' : '/dist/',
   build: {
@@ -31,11 +38,11 @@ export default defineConfig(({ command }) => ({
       to: 'dist',
       from: 'src/assets/css/app.css',
       plugins: [
-        require('postcss-import'),
-        require('tailwindcss/nesting'),
+        postcssImport,
+        tailwindNesting,
         tailwindcss('./tailwind.config.js'),
-        require('postcss-focus-visible'),
-        require('autoprefixer'),
+        postcssFocusVisible,
+        autoprefixer,
       ],
     },
   },

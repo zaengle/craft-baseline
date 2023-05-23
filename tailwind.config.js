@@ -1,9 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  presets: [
-    require('./.tailwind/config.colors.js'),
-    require('./.tailwind/config.typography.js'),
-  ],
+export default {
   // Note: since we're using webpack (via Mix)
   // the string in the content array gets resolved
   // **to directories not globs**
@@ -16,12 +12,15 @@ module.exports = {
     "./src/assets/**/*.{html,js,svg}",
     './src/templates/**/*.twig',
   ],
-  safelist: [],
   theme: {
-    extend: {},
+    extend: {
+      typography: (theme) => ({}),
+      colors: (theme) => ({}),
+    },
   },
   plugins: [
-    require('tailwindcss-debug-screens'),
-    require('@tailwindcss/typography'),
+    import('tailwindcss-debug-screens'),
+    import('@tailwindcss/typography'),
+    import('@tailwindcss/forms'),
   ],
 }
