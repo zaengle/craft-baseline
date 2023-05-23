@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/zaengle/craft-baseline#README.md",
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "colors": "^1.4.0",
     "commander": "^10.0.1",
     "glob": "^10.2.1",
