@@ -31,7 +31,7 @@ export default async ({ interactive, handle, installDeps, installCraft, security
     name: 'repoUrl',
     message: 'What is the git repository URL for this project?',
     type: 'input',
-    default: toRepoUrl(handle),
+    default: ({ handle }) => toRepoUrl(handle),
   }, {
     name: 'installDeps',
     message: 'Install dependencies?',
