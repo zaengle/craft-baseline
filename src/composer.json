@@ -45,7 +45,7 @@
   "scripts": {
     "check-cs": "ecs check --ansi",
     "fix-cs": "ecs check --ansi --fix --config ../ecs.php",
-    "phpstan": "vendor/bin/phpstan analyse",
+    "phpstan": "vendor/bin/phpstan analyse --memory-limit=1G",
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
