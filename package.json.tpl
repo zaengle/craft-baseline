@@ -20,8 +20,14 @@
     "url": "<% project.repoUrl %>/issues"
   },
   "homepage": "<% project.repoUrl %>#README.md",
-  "devDependencies": {
+  "dependencies": {
     "@tailwindcss/typography": "^0.5.4",
+    "tailwindcss": "^3.1.8",
+    "tailwindcss-debug-screens": "^2.2.1",
+    "lite-vimeo-embed": "github:zaengle/lite-vimeo-embed#master",
+    "lite-youtube-embed": "^0.2.0"
+  },
+  "devDependencies": {
     "@vitest/coverage-c8": "^0.28.5",
     "@zaengle/eslint-config-base": "^1.0.0",
     "autoprefixer": "^10.4.8",
@@ -34,8 +40,6 @@
     "postcss-focus-visible": "^7.1.0",
     "postcss-import": "^14.1.0",
     "rollup-plugin-copy": "^3.4.0",
-    "tailwindcss": "^3.1.8",
-    "tailwindcss-debug-screens": "^2.2.1",
     "vite": "^4.1.1",
     "vite-plugin-restart": "^0.3.1",
     "vite-plugin-svg-icons": "^2.0.1",

@@ -1,3 +1,6 @@
+import 'lite-youtube-embed'
+import 'lite-vimeo-embed/module/lite-vimeo-embed'
+
 import 'virtual:svg-icons-register'
 import.meta.glob('../img/**/*')
 

@@ -1,0 +1,9 @@
+/**
+ * Vendor CSS for JS plugins etc
+ */
+
+@import "lite-youtube-embed/src/lite-yt-embed.css";
+/* Overrides */
+lite-youtube {
+  max-width: none;
+}
