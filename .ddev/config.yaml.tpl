@@ -1,6 +1,7 @@
 name: <% project.handle %>
 type: craftcms
 docroot: src/web/
+upload_dir: uploads/
 php_version: "8.1"
 webserver_type: nginx-fpm
 router_http_port: "80"
