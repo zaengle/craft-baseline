@@ -43,6 +43,7 @@
     "vite": "^4.1.1",
     "vite-plugin-restart": "^0.3.1",
     "vite-plugin-svg-icons": "^2.0.1",
+    "vitepress": "^1.0.0-beta.3",
     "vitest": "^0.28.5"
   }
 }

@@ -1,20 +1,20 @@
-## Using DDEV
+# Local Development with DDEV
 
-A config is provided for [DDEv](https://ddev.com/get-started/). The advantage of using DDEV is that all local dependency versions can be matched to production, and to all other team members working on the project.
+A config is provided for [DDEV](https://ddev.com/get-started/). The advantage of using DDEV is that all local dependency versions can be matched to production, and to all other team members working on the project.
 
 [Read the Full DDEV docs](https://ddev.readthedocs.io/en/) or start by [installing DDEV](https://ddev.readthedocs.io/en/latest/users/install/docker-installation/) if you don't have it already:
-
-
-
 
 One time setup:
 ```shell
 brew install pre-commit
 pre-commit install
+# Either:
+# Alternate, lighterweight container management
+brew install colima
+# Or 
 # Not required if you already have docker / docker desktop
 brew install docker
-# alternate, lighterweight container management
-brew install colima
+
 brew tap drud/ddev && brew install ddev
 ddev config global --mutagen-enabled
 # list commands
@@ -23,22 +23,22 @@ ddev -h
 
 Once per host machine (re)start
 ```shell
+# Configure VM resources by passing flags to colima start: -m8 -c2 -d150
 colima start
 ```
-
 
 Daily drive:
 ```shell
 # start the project's containers
 ddev start
-# composer
+# dependenies: composer + npm
 ddev composer install
+ddev npm install
 # run a Craft command
-bin/craft help
+ddev craft help
 ```
 
 ## Useful commands
-
 
 - `ddev craft <command>` run a `craft` CLI command
 - `ddev npm <command>` run a `npm` CLI command, e.g. `ddev npm run dev`
