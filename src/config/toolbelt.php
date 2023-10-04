@@ -31,7 +31,6 @@ return [
     // from your front end build tool
     'svgSpriteIdPrefix' => '',
     // Optional path to customise the template used by `useSvgSprite()`
-    'svgUseSpriteTemplate' => '/src/templates/_toolbelt/useSvgSprite',
     'svgSpriteDefaultOpts' => [
         'width' => 32,
         'height' => 32,
