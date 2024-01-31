@@ -3,7 +3,6 @@
   "prefer-stable": true,
   "require": {
     "craftcms/cms": "^4.0.0.1",
-    "markhuot/craft-pest": "^1.0@alpha",
     "nystudio107/craft-vite": "^4.0",
     "putyourlightson/craft-elements-panel": "^2.0",
     "vlucas/phpdotenv": "^5.4.0",
