@@ -1,4 +1,4 @@
-dateModified: 1682003083
+dateModified: 1710154565
 email:
   fromEmail: dev@zaengle.com
   fromName: 'Craft Baseline'
@@ -7,12 +7,13 @@ meta:
   __names__:
     659152ec-b639-4e38-8e14-397111b7cbf8: 'Craft Baseline' # Craft Baseline
     23003052-0ab6-4232-92d4-3e19fc21d35b: Common # Common
+    ba72b5dd-9e9f-4b11-b3d3-2c5cb5bfa144: Simple # Simple
 plugins:
-  conventions:
+  ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 1.0.0
-  elements-panel:
+    schemaVersion: 3.0.0.0
+  conventions:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
@@ -25,10 +26,11 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
+  retryDuration: 120
   name: 'Craft Baseline'
-  schemaVersion: 4.4.0.4
+  schemaVersion: 5.0.0.19
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

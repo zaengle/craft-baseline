@@ -5,6 +5,8 @@ export default async ({ answers }) => {
     if (answers.installCraft) {
       console.log('Installing Craft...')
       await command('ddev craft install/craft')
+      await command('ddev craft project-config/touch')
+      await command('ddev craft up')
     }
     return { answers }
   } catch (error) {

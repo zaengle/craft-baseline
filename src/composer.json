@@ -2,12 +2,12 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/cms": "^4.0.0.1",
-    "nystudio107/craft-vite": "^4.0",
-    "putyourlightson/craft-elements-panel": "^2.0",
+    "craftcms/ckeditor": "^4.0.0-beta.7",
+    "craftcms/cms": "^5.0.0-beta.5",
+    "nystudio107/craft-vite": "^5.0.0-beta.3",
     "vlucas/phpdotenv": "^5.4.0",
-    "zaengle/craft-conventions": "^1.0",
-    "zaengle/craft-toolbelt": "^1.0"
+    "zaengle/craft-conventions": "^5.0.0-beta.1",
+    "zaengle/craft-toolbelt": "^5.0.0-beta.1"
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
@@ -15,6 +15,7 @@
     "nystudio107/craft-autocomplete": "^1.11",
     "pestphp/pest": "^2.33.2",
     "phpstan/phpstan": "^1.7",
+    "roave/security-advisories": "dev-latest",
     "symplify/easy-coding-standard": "^10.2",
     "yiisoft/yii2-shell": "^2.0.3"
   },
@@ -38,7 +39,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.1"
+      "php": "8.2"
     }
   },
   "scripts": {
