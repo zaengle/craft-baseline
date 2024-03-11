@@ -5,8 +5,11 @@ export default async ({ answers }) => {
     if (answers.installCraft) {
       console.log('Installing Craft...')
       await command('ddev craft install/craft')
-      await command('ddev craft project-config/touch')
-      await command('ddev craft up')
+      await command('ddev craft plugin/install ckeditor')
+      await command('ddev craft plugin/install conventions')
+      await command('ddev craft plugin/install toolbelt')
+      await command('ddev craft plugin/install vite')
+      await command('ddev mutagen sync')
     }
     return { answers }
   } catch (error) {
