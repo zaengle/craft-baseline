@@ -32,6 +32,7 @@ $isProd = App::env('CRAFT_ENVIRONMENT') === 'production';
 
 return GeneralConfig::create()
     ->disallowRobots(!$isProd)
+    ->omitScriptNameInUrls()
     ->errorTemplatePrefix('_errors/')
     ->brokenImagePath('@webroot/static/404.svg')
     ->enableTemplateCaching(App::parseBooleanEnv('CRAFT_ENABLE_TEMPLATE_CACHING') ?? true)
