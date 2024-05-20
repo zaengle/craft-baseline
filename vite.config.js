@@ -68,7 +68,7 @@ export default defineConfig(({ command }) => ({
   ],
   resolve: {
     alias: {
-      '~': path.resolve('./src/assets/js'),
+      '~': path.resolve('./src/assets'),
       '@': path.resolve('./node_modules'),
     },
   },
