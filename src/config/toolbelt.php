@@ -39,11 +39,6 @@ return [
         'aria-hidden' => 'true',
     ],
     'custom' => [
-        'functions' => [
-            'viteAsset' => static function(string $path): string
-            {
-                return Vite::getInstance()->vite->asset("src/assets/{$path}");
-            },
-        ],
+        'functions' => [],
     ],
 ];
