@@ -18,6 +18,8 @@
  */
 
 use craft\helpers\App;
+use craft\helpers\MailerHelper;
+use craft\mail\transportadapters\Smtp;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
@@ -35,7 +37,7 @@ return [
         'mailer' => static function() {
           // Get the default component config:
           $config = App::mailerConfig();
-          if (App::env('MAIL_MAILER') == 'smtp') {
+          if (App::env('MAIL_MAILER') === 'smtp') {
             $adapter = MailerHelper::createTransportAdapter(
               Smtp::class,
               [
