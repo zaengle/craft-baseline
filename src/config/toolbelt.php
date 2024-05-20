@@ -29,7 +29,7 @@ return [
     ],
     // The prefix to apply to symbol ids in your SVG sprite. Make sure this matches the output
     // from your front end build tool
-    'svgSpriteIdPrefix' => '',
+    'svgSpriteIdPrefix' => 'sprite-',
     // Optional path to customise the template used by `useSvgSprite()`
     'svgSpriteDefaultOpts' => [
         'width' => 32,
@@ -39,11 +39,6 @@ return [
         'aria-hidden' => 'true',
     ],
     'custom' => [
-        'functions' => [
-            'viteAsset' => static function(string $path): string
-            {
-                return Vite::getInstance()->vite->asset("src/assets/{$path}");
-            },
-        ],
+        'functions' => [],
     ],
 ];
