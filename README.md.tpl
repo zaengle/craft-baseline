@@ -4,15 +4,20 @@ An opinionated CraftCMS + Tailwind setup
 
 ## Requirements
 
-- A local LAMP/LEMP stack ([DDEV](./docs/ddev-local-development.md) recommended )
-- [Precommit](https://pre-commit.com/)
+- [DDEV](./docs/ddev-local-development.md)
 
 ## Installation
 
 ```bash
-make install
+ddev composer install
+ddev npm install
+ddev import-db --file=./path-to/database-dump.sql
 ```
 
 ## Daily development
 
-See [the docs](./docs/)
+```bash
+ddev npm run dev
+```
+
+For more, see [the docs](./docs/)

@@ -32,7 +32,7 @@
     "@zaengle/eslint-config-base": "^1.0.0",
     "autoprefixer": "^10.4.8",
     "dotenv": "^16.4.5",
-    "eslint": "^9.3.0",
+    "eslint": "^8.0.0",
     "eslint-plugin-vitest-globals": "^1.5.0",
     "eslint-plugin-vue": "^9.26.0",
     "jsdom": "^24.0.0",
