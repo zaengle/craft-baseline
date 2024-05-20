@@ -1,6 +1,5 @@
 {
   "name": "<% project.handle %>",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "private": true,
@@ -12,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+<% project.repoUrl %>.git"
+    "url": "git+<% project.repoUrl %>"
   },
   "author": "Zaengle Corp",
   "license": "ISC",
@@ -21,7 +20,7 @@
   },
   "homepage": "<% project.repoUrl %>#README.md",
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.7"
+    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
     "tailwindcss": "^3.4.3",
     "tailwindcss-debug-screens": "^2.2.1",
