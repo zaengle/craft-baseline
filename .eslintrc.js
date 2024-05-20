@@ -1,13 +1,13 @@
 module.exports = {
-  extends: []
+  extends: [
     '@zaengle/eslint-config-base',
-    'plugin:vitest-globals/recommended'
+    'plugin:vitest-globals/recommended',
   ],
-   "overrides": [
+  overrides: [
     {
-      "files": ["**/__tests__/*.{j,t}s?(x)", "**/*.spec.{j,t}s?(x)"],
-      "env": {
-        "vitest-globals/env": true,
+      files: ['**/__tests__/*.{j,t}s?(x)', '**/*.spec.{j,t}s?(x)'],
+      env: {
+        'vitest-globals/env': true,
       },
     },
   ],
