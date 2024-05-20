@@ -20,6 +20,7 @@ export default defineConfig(({ command }) => ({
     assetsInlineLimit: 0,
     copyPublicDir: false,
     outDir: 'src/web/dist',
+    sourcemap: true,
     commonjsOptions: {
       transformMixedEsModules: true,
     },
@@ -27,9 +28,6 @@ export default defineConfig(({ command }) => ({
       input: {
         app: 'src/assets/js/app.js',
         css: 'src/assets/css/app.css',
-      },
-      output: {
-        sourcemap: true,
       },
     },
   },
@@ -40,7 +38,7 @@ export default defineConfig(({ command }) => ({
       plugins: [
         postcssImport,
         tailwindNesting,
-        tailwindcss('./tailwind.config.js'),
+        tailwindcss('./tailwind.config.mjs'),
         postcssFocusVisible,
         autoprefixer,
       ],
@@ -55,9 +53,10 @@ export default defineConfig(({ command }) => ({
       ],
     }),
     ViteRestart({
-      restart: ['./tailwind.config.js'],
+      restart: ['./tailwind.config.mjs'],
       reload: ['src/templates/**/*', 'src/modules/**/*.php'],
     }),
+
     createSvgIconsPlugin({
       // Specify the icon folder to be cached
       iconDirs: [path.resolve(process.cwd(), 'src/assets/svg/sprite')],

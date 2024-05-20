@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+import debugScreens from 'tailwindcss-debug-screens'
+import typography from '@tailwindcss/typography'
+import forms from '@tailwindcss/forms'
+
 export default {
   // Note: since we're using webpack (via Mix)
   // the string in the content array gets resolved
@@ -19,8 +24,8 @@ export default {
     },
   },
   plugins: [
-    require('tailwindcss-debug-screens'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/forms'),
+    debugScreens,
+    typography,
+    forms,
   ],
 }

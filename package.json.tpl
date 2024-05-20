@@ -28,6 +28,7 @@
     "lite-youtube-embed": "^0.3.0"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "@zaengle/eslint-config-base": "^1.0.0",
     "autoprefixer": "^10.4.8",
     "dotenv": "^16.0.1",
@@ -39,7 +40,7 @@
     "postcss-focus-visible": "^9.0.1",
     "postcss-import": "^16.0.0",
     "rollup-plugin-copy": "^3.4.0",
-    "vite": "^4.1.1",
+    "vite": "^5.0.0",
     "vite-plugin-restart": "^0.4.0",
     "vite-plugin-svg-icons": "^2.0.1",
     "vitepress": "^1.0.0-beta.3",
