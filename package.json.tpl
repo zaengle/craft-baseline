@@ -39,7 +39,7 @@
     "postcss": "^8.4.38",
     "postcss-focus-visible": "^9.0.1",
     "postcss-import": "^16.1.0",
-    "rollup-plugin-copy": "^5.0.12",
+    "rollup-plugin-copy": "^3.5.0",
     "vite": "^5.2.11",
     "vite-plugin-restart": "^0.4.0",
     "vite-plugin-svg-icons": "^2.0.1",
