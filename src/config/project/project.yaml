@@ -30,7 +30,7 @@ system:
   live: true
   retryDuration: 120
   name: 'Craft Baseline'
-  schemaVersion: 5.3.0.2
+  schemaVersion: 5.5.0.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
