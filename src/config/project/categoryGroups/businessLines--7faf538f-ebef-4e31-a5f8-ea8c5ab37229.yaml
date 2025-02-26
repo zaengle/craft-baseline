@@ -1,0 +1,145 @@
+defaultPlacement: end
+fieldLayouts:
+  4e6db88f-d5ac-4684-b22b-8b2801c7ef10:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 759da275-28cd-4f93-ac00-11bdcb9f8d4d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a27b5a02-401f-4c94-9164-fdc3bd6d7af8 # Abbreviation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 872b1b1d-2a6f-40e5-ad1b-2f2627a54efd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 35b5943f-246d-4230-9b75-8507d4107dee # Horizontal Image (Green/Blue)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2ca0d99f-88b7-4a3b-9ba1-f0949d09ebfa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e841bf98-0a03-4a1e-be49-2690b90e5ff4 # Vertical Image (White/Blue)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: afa7a101-01da-4bdd-9d7d-750f1bf8706d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ae94018a-2ec8-409f-8b90-4d3800820abe # Boilerplate
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 087e93f2-4d7b-4aef-81d2-8be85b8affc8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 67880a18-09ca-4c72-819d-99442e0fe304 # Product Brands
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8113e680-ce66-4beb-9f56-dcb86e35b393
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Business Lines'
+        uid: df450f70-49e8-4326-91da-3534bf7579f8
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d326c25c-1ad1-48b1-bf3f-b5223b5e03f7 # Hide this language
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da54aac5-b5ba-413f-be55-dca0f860f7e8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Etc
+        uid: 79486aa6-5fd1-48ba-ad51-210f5106237c
+        userCondition: null
+handle: businessLines
+name: 'Business Lines'
+siteSettings:
+  4fd61ef3-0957-4d1e-a593-dc93e645b835: # G O L D E N - Portuguese
+    hasUrls: true
+    template: null
+    uriFormat: 'business-lines/{slug}'
+  45d82af1-444b-4ef0-ae83-293ade46f8b3: # G O L D E N - Italian
+    hasUrls: true
+    template: null
+    uriFormat: 'business-lines/{slug}'
+  683aac47-3f36-4506-a033-58905fd2de87: # G O L D E N - German
+    hasUrls: true
+    template: null
+    uriFormat: 'business-lines/{slug}'
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    hasUrls: true
+    template: null
+    uriFormat: 'business-lines/{slug}'
+  e30f07eb-6153-416d-af2e-07c687e0a2f3: # G O L D E N - Spanish
+    hasUrls: true
+    template: null
+    uriFormat: 'business-lines/{slug}'
+  fc467f8d-ea71-4951-b9a2-a1cdd4163498: # G O L D E N - French
+    hasUrls: true
+    template: null
+    uriFormat: 'business-lines/{slug}'
+structure:
+  maxLevels: null
+  uid: 32cd9cc1-14d6-4008-b511-ced356e0299c

@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: string
+handle: pageLinks
+instructions: null
+name: Links
+searchable: true
+settings:
+  entryTypes:
+    -
+      uid: f37a5401-9feb-4525-8b26-6a3a338d68c3
+  maxEntries: 1
+  minEntries: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

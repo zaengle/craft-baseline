@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 7f123799-080e-4b85-b734-4be52842edb5 # Thank You Pages
+handle: thankYouPages
+name: 'Thank You Pages'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: thank-you/_entry
+    uriFormat: 'thank-you/{slug}'
+type: channel

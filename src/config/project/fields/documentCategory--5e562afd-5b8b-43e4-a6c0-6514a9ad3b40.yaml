@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: documentCategory
+instructions: null
+name: 'Document Category'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:93e837d0-93d1-4976-84ef-7836581a3e91' # Documents
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

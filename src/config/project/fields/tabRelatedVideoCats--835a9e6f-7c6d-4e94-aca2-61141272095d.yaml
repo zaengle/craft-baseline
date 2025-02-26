@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: tabRelatedVideoCats
+instructions: null
+name: 'Tabs - Tab - Rich Text - Related Video Categories'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:5c3e2c14-ff70-4d8f-938e-cb074574e000' # Videos
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

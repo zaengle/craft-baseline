@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 9d16dc09-b2c7-428c-8c76-06e57bd7fe6c # Industries
+handle: industries
+name: Industries
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: capabilities/_entry
+    uriFormat: '{industryCategory.orderBy(''level ASC'').one.slug}/{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 84c9d27f-2706-4459-a957-6fda5fd767a0
+type: structure

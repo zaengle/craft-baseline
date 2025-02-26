@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: string
+handle: buttonGroup
+instructions: null
+name: 'Button Group'
+searchable: false
+settings:
+  entryTypes:
+    -
+      uid: 5f57b7fc-8aed-4921-aa82-67dec24c5bf8
+  maxEntries: 4
+  minEntries: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

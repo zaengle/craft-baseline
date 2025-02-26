@@ -1,0 +1,18 @@
+columnSuffix: edzojbln
+contentColumnType: text
+handle: formIframe
+instructions: null
+name: 'Form Iframe'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 3
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

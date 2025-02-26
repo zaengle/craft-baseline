@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 654a1c1d-bfe8-4ca3-a165-dd107ba85045 # White Papers
+handle: whitePapers
+name: 'White Papers'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: capabilities/_entry
+    uriFormat: '{whitePaperCategory.orderBy(''level ASC'').one.slug}/{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: d0db0ef2-9cf0-4a43-972d-ea5e82d839b1
+type: structure

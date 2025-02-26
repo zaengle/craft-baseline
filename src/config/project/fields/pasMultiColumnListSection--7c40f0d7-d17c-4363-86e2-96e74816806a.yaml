@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: string
+handle: pasMultiColumnListSection
+instructions: null
+name: 'Multi-column List Section'
+searchable: true
+settings:
+  entryTypes:
+    -
+      uid: b1f86ae4-5c60-4b00-8833-09b3ae0654b8
+  maxEntries: null
+  minEntries: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

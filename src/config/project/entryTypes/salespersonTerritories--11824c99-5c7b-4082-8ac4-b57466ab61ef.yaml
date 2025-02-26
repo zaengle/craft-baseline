@@ -1,0 +1,46 @@
+fieldLayouts:
+  c4a087e0-db91-4519-8a8f-0cd9f4f6d2a9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 68f889cf-2f51-4eff-98bf-c7cc5ea4d57e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 83f50fc1-0a91-4ba9-9934-6479b6abdb0d
+        userCondition: null
+handle: salespersonTerritories
+hasTitleField: true
+name: 'Salesperson Territories'
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

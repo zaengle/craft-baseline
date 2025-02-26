@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 99e545e6-7c01-49e6-9b6e-9636a0842a48 # Parts & Service Pages
+handle: partsAndServicePages
+name: 'Parts & Service Pages'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: parts-and-service-pages/_entry
+    uriFormat: 'parts-and-service/{slug}'
+structure:
+  maxLevels: null
+  uid: 2d6456d4-79e1-4481-bb76-764e2eefe8fd
+type: structure

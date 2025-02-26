@@ -1,0 +1,10 @@
+columnSuffix: null
+handle: form
+instructions: null
+name: 'Page Builder - Section with Form - Form'
+searchable: false
+settings:
+  forms: '*'
+translationKeyFormat: null
+translationMethod: site
+type: Solspace\Freeform\FieldTypes\FormFieldType

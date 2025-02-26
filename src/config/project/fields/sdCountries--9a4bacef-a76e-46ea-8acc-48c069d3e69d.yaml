@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+handle: sdCountries
+instructions: null
+name: Countries
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  sources:
+    - 'section:9063a83d-2dde-4c06-8f75-78e1f42167a6' # Salesperson Countries
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

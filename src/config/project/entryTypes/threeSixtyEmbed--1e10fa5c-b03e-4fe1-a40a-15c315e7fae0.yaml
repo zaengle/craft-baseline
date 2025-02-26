@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  e67ac687-6a79-4d16-85da-83b681478aca:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 06883308-bfb3-4e34-b949-a2c5d3eff75f
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: '360º Viewer'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 03000574-5346-4e0e-b58e-14bd36af89b8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6adeb75b-7cfe-47f9-b9ad-1d3e3c01dcf8
+        userCondition: null
+handle: threeSixtyEmbed
+hasTitleField: false
+icon: null
+name: '360º Embed'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,352 @@
+columnSuffix: null
+handle: boothBrand
+instructions: null
+name: 'Booth - Brand Booth - Booth Brand'
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Allpax
+        -
+          - value
+          - allpax
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Axon
+        -
+          - value
+          - axon
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Benchmark
+        -
+          - value
+          - benchmark
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Brenton
+        -
+          - value
+          - brenton
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Currie
+        -
+          - value
+          - currie
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Dekka
+        -
+          - value
+          - dekka
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Edson
+        -
+          - value
+          - edson
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - EOL
+        -
+          - value
+          - eol
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'EPI Labelers'
+        -
+          - value
+          - epi
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Federal
+        -
+          - value
+          - federal
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Fowler
+        -
+          - value
+          - fowler
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Greydon
+        -
+          - value
+          - greydon
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'ID Technology'
+        -
+          - value
+          - id_tech
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Ipak
+        -
+          - value
+          - ipak
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - KLEENLine
+        -
+          - value
+          - kleenline
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - LSI
+        -
+          - value
+          - lsi
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Matrix
+        -
+          - value
+          - matrix
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'NJM Packaging'
+        -
+          - value
+          - njm
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Orion Packaging'
+        -
+          - value
+          - orion
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Ossid
+        -
+          - value
+          - ossid
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Pace Packaging'
+        -
+          - value
+          - pace
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Pacific Packaging'
+        -
+          - value
+          - pacificPak
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - ProMach
+        -
+          - value
+          - pro_mach
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Rennco
+        -
+          - value
+          - rennco
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Roberts PolyPro'
+        -
+          - value
+          - roberts
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Shuttleworth
+        -
+          - value
+          - shuttleworth
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Tekkra
+        -
+          - value
+          - tekkra
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Texwrap
+        -
+          - value
+          - texwrap
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Weiler Labeling Systems'
+        -
+          - value
+          - weiler
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wexxar BEL'
+        -
+          - value
+          - wexxar
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Zalkin
+        -
+          - value
+          - zalkin
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Dropdown

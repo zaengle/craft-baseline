@@ -1,0 +1,101 @@
+color: null
+fieldLayouts:
+  f0a49325-f36a-4ba8-8125-b9cc0794a0c4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 39c792f2-61e5-461d-a879-1996248572aa
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Heading
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a2c35ec8-f332-46e1-8843-bf39b003e125
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 87fdeda4-7040-4b70-bdb4-fed53ef425fc
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Text
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 40cc93b4-1be7-42fc-8bf1-effee7c947e2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 1041b349-488f-4ec0-9dcd-62bfb310d677
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Form
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98bb0936-8646-4f7c-bdde-e59da30dcff7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: d3a99994-fa15-4453-857d-45f2bb1fb2d1
+            handle: backgroundColor
+            includeInCards: false
+            instructions: null
+            label: 'Background Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5d93134-74f3-498c-bf29-29817cfc9802
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: edf56fec-7919-4063-98ce-0ef3df58618d
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Form Iframe'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 172f9855-d3b6-4302-8ccc-ca0056d62a27
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6ce1b117-67aa-45f8-a1d2-79986b6b6bc0
+        userCondition: null
+handle: sectionWithForm
+hasTitleField: false
+icon: null
+name: 'Section with Form'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

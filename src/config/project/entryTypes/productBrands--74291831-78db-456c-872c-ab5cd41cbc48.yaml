@@ -1,0 +1,166 @@
+fieldLayouts:
+  976f30f4-e3a5-4386-a4a7-bb464563f338:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a8c2ffd1-1c50-4fbc-9498-77eae2399bc8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d17281a0-6d6e-4a3a-b0be-140b78ea759d # Short Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72cad377-415c-4776-9cfe-01e086fdc5a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 74798e47-d2ac-49be-9211-ea2039bf22dc # Boilerplate
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81b68477-7e45-46ab-bf63-929d3794a2e8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 7d09ec99-9557-4936-9e49-00bb9a75ed6f # Business Line
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b51b05a-a572-4e03-ad8f-1e24964a9338
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a371ad45-1fa5-46aa-923c-4e56cc228c95 # Logo - Black & White
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f71d094b-7785-42a7-a2bb-d4c2107f22f5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 66215d9d-3387-4914-aff3-6b826f1087ec # Logo - Color Reversed
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 83076e2a-4eb4-487a-ae7d-a0e0cb30c094
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 485bc2f3-8a72-45e8-91a5-52ba75ef6f95 # Logo - Full Color
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8ed3a445-c084-41d6-8120-824dd19d18fd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6c011595-1775-425c-bcf9-cbcb9ecb25b7 # Logo - Full Reversed Out
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a2f3477e-7f78-49f1-8b99-f888b316a003
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 09276a74-82c3-4e85-9943-5b68c6e9eede # Service Line
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 70fbbc52-5621-4373-b19b-18e44349860a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 38cacefd-25dc-41e2-8896-51a5e6e5d9bc # Website
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2786ac43-7a7d-4981-9155-2df165abae7d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 89c5f6f6-851b-4949-9794-207dc8c3849f # Unique ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d2101e7d-be3a-4860-a506-42a316ada028
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Product Brands'
+        uid: ec206491-d7b2-4840-b93b-8e7a2b915f77
+        userCondition: null
+handle: productBrands
+hasTitleField: true
+name: 'Product Brands'
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: none

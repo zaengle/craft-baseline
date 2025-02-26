@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: pbThreeSixtyViewer
+instructions: null
+name: 'Page Builder - 360º Embed - 360º Viewer'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:fc59be59-7113-4986-a086-73da128e1e2e' # 360º Viewers
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

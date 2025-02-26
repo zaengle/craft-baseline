@@ -1,0 +1,211 @@
+defaultPlacement: end
+fieldLayouts:
+  ca8f8653-6d4d-4824-a7c9-98a3466b7675:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 7495c094-557d-47f1-929c-ddc65ddc2c58
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4fe5459e-932f-4ec8-8e1e-5bc5d98360d5 # Custom H1
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b2458df7-81cf-49ff-8cc1-aeaa5ff2511b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 640c2f8f-7d40-43ac-9f74-ad11816ab2db # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 38722f5a-e3dd-4792-9f7c-b14de3ab8e47
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d477efc8-16f2-4f50-8b28-25c9792ba7b5 # Hero Background Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: abef2316-3c7c-4c5c-92b4-ad3f8fbd68a1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9b6c6f32-7b00-4ad2-b160-3f8409c72ed0 # Thumbnail
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 10ada0db-5b1b-4d24-8020-c038b14e21f4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fcd33cde-e84c-4c77-9500-d1d178e71389 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd8f6534-f08a-4953-aeab-2249d749e368
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2814d806-b1ef-471d-bd2d-9837f6251718 # Links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da2c0b56-c61f-4c7d-b0c7-bf8a4f19cdd7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Category
+        uid: 7c5eb0fc-9d85-4a1a-8115-7495f3bf48b5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2d042d9b-af16-4d98-9347-8aadaad910b4 # Page Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: acfb20c2-1bc0-4bbc-9114-9added543da2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 784189f8-141b-4901-a137-08ab2d5b1a56 # Meta Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6187d10b-7d37-4d55-b068-f932ab132afb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2de2c9bb-2614-4aee-92ad-8acc2273975d # Canonical URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 51cac53c-a7fa-4fb5-972f-b4bd3ed1a618
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dda2aa22-ce74-41a0-b919-85a4bc5563a7 # Robots Noindex, Nofollow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 808799e7-31b6-4b67-9642-a4ce00da5d17
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: a4e06d26-4f0b-4b10-9a6a-79c689bcb836
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d326c25c-1ad1-48b1-bf3f-b5223b5e03f7 # Hide this language
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0eb1def3-95f0-4e03-9188-719dbf6f91bc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Etc
+        uid: ba523702-cb59-41a9-b029-3dd4e3e80797
+        userCondition: null
+handle: industryCats
+name: Industries
+siteSettings:
+  4fd61ef3-0957-4d1e-a593-dc93e645b835: # G O L D E N - Portuguese
+    hasUrls: true
+    template: capabilities/_category
+    uriFormat: '{parent.uri}/{slug}'
+  45d82af1-444b-4ef0-ae83-293ade46f8b3: # G O L D E N - Italian
+    hasUrls: true
+    template: capabilities/_category
+    uriFormat: '{parent.uri}/{slug}'
+  683aac47-3f36-4506-a033-58905fd2de87: # G O L D E N - German
+    hasUrls: true
+    template: capabilities/_category
+    uriFormat: '{parent.uri}/{slug}'
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    hasUrls: true
+    template: capabilities/_category
+    uriFormat: '{parent.uri}/{slug}'
+  e30f07eb-6153-416d-af2e-07c687e0a2f3: # G O L D E N - Spanish
+    hasUrls: true
+    template: capabilities/_category
+    uriFormat: '{parent.uri}/{slug}'
+  fc467f8d-ea71-4951-b9a2-a1cdd4163498: # G O L D E N - French
+    hasUrls: true
+    template: capabilities/_category
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 4e6a7727-dc79-4c09-9106-c267be2c5af0

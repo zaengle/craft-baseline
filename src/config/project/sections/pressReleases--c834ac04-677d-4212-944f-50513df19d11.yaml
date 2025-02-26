@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 5a371973-c25a-4fc9-a00b-82a2cc03254e # Press Release
+handle: pressReleases
+name: 'Press Releases'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: press-releases/_entry
+    uriFormat: 'news/{slug}'
+type: channel

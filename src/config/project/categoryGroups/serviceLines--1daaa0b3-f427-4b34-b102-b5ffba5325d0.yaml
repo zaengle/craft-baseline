@@ -1,0 +1,85 @@
+defaultPlacement: end
+fieldLayouts:
+  da3447b5-5ad9-4fd4-b364-4084d857280c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 114b565a-7279-4fd3-9f47-dc96fc89bb05
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6627d23e-f298-4716-98df-78e75a38e0b2
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d326c25c-1ad1-48b1-bf3f-b5223b5e03f7 # Hide this language
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22730730-1d30-4cbc-95af-f93c73b94a45
+            userCondition: null
+            warning: null
+            width: 100
+        name: Etc
+        uid: eee34439-992d-469c-b007-5af4250b54bf
+        userCondition: null
+handle: serviceLines
+name: 'Service Lines'
+siteSettings:
+  4fd61ef3-0957-4d1e-a593-dc93e645b835: # G O L D E N - Portuguese
+    hasUrls: true
+    template: null
+    uriFormat: 'service-lines/{slug}'
+  45d82af1-444b-4ef0-ae83-293ade46f8b3: # G O L D E N - Italian
+    hasUrls: true
+    template: null
+    uriFormat: 'service-lines/{slug}'
+  683aac47-3f36-4506-a033-58905fd2de87: # G O L D E N - German
+    hasUrls: true
+    template: null
+    uriFormat: 'service-lines/{slug}'
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    hasUrls: true
+    template: null
+    uriFormat: 'service-lines/{slug}'
+  e30f07eb-6153-416d-af2e-07c687e0a2f3: # G O L D E N - Spanish
+    hasUrls: true
+    template: null
+    uriFormat: 'service-lines/{slug}'
+  fc467f8d-ea71-4951-b9a2-a1cdd4163498: # G O L D E N - French
+    hasUrls: true
+    template: null
+    uriFormat: 'service-lines/{slug}'
+structure:
+  maxLevels: null
+  uid: a4917976-8afd-4e8c-8b15-6a5265e0f46c

@@ -1,40 +1,698 @@
-dateModified: 1710154565
+dateModified: 1740574093
 email:
-  fromEmail: dev@zaengle.com
-  fromName: 'Craft Baseline'
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: $SYSTEM_EMAIL_ADDRESS
+  fromName: $SENDER_NAME
+  replyToEmail: $REPLY_TO_ADDRESS
+  template: ''
+  transportSettings:
+    encryptionMethod: tls
+    host: $HOST_NAME
+    password: $POSTMARK_APP_CREDENTIALS
+    port: $PORT
+    timeout: '10'
+    useAuthentication: '1'
+    username: $POSTMARK_APP_CREDENTIALS
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  goldenFilesPmassetsCom:
+    hasUrls: true
+    name: golden-files.pmassets.com
+    settings:
+      addSubfolderToRootUrl: true
+      autoFocalPoint: false
+      bucket: files-barteltpackaging-com
+      bucketSelectionMode: choose
+      cfDistributionId: $CLOUDFRONT_DISTRIBUTION_ID
+      cfPrefix: ''
+      expires: '1 months'
+      keyId: $AWS_ACCESS_KEY_ID
+      makeUploadsPublic: true
+      region: us-east-1
+      secret: $AWS_SECRET_ACCESS_KEY
+      storageClass: ''
+      subfolder: ''
+    type: craft\awss3\Fs
+    url: $CLOUDFRONT_BASE_URL
 meta:
   __names__:
-    659152ec-b639-4e38-8e14-397111b7cbf8: 'Craft Baseline' # Craft Baseline
-    23003052-0ab6-4232-92d4-3e19fc21d35b: Common # Common
-    ba72b5dd-9e9f-4b11-b3d3-2c5cb5bfa144: Simple # Simple
+    0ae9699f-02b3-4ff0-bd73-ea5c2c0476e4: Subheading # Subheading
+    0af0ae1e-6b3f-477d-88aa-c42476d9bf37: 'Wide Section Link Text' # Wide Section Link Text
+    0b5bf57d-426a-4229-900b-cfb14f07c53a: Booth # Booth
+    0b58a983-fb6b-4230-8c7a-4c25037e711a: Body # Body
+    0bdb47e6-b96c-4c83-9042-dc0ea5f13882: 'Parts & Service' # Parts & Service
+    00c70b18-bf13-4bb4-bcee-231ced4628c3: 'U.S. States' # U.S. States
+    0f47c10c-0d68-401e-85a8-4e1a85420bf2: Photo # Photo
+    1a64c3f1-395f-459a-8414-196fc0a50a53: Applications # Applications
+    1b991ae8-ec7d-4632-bb30-f66d67d7e997: 'Search Modal Links' # Search Modal Links
+    1bc8ce43-906b-4d67-9732-dab581eb4112: 'Salesperson U.S. States' # Salesperson U.S. States
+    1c1b956c-97f2-4a60-9d26-a547f55df159: 'Canadian Provinces' # Canadian Provinces
+    1cb0c4fa-616d-4808-a7f1-fa4535bb5f48: 'Territory/Responsibility Description' # Territory/Responsibility Description
+    1daaa0b3-f427-4b34-b102-b5ffba5325d0: 'Service Lines' # Service Lines
+    01df74fc-1320-4e61-8058-97dfdc1b28ca: 'Product - 816 Wide' # Product - 816 Wide
+    1e4eb109-0857-4226-a41b-8d831f36b081: Images # Images
+    1ecf5e4b-dd78-4985-855c-3db7c600ae1a: 'Wide Section Link URL' # Wide Section Link URL
+    1f31d8cf-2b54-4bee-b782-1379d83d716a: 'Trade Show' # Trade Show
+    02a1098c-cf54-417b-a8c8-c5268393abfe: Categories # Categories
+    2aa4103d-a139-45e5-845b-320659c402bc: 'Site Settings' # Site Settings
+    2d042d9b-af16-4d98-9347-8aadaad910b4: 'Page Title' # Page Title
+    2de2c9bb-2614-4aee-92ad-8acc2273975d: 'Canonical URL' # Canonical URL
+    3bbbb082-3101-4c37-a3e0-5f12e23d6d93: 'White Paper Category' # White Paper Category
+    3f5409a5-7912-4293-893b-ae784a7ca840: 'Product Gallery Sort Order' # Product Gallery Sort Order
+    4fd61ef3-0957-4d1e-a593-dc93e645b835: 'G O L D E N - Portuguese' # G O L D E N - Portuguese
+    4fe5459e-932f-4ec8-8e1e-5bc5d98360d5: 'Custom H1' # Custom H1
+    5a371973-c25a-4fc9-a00b-82a2cc03254e: 'Press Release' # Press Release
+    5af6f1f2-02eb-4311-aba6-1de866bc57ca: Industries # Industries
+    5b88e4da-8ccd-4aac-ac8f-33e3d7debd0a: Home # Home
+    5c3e2c14-ff70-4d8f-938e-cb074574e000: Videos # Videos
+    5d36c8b5-453e-4b82-b875-df79e9608083: 'Product Brand/Line' # Product Brand/Line
+    5e562afd-5b8b-43e4-a6c0-6514a9ad3b40: 'Document Category' # Document Category
+    6a62de79-e790-4031-9c21-6cfa88a4378f: 'Hero Button Text' # Hero Button Text
+    6b86e71e-79df-4bd8-a557-763f30dcb90b: 'Public Schema' # Public Schema
+    6c011595-1775-425c-bcf9-cbcb9ecb25b7: 'Logo - Full Reversed Out' # Logo - Full Reversed Out
+    6d8c2249-7976-4ec4-9ebe-db7e553e73fd: 'Show Date & Author' # Show Date & Author
+    7b2f2767-c4ec-41ea-9743-ac9bcc584292: 'Notification Bar' # Notification Bar
+    7ba24eda-27c0-46d9-8a57-c5efcf530202: Contact # Contact
+    7c40f0d7-d17c-4363-86e2-96e74816806a: 'Multi-column List Section' # Multi-column List Section
+    7d09ec99-9557-4936-9e49-00bb9a75ed6f: 'Business Line' # Business Line
+    7f123799-080e-4b85-b734-4be52842edb5: 'Thank You Pages' # Thank You Pages
+    7faf538f-ebef-4e31-a5f8-ea8c5ab37229: 'Business Lines' # Business Lines
+    8c6883a4-b92e-4646-a528-43483e3056f5: 'Trade Shows' # Trade Shows
+    08f1796d-3ecf-4d0d-9dbb-80e439bdc061: Products # Products
+    9a4bacef-a76e-46ea-8acc-48c069d3e69d: Countries # Countries
+    9afe3d99-95db-4f7d-977b-d12ff3c82fa9: Body # Body
+    9b6c6f32-7b00-4ad2-b160-3f8409c72ed0: Thumbnail # Thumbnail
+    9d16dc09-b2c7-428c-8c76-06e57bd7fe6c: Industries # Industries
+    9da24b2d-1220-47b4-a6de-168f931500c6: 'Industry Category' # Industry Category
+    14b10afb-9c39-4ca4-a740-c4bbbd04f101: 'Page Builder' # Page Builder
+    15c54c8b-d906-44d8-96cf-3d056b5b6499: 'First Name' # First Name
+    21ffa9cc-131b-4873-bf16-3cdb922bee83: Documents # Documents
+    22aabc61-9e15-49bd-b21e-5d966bd87881: 'Enable Language' # Enable Language
+    24e9205c-1672-45fe-acc1-2c3a17a882da: 'Long Description' # Long Description
+    32a38d20-6d69-408d-8f5f-18b6dacc5b44: Product # Product
+    32d5d115-8628-4bbc-858f-e9ede1ea25ce: 'Landing Pages' # Landing Pages
+    34c52476-1f42-45cd-9b9d-59684d0d0f59: 'Salesperson Countries' # Salesperson Countries
+    35b5943f-246d-4230-9b75-8507d4107dee: 'Horizontal Image (Green/Blue)' # Horizontal Image (Green/Blue)
+    38cacefd-25dc-41e2-8896-51a5e6e5d9bc: Website # Website
+    43a0299a-adc1-43e1-b419-4ce8ee89b992: 'Show Language Switcher' # Show Language Switcher
+    45a8289b-fec5-4284-ab80-d965bbc009f6: 'Salesperson Canadian Provinces' # Salesperson Canadian Provinces
+    45d82af1-444b-4ef0-ae83-293ade46f8b3: 'G O L D E N - Italian' # G O L D E N - Italian
+    46f3b776-94b5-4652-8195-96220edfb1b5: 'Salesperson Directory' # Salesperson Directory
+    53aba0fa-85d5-4631-9f35-098327f69df4: Documents # Documents
+    57bad9ba-917c-412f-90a3-461b31e54f66: Time # Time
+    57f191b1-3da5-41d9-850a-8301da17d9ae: 'Callout Heading' # Callout Heading
+    67e410d6-851a-4387-af0c-4ced0f50118d: 'Image Caption' # Image Caption
+    68d5c916-fba5-404a-beab-419b83a3a5b9: Form # Form
+    69ceb1c7-d4d4-46ed-9307-28748a29edda: 'Default Hero Background Image' # Default Hero Background Image
+    69d1259d-8060-407d-b884-a202c72380cf: 'Hero Button Link' # Hero Button Link
+    70a8ba0e-8bed-49ec-81cb-1ac3937ea5fd: golden-files.pmassets.com # golden-files.pmassets.com
+    72acbab7-cb71-4b40-bd69-8e5b35e9206d: 'Hero Background Video' # Hero Background Video
+    79d09ff4-fd50-4724-8e3b-ef912fec2b1f: Contact # Contact
+    88eb9254-0c5f-414f-b165-148f2ad8d401: Overview # Overview
+    89c5f6f6-851b-4949-9794-207dc8c3849f: 'Unique ID' # Unique ID
+    090ea542-8108-4c65-accb-7422abf1bcea: Categories # Categories
+    93e837d0-93d1-4976-84ef-7836581a3e91: Documents # Documents
+    95fd1670-1ee2-41c5-8af4-45c427afd079: Location # Location
+    99e545e6-7c01-49e6-9b6e-9636a0842a48: 'Parts & Service Pages' # Parts & Service Pages
+    99ea0590-7742-4960-ae3d-d37b35d4d39d: 'Footer Links' # Footer Links
+    219d285c-1c39-454e-9be3-e7531768723d: Videos # Videos
+    292c0922-e124-44f3-812d-dbd947ea0672: Links # Links
+    0473ecdb-aa6a-4aa9-9776-33df01ba50e2: 'General Pages' # General Pages
+    485bc2f3-8a72-45e8-91a5-52ba75ef6f95: 'Logo - Full Color' # Logo - Full Color
+    640c2f8f-7d40-43ac-9f74-ad11816ab2db: Description # Description
+    647c8703-4abc-4812-829e-0760969468b0: 'Brand Description' # Brand Description
+    654a1c1d-bfe8-4ca3-a165-dd107ba85045: 'White Papers' # White Papers
+    680d9c33-bee0-40f0-9ae2-ff5a1b9de898: Home # Home
+    683aac47-3f36-4506-a033-58905fd2de87: 'G O L D E N - German' # G O L D E N - German
+    700cefbf-4aec-4928-a219-88d078011467: 'Job Title' # Job Title
+    745d5dfc-8089-4164-80c2-f01626efc0b0: Applications # Applications
+    771ba179-2c59-4389-bad3-882ce829a509: Description # Description
+    775f0af5-8bb7-44a5-9c99-dbfd56b8415f: Form # Form
+    863fbf87-4801-4c57-bbe6-c1230b4c34df: 'Media Boilerplate' # Media Boilerplate
+    875f7c22-d252-4f67-8d23-f5d4a1db2385: Email # Email
+    989f3a4b-5f59-4162-a7d4-3fd3390d42d0: 'White Papers' # White Papers
+    990de78c-41f5-4317-9302-05f7b159c19d: Description # Description
+    1970cb69-1239-4767-9bbe-84411bb02f70: 'Media Contact' # Media Contact
+    2814d806-b1ef-471d-bd2d-9837f6251718: Links # Links
+    4613e5ac-64f0-478a-835f-0b7f6d441bd0: Body # Body
+    5059a1ec-e5a5-4b90-97e6-522ddeae0bb0: 'Postal Code' # Postal Code
+    6156bc5b-7d01-4947-b573-49bfdf94ab15: 'Business Line' # Business Line
+    7296aad6-8ce4-42d2-be88-ab6c9368a3bc: 'Rotator URL' # Rotator URL
+    7719da66-a834-427f-b099-c38c30b512ce: 'Company Pages' # Company Pages
+    08714e93-7806-45e8-800d-6213de3f09ce: 'Case Studies' # Case Studies
+    9063a83d-2dde-4c06-8f75-78e1f42167a6: 'Salesperson Countries' # Salesperson Countries
+    09276a74-82c3-4e85-9943-5b68c6e9eede: 'Service Line' # Service Line
+    09339dbb-fadb-4a82-b8cf-1bf06d827454: 'Parts & Service' # Parts & Service
+    9590ae89-e2d7-46c6-b9d5-cd89b48c2def: 'Short Description' # Short Description
+    11824c99-5c7b-4082-8ac4-b57466ab61ef: 'Salesperson Territories' # Salesperson Territories
+    12103b78-4726-4c36-9ee1-687ea17c4c15: Sites # Sites
+    22277a0c-ccfa-43e1-8e54-9695fa681ba9: 'Product - 432 Wide' # Product - 432 Wide
+    32982c06-3d38-4809-aefd-62250da1b644: 'Product Brands' # Product Brands
+    36891f83-2b66-46a0-914b-40112435a63e: 'Phone - Work' # Phone - Work
+    43096ff2-1c0c-4d09-8e27-b69dbadbc13d: 'ProMach Regional Sales Territory' # ProMach Regional Sales Territory
+    66215d9d-3387-4914-aff3-6b826f1087ec: 'Logo - Color Reversed' # Logo - Color Reversed
+    66960c18-3f3e-49e6-96d2-4d57672c8098: 'Fallback Contact' # Fallback Contact
+    67880a18-09ca-4c72-819d-99442e0fe304: 'Product Brands' # Product Brands
+    72824a12-307f-4979-8beb-bb8c64d7c82d: 'Hero Headline' # Hero Headline
+    74798e47-d2ac-49be-9211-ea2039bf22dc: Boilerplate # Boilerplate
+    98358c4e-372a-451c-be23-81a0451f763f: 'General Page' # General Page
+    0215953f-df5e-4f1b-bf8d-de7ee03f90fd: Industries # Industries
+    784189f8-141b-4901-a137-08ab2d5b1a56: 'Meta Description' # Meta Description
+    05280820-5a3a-4ff5-92d1-f035756f1a43: 'ProMach Employee?' # ProMach Employee?
+    5957518c-e3b6-4e68-be38-4608066b4655: Description # Description
+    8281117b-6c70-4a8a-8058-b16d6596aa00: 'Wide Section Background Image' # Wide Section Background Image
+    9301470b-805e-4e99-9507-456c800355b8: 'Channel Partner Company Info' # Channel Partner Company Info
+    31928910-fadc-4811-bd23-4de3dee85b7b: 'Subhead Heading' # Subhead Heading
+    74291831-78db-456c-872c-ab5cd41cbc48: 'Product Brands' # Product Brands
+    87829378-0c2a-4880-ab50-4a4a58ac4e4f: 'YouTube Video' # YouTube Video
+    87871504-0db0-4e36-9fe2-0f004afba14c: Attachments # Attachments
+    88818712-b173-4d80-ba5a-16afc073ce89: 'Hero Button' # Hero Button
+    a1f7d7c8-6550-44c8-9660-a3d33da75df6: 'YouTube Videos' # YouTube Videos
+    a2da3692-a560-4759-8196-f3f7ebd3d6ae: 'Press Clipping URL' # Press Clipping URL
+    a27b5a02-401f-4c94-9164-fdc3bd6d7af8: Abbreviation # Abbreviation
+    a58e9d09-3822-4b62-b1a0-9e7d9d760d00: 'ProMach Brands' # ProMach Brands
+    a371ad45-1fa5-46aa-923c-4e56cc228c95: 'Logo - Black & White' # Logo - Black & White
+    a77680a5-298f-484f-bebd-28947648a8eb: 'Trade Show Logo' # Trade Show Logo
+    ac3d9758-06cb-483e-8aed-c79fcbfc3a71: 'Contact Info' # Contact Info
+    acd917a2-35ae-4502-a64f-dc36848d8818: 'Hero Subhead' # Hero Subhead
+    ad75332d-8f1c-4f82-adb6-4e2ae9c671bd: Summary # Summary
+    ae94018a-2ec8-409f-8b90-4d3800820abe: Boilerplate # Boilerplate
+    b3c626b4-d8b2-4160-8b82-83a41f09e20e: 'Landing Pages' # Landing Pages
+    b6c25cd5-7401-4210-8172-c44118005efe: Thumbnail # Thumbnail
+    b8dc01c2-2201-4a45-b4d0-30c59f98c916: 'Thank You Pages' # Thank You Pages
+    b10dfe6d-a3cf-4c0a-b62f-b6630c3b1f4a: 'Wide Section Heading' # Wide Section Heading
+    b7592cfd-db93-4b1d-af2b-991535d19a8e: 'Salesperson Canadian Provinces' # Salesperson Canadian Provinces
+    bad14d4c-7164-4321-8f0f-933b1dcd723f: 'Case Study Category' # Case Study Category
+    bc14dcb1-95fb-4824-9a5f-93a2927b88ef: 'Salesperson U.S. States' # Salesperson U.S. States
+    bcaf43d6-0a78-4d23-983d-b0c2cc60d59c: Thumbnail # Thumbnail
+    bde41eba-ce96-4817-9422-0df9e483d00d: Videos # Videos
+    be8967ff-8c58-4944-aba6-fcd6eba5b757: 'Salesperson Territories' # Salesperson Territories
+    bf548431-b8ba-4d96-93b5-399f7f1bfe84: 'Salesperson Directory' # Salesperson Directory
+    c0ea20be-803e-4be3-9775-fc071aa393e1: 'G O L D E N' # G O L D E N
+    c0f82bea-4b2a-416a-8559-b27ceaa8ce14: 'Action Selling Certified?' # Action Selling Certified?
+    c7f2f0c2-45a3-4793-8602-d5cb75eb1430: 'Notification Bar' # Notification Bar
+    c13a0007-b967-422d-bef0-e5417c4137d8: Country # Country
+    c25c1358-5489-4565-b499-a54e0d346dca: 'Certification Date' # Certification Date
+    c90d2d9d-d753-45d3-ad54-727a25640d4e: Main # Main
+    c834ac04-677d-4212-944f-50513df19d11: 'Press Releases' # Press Releases
+    c909ec5f-bc7b-47ac-9afb-93c47c5e8b24: 'Product Thumbnail ' # Product Thumbnail 
+    c7380c3d-c34b-4be1-bc87-601956014cce: 'Application Category' # Application Category
+    cce95aed-330d-428a-b48a-e6c646bb6494: 'Form Iframe' # Form Iframe
+    cdb7ef5a-1af3-4952-83fa-1bf55956780c: '360º Viewers' # 360º Viewers
+    cee9eb5b-3a39-4d08-97c7-7cb95adb82af: City # City
+    d5fe9b3e-056a-48d2-9ba4-af57e686c520: 'Callout Body' # Callout Body
+    d40a00ad-7c44-472a-be39-ebc4e82e9463: 'Thumbnail Image' # Thumbnail Image
+    d326c25c-1ad1-48b1-bf3f-b5223b5e03f7: 'Hide this language' # Hide this language
+    d477efc8-16f2-4f50-8b28-25c9792ba7b5: 'Hero Background Image' # Hero Background Image
+    d642ab83-7364-4bb9-af99-b146698e39bb: 'Subhead List' # Subhead List
+    d17281a0-6d6e-4a3a-b0be-140b78ea759d: 'Short Name' # Short Name
+    dda2aa22-ce74-41a0-b919-85a4bc5563a7: 'Robots Noindex, Nofollow' # Robots Noindex, Nofollow
+    ddfc8bc5-439d-4880-a7b5-2e5649d491dc: 'Case Studies' # Case Studies
+    de1af0ae-1cff-4891-8176-093ad8bc2331: 'Contact Info' # Contact Info
+    de10643f-66dd-4120-bf5b-8647192d74d9: 'Product - Alternative' # Product - Alternative
+    dea45362-35c2-43a9-a972-bb5505578a2b: 'Callout Body' # Callout Body
+    df95d1a0-04c4-4754-b01c-e4b8d484af25: 'General Email' # General Email
+    e2aecefd-a072-469f-92e4-3e62f3c498d7: 'Callout Heading' # Callout Heading
+    e3b03a5b-aca1-48c8-ac78-7de97e98313b: 'Phone - Mobile' # Phone - Mobile
+    e5b74fe7-319c-4b2e-9bcb-20d4d70ae5d3: 'Product Brand(s)' # Product Brand(s)
+    e30f07eb-6153-416d-af2e-07c687e0a2f3: 'G O L D E N - Spanish' # G O L D E N - Spanish
+    e47d1b7b-decf-4077-bed6-a8bf61368b9f: Applications # Applications
+    e90e011d-3f9b-4da3-9d1b-84cc9f632ff3: 'New Product' # New Product
+    e97e1c67-9176-4507-aa20-5efbdf17c208: 'Last Name' # Last Name
+    e724fca6-9c3e-4939-bae8-f215e9ab735a: '360º Viewers' # 360º Viewers
+    e841bf98-0a03-4a1e-be49-2690b90e5ff4: 'Vertical Image (White/Blue)' # Vertical Image (White/Blue)
+    edaecaf0-8696-47bd-aeed-7546496b6623: 'Short Description' # Short Description
+    eee29fba-88d2-41e2-bdea-2542c33270bf: 'ProMach Brands' # ProMach Brands
+    ef042dcf-ad2f-43de-9858-6f2a533a0c14: 'Hero Background Image' # Hero Background Image
+    f7a30e51-9f1f-41aa-9e22-1544c7d04d3d: 'Case Studies' # Case Studies
+    f9dc739c-50c3-4ecb-83e1-dc09d612f4c1: Form # Form
+    f6374af2-b7e3-4b92-8a6f-fb78d1f17fa7: Company # Company
+    f23358bf-80ef-4189-a63f-2cb164cd8ac8: 'White Papers' # White Papers
+    f386410d-8d88-4637-9446-9366ccbaa844: 'Disable Additional Products ' # Disable Additional Products 
+    f7918598-ac27-4e3a-954a-d3cba997f2b1: 'Button Group' # Button Group
+    fa4d7a11-8448-448d-b0f2-7ac7873db15f: Tabs # Tabs
+    fadfed23-985d-4e9b-971d-a11adfd4ac52: 'Parts & Service Pages' # Parts & Service Pages
+    fc59be59-7113-4986-a086-73da128e1e2e: '360º Viewers' # 360º Viewers
+    fc467f8d-ea71-4951-b9a2-a1cdd4163498: 'G O L D E N - French' # G O L D E N - French
+    fcd33cde-e84c-4c77-9500-d1d178e71389: Body # Body
+    fd86a978-8452-432a-8273-64d7918a49fa: 'Channel Partner Company' # Channel Partner Company
+    fe343b1e-ebd0-47a8-bd71-808f9c78e074: Products # Products
 plugins:
-  ckeditor:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.0.0.0
-  conventions:
+  assetrev:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  toolbelt:
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '2.0'
+  cookie-consent-banner:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+    settings:
+      allow: 'Allow cookies'
+      async_js: ''
+      auto_inject: '1'
+      decline: Decline
+      defer_js: ''
+      disable_in_live_preview: ''
+      dismiss: Accept
+      dismiss_on_scroll: '0'
+      dismiss_on_timeout: '0'
+      excluded_categories: null
+      excluded_entry_types: null
+      expiry_days: '365'
+      honour_do_not_track_header: ''
+      layout: block
+      learn: 'Privacy and Cookie Policies'
+      learn_more_link: 'https://www.promachbuilt.com/privacy/'
+      message: 'This website uses cookies to ensure you get the best possible experience. By continuing to browse this website, you agree to this use. Further information can be found in our'
+      palette: white
+      palette_banner: 171b60
+      palette_banner_text: d7d8d6
+      palette_button: 009a76
+      palette_button_text: ffffff
+      palette_left_button_bg: '#4b81e8'
+      palette_left_button_text: '#000000'
+      palette_link: '#ffffff'
+      position: toppush
+      preload_css: ''
+      revokable: ''
+      secure_only: ''
+      target: _blank
+      type: info
+  cp-nav:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.11
+    settings:
+      originalNavHash:
+        __assoc__:
+          -
+            - 0effc4f2-591d-44bc-a2bf-d80a412b9d9a
+            - W3sibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJkYXNoYm9hcmQiLCJmb250SWNvbiI6ImdhdWdlIn0seyJsYWJlbCI6IkVudHJpZXMiLCJ1cmwiOiJlbnRyaWVzIiwiZm9udEljb24iOiJzZWN0aW9uIn0seyJsYWJlbCI6Ikdsb2JhbHMiLCJ1cmwiOiJnbG9iYWxzIiwiZm9udEljb24iOiJnbG9iZSJ9LHsibGFiZWwiOiJDYXRlZ29yaWVzIiwidXJsIjoiY2F0ZWdvcmllcyIsImZvbnRJY29uIjoidHJlZSJ9LHsibGFiZWwiOiJBc3NldHMiLCJ1cmwiOiJhc3NldHMiLCJmb250SWNvbiI6ImFzc2V0cyJ9LHsibGFiZWwiOiJVc2VycyIsInVybCI6InVzZXJzIiwiZm9udEljb24iOiJ1c2VycyJ9LHsibGFiZWwiOiJGZWVkIE1lIiwidXJsIjoiZmVlZC1tZSIsImljb24iOiJcL2hvbWVcL3ZhZ3JhbnRcL2NvZGVcL2dvbGRlblwvdmVuZG9yXC9jcmFmdGNtc1wvZmVlZC1tZVwvc3JjXC9pY29uLW1hc2suc3ZnIn0seyJsYWJlbCI6IkZyZWVmb3JtIiwidXJsIjoiZnJlZWZvcm0iLCJpY29uIjoiXC9ob21lXC92YWdyYW50XC9jb2RlXC9nb2xkZW5cL3ZlbmRvclwvc29sc3BhY2VcL2NyYWZ0LWZyZWVmb3JtXC9wYWNrYWdlc1wvcGx1Z2luXC9zcmNcL2ljb24tbWFzay5zdmciLCJiYWRnZUNvdW50Ijo5LCJzdWJuYXYiOnsiZGFzaGJvYXJkIjp7ImxhYmVsIjoiRGFzaGJvYXJkIiwidXJsIjoiZnJlZWZvcm1cL2Rhc2hib2FyZCJ9LCJzdWJtaXNzaW9ucyI6eyJsYWJlbCI6IlN1Ym1pc3Npb25zIiwidXJsIjoiZnJlZWZvcm1cL3N1Ym1pc3Npb25zIn0sImZvcm1zIjp7ImxhYmVsIjoiRm9ybXMiLCJ1cmwiOiJmcmVlZm9ybVwvZm9ybXMifSwiZmllbGRzIjp7ImxhYmVsIjoiRmllbGRzIiwidXJsIjoiZnJlZWZvcm1cL2ZpZWxkcyJ9LCJub3RpZmljYXRpb25zIjp7ImxhYmVsIjoiRW1haWwgTm90aWZpY2F0aW9ucyIsInVybCI6ImZyZWVmb3JtXC9ub3RpZmljYXRpb25zIn0sImV4cG9ydCI6eyJsYWJlbCI6IkV4cG9ydCIsInVybCI6ImZyZWVmb3JtXC9leHBvcnRcL3Byb2ZpbGVzIn0sInNldHRpbmdzIjp7ImxhYmVsIjoiU2V0dGluZ3MiLCJ1cmwiOiJmcmVlZm9ybVwvc2V0dGluZ3MifSwicmVzb3VyY2VzIjp7ImxhYmVsIjoiUmVzb3VyY2VzIiwidXJsIjoiZnJlZWZvcm1cL3Jlc291cmNlcyJ9fX0seyJsYWJlbCI6Ik5hdmlnYXRpb24iLCJ1cmwiOiJuYXZpZ2F0aW9uIiwiaWNvbiI6IlwvaG9tZVwvdmFncmFudFwvY29kZVwvZ29sZGVuXC92ZW5kb3JcL3ZlcmJiXC9uYXZpZ2F0aW9uXC9zcmNcL2ljb24tbWFzay5zdmcifSx7ImxhYmVsIjoiU0VPbWF0aWMiLCJ1cmwiOiJzZW9tYXRpYyIsImljb24iOiJcL2hvbWVcL3ZhZ3JhbnRcL2NvZGVcL2dvbGRlblwvdmVuZG9yXC9ueXN0dWRpbzEwN1wvY3JhZnQtc2VvbWF0aWNcL3NyY1wvaWNvbi1tYXNrLnN2ZyIsInN1Ym5hdiI6eyJkYXNoYm9hcmQiOnsibGFiZWwiOiJEYXNoYm9hcmQiLCJ1cmwiOiJzZW9tYXRpY1wvZGFzaGJvYXJkIn0sImdsb2JhbCI6eyJsYWJlbCI6Ikdsb2JhbCBTRU8iLCJ1cmwiOiJzZW9tYXRpY1wvZ2xvYmFsXC9nZW5lcmFsIn0sImNvbnRlbnQiOnsibGFiZWwiOiJDb250ZW50IFNFTyIsInVybCI6InNlb21hdGljXC9jb250ZW50In0sInNpdGUiOnsibGFiZWwiOiJTaXRlIFNldHRpbmdzIiwidXJsIjoic2VvbWF0aWNcL3NpdGVcL2lkZW50aXR5In0sInRyYWNraW5nIjp7ImxhYmVsIjoiVHJhY2tpbmcgU2NyaXB0cyIsInVybCI6InNlb21hdGljXC90cmFja2luZ1wvZ3RhZyJ9LCJwbHVnaW4iOnsibGFiZWwiOiJQbHVnaW4gU2V0dGluZ3MiLCJ1cmwiOiJzZW9tYXRpY1wvcGx1Z2luIn19fSx7ImxhYmVsIjoiR3JhcGhRTCIsInVybCI6ImdyYXBocWwiLCJpY29uIjoiQGFwcGljb25zXC9ncmFwaHFsLnN2ZyIsInN1Ym5hdiI6eyJzY2hlbWFzIjp7ImxhYmVsIjoiU2NoZW1hcyIsInVybCI6ImdyYXBocWxcL3NjaGVtYXMifSwidG9rZW5zIjp7ImxhYmVsIjoiVG9rZW5zIiwidXJsIjoiZ3JhcGhxbFwvdG9rZW5zIn0sImdyYXBoaXFsIjp7ImxhYmVsIjoiR3JhcGhpUUwiLCJ1cmwiOiJncmFwaGlxbCIsImV4dGVybmFsIjp0cnVlfX19LHsidXJsIjoidXRpbGl0aWVzIiwibGFiZWwiOiJVdGlsaXRpZXMiLCJmb250SWNvbiI6InRvb2wiLCJiYWRnZUNvdW50IjoxfSx7InVybCI6InNldHRpbmdzIiwibGFiZWwiOiJTZXR0aW5ncyIsImZvbnRJY29uIjoic2V0dGluZ3MifSx7InVybCI6InBsdWdpbi1zdG9yZSIsImxhYmVsIjoiUGx1Z2luIFN0b3JlIiwiZm9udEljb24iOiJwbHVnaW4ifV0=
+  embeddedassets:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  vite:
+  entry-instructions:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  environment-label:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  feed-me:
+    edition: lite
+    enabled: true
+    schemaVersion: 5.1.1
+  freeform:
+    edition: pro
+    enabled: true
+    licenseKey: 3QOF3ER6JG2EAZZO81AG9ATG
+    schemaVersion: 5.4.2
+    settings:
+      alertNotificationRecipients: ''
+      allowFileTemplateEdit: true
+      autoScroll: true
+      autoScrollToErrors: '1'
+      badgeType: all
+      blockedEmails: null
+      blockedEmailsError: 'Invalid Email Address'
+      blockedIpAddresses: null
+      blockedKeywords: null
+      blockedKeywordsError: 'Invalid Entry Data'
+      bypassSpamCheckOnLoggedInUsers: false
+      clientDigestFrequency: '1'
+      clientDigestRecipients: ''
+      defaultView: dashboard
+      defaults:
+        __assoc__:
+          -
+            - previewHtml
+            - true
+          -
+            - twigInHtml
+            - true
+          -
+            - twigIsolation
+            - true
+          -
+            - includeSampleTemplates
+            - true
+          -
+            - notifications
+            -
+              __assoc__:
+                -
+                  - admin
+                  -
+                    __assoc__:
+                      -
+                        - template
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                -
+                  - conditional
+                  -
+                    __assoc__:
+                      -
+                        - template
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                -
+                  - userSelect
+                  -
+                    __assoc__:
+                      -
+                        - template
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                -
+                  - emailField
+                  -
+                    __assoc__:
+                      -
+                        - template
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+          -
+            - settings
+            -
+              __assoc__:
+                -
+                  - general
+                  -
+                    __assoc__:
+                      -
+                        - formType
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - submissionTitle
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - '{{ dateCreated|date("Y-m-d H:i:s") }}'
+                      -
+                        - formattingTemplate
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - basic-light/index.twig
+                -
+                  - dataStorage
+                  -
+                    __assoc__:
+                      -
+                        - storeData
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - defaultStatus
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - 2
+                      -
+                        - collectIp
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                -
+                  - processing
+                  -
+                    __assoc__:
+                      -
+                        - ajax
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - showIndicator
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - showText
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - true
+                      -
+                        - processingText
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - Processing...
+                -
+                  - successAndErrors
+                  -
+                    __assoc__:
+                      -
+                        - successBehavior
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - reload
+                      -
+                        - returnUrl
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - successTemplate
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - ''
+                      -
+                        - successMessage
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - 'Form has been submitted successfully!'
+                      -
+                        - errorMessage
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - 'Sorry, there was an error submitting the form. Please try again.'
+                -
+                  - limits
+                  -
+                    __assoc__:
+                      -
+                        - duplicateCheck
+                        -
+                          __assoc__:
+                            -
+                              - locked
+                              - false
+                            -
+                              - value
+                              - no_limit
+      digestFrequency: '1'
+      digestOnlyOnProduction: ''
+      digestRecipients: ''
+      displayFeed: ''
+      emailTemplateDefault: database
+      emailTemplateDirectory: null
+      emailTemplateStorageType: files_database
+      exportHandlesAsNames: ''
+      exportLabels: ''
+      fillWithGet: ''
+      footerScripts: false
+      formFieldShowOnlyAllowedForms: ''
+      formSubmitDisable: ''
+      formSubmitExpiration: null
+      formTemplateDirectory: freeform
+      formattingTemplate: flexbox.twig
+      minimumSubmitTime: null
+      pluginName: ''
+      purgableSpamAgeInDays: null
+      purgableSubmissionAgeInDays: '0'
+      purgableUnfinalizedAssetAgeInMinutes: 180
+      rememberPageSubmitOrder: true
+      removeNewlines: ''
+      renderFormHtmlInCpViews: '1'
+      saveFormSessionLimit: 10
+      saveFormTtl: 30
+      scriptInsertLocation: form
+      scriptInsertType: pointers
+      sessionContext: payload
+      sessionContextCount: 100
+      sessionContextSecret: ''
+      sessionContextTimeToLiveMinutes: 180
+      sessionEntryMaxCount: 50
+      sessionEntryTTL: 10800
+      showErrorsForBlockedEmails: false
+      showErrorsForBlockedKeywords: false
+      spamFolderEnabled: false
+      spamProtectionBehavior: simulate_success
+      submissionThrottlingCount: null
+      submissionThrottlingTimeFrame: null
+      successTemplateDirectory: null
+      updateSearchIndexes: '1'
+  freeform-pro:
+    edition: standard
+    enabled: false
+    schemaVersion: 2.1.3
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: X0GHGPANTAVC3E7K8VKU0ANM
+    schemaVersion: 2.1.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  sentry-logger:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: TSGVZX31CO3NODFCH2IZFLYA
+    schemaVersion: 3.0.12
+    settings:
+      addHrefLang: true
+      addXDefaultHrefLang: true
+      cpTitlePrefix: '⚙ '
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      environment: live
+      generatorEnabled: true
+      headersEnabled: true
+      lowercaseCanonicalUrl: '1'
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: '1'
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+  site-switcher:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0
 system:
   edition: pro
   live: true
-  retryDuration: 120
-  name: 'Craft Baseline'
-  schemaVersion: 5.5.0.0
-  timeZone: America/Los_Angeles
+  name: $SYSTEM_NAME
+  schemaVersion: 5.6.0.2
+  timeZone: America/New_York
 users:
   allowPublicRegistration: false
+  deactivateByDefault: false
   defaultGroup: null
-  photoSubpath: null
+  photoSubpath: ''
   photoVolumeUid: null
   requireEmailVerification: true

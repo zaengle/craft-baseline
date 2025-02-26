@@ -1,0 +1,322 @@
+fieldLayouts:
+  2d3b72ab-6642-4584-b2dc-93c98711f0e4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 13289aca-ac86-4992-87e7-87af086df89b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c0f82bea-4b2a-416a-8559-b27ceaa8ce14 # Action Selling Certified?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 602e7b8f-068f-4dd0-8591-9a803f8b14ca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1c1b956c-97f2-4a60-9d26-a547f55df159 # Canadian Provinces
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 52ca2901-2a29-4438-b0e2-6d0ac3a12848
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c25c1358-5489-4565-b499-a54e0d346dca # Certification Date
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 89b0b933-217b-4907-a699-2e080bd761b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fd86a978-8452-432a-8273-64d7918a49fa # Channel Partner Company
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 768e78f4-43b1-4a42-b797-070037fe678d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9301470b-805e-4e99-9507-456c800355b8 # Channel Partner Company Info
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81947af5-a63a-4ea9-8815-138d7a124ff0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cee9eb5b-3a39-4d08-97c7-7cb95adb82af # City
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b2bd444e-5e4a-49cc-8264-12733a687224
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9a4bacef-a76e-46ea-8acc-48c069d3e69d # Countries
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5ef121db-ceda-4065-a60b-c3486e63ece0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c13a0007-b967-422d-bef0-e5417c4137d8 # Country
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ac2bc5b-645e-406f-bbc7-7bd07f659155
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 875f7c22-d252-4f67-8d23-f5d4a1db2385 # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9a2b4434-9fb8-4d93-8d29-363ee2e49e70
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 66960c18-3f3e-49e6-96d2-4d57672c8098 # Fallback Contact
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ef63518a-dec9-479e-be87-f02dd639705b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 15c54c8b-d906-44d8-96cf-3d056b5b6499 # First Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0788dfea-aed6-4e72-a98b-32e751b76b94
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 700cefbf-4aec-4928-a219-88d078011467 # Job Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16fa9902-02ed-4947-982c-d4ae749b1872
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e97e1c67-9176-4507-aa20-5efbdf17c208 # Last Name
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: af85128a-d1f2-489b-a608-3d7b6246aa93
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e3b03a5b-aca1-48c8-ac78-7de97e98313b # Phone - Mobile
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 44be3635-47ff-4a79-b3d1-f401c7a8bfa8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 36891f83-2b66-46a0-914b-40112435a63e # Phone - Work
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 800e416d-6230-40e9-92b3-23f3f839372b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0f47c10c-0d68-401e-85a8-4e1a85420bf2 # Photo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d265c102-c81a-4fe7-b2de-bdfaa394c3e0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5059a1ec-e5a5-4b90-97e6-522ddeae0bb0 # Postal Code
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3ff043d3-8035-4a8f-8d7d-37d81725b855
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: e5b74fe7-319c-4b2e-9bcb-20d4d70ae5d3 # Product Brand(s)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 15882f54-3014-4a46-ae12-7c7da95e6d0e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5d36c8b5-453e-4b82-b875-df79e9608083 # Product Brand/Line
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c583a337-d1d4-4ac8-b16b-95ddbbad432d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 05280820-5a3a-4ff5-92d1-f035756f1a43 # ProMach Employee?
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a0abbd08-6225-4fa7-a209-b5e5bbd821ea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 43096ff2-1c0c-4d09-8e27-b69dbadbc13d # ProMach Regional Sales Territory
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 94bf2a5c-3c68-4045-baec-2e1468a52097
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1cb0c4fa-616d-4808-a7f1-fa4535bb5f48 # Territory/Responsibility Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 576bd081-bbca-4787-b250-b225c84e1680
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 00c70b18-bf13-4bb4-bcee-231ced4628c3 # U.S. States
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 25da87b1-c3d4-47b9-afb2-dc8a91abc5ee
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cbeabb2a-be02-4bc1-8ba0-eee8a20a7818
+        userCondition: null
+handle: salespersonDirectory
+hasTitleField: true
+name: 'Salesperson Directory'
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

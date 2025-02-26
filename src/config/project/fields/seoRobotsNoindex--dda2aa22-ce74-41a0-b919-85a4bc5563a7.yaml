@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: seoRobotsNoindex
+instructions: null
+name: 'Robots Noindex, Nofollow'
+searchable: true
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Prevent search engine indexing?'
+        -
+          - value
+          - 'yes'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Checkboxes

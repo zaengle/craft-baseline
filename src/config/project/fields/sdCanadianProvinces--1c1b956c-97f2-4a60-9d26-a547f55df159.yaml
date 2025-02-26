@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+handle: sdCanadianProvinces
+instructions: null
+name: 'Canadian Provinces'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  sources:
+    - 'section:45a8289b-fec5-4284-ab80-d965bbc009f6' # Salesperson Canadian Provinces
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

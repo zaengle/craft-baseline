@@ -1,0 +1,46 @@
+fieldLayouts:
+  44703d05-d2ac-4c39-9e21-afe14959d023:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 922b3d84-ae91-486c-a40a-6cdb5612e298
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e96f44ef-868e-4b15-a35b-c6c3bb215c50
+        userCondition: null
+handle: salespersonCanadianProvinces
+hasTitleField: true
+name: 'Salesperson Canadian Provinces'
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

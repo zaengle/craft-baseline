@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 7ba24eda-27c0-46d9-8a57-c5efcf530202 # Contact
+handle: contact
+name: Contact
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: singles/_contact
+    uriFormat: contact
+type: single

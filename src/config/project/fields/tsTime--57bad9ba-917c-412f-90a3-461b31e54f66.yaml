@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: string
+handle: tsTime
+instructions: null
+name: Time
+searchable: true
+settings:
+  entryTypes:
+    -
+      uid: edc29af7-2805-43ef-9234-dd9f3e029d08
+  maxEntries: null
+  minEntries: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

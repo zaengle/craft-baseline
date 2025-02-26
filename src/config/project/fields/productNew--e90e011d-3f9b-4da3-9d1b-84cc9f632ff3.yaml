@@ -1,0 +1,13 @@
+columnSuffix: null
+contentColumnType: boolean
+handle: productNew
+instructions: 'Is this a new product? If so, turn this switch on so that the product is labeled as new for the end-user who visits the website.'
+name: 'New Product'
+searchable: true
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Lightswitch

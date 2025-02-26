@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: industryCategory
+instructions: null
+name: 'Industry Category'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:5af6f1f2-02eb-4311-aba6-1de866bc57ca' # Industries
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

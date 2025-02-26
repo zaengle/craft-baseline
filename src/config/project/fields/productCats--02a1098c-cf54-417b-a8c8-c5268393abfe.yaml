@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: productCats
+instructions: 'Select the category or categories that you would like this entry to be associated with. This means when you click into any of the categories you select here when on the website, this entry will display.'
+name: Categories
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:08f1796d-3ecf-4d0d-9dbb-80e439bdc061' # Products
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

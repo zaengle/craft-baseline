@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: e724fca6-9c3e-4939-bae8-f215e9ab735a # 360º Viewers
+handle: threeSixtyViewers
+name: '360º Viewers'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: ajax/_360
+    uriFormat: 'ajax/360/{slug}'
+type: channel

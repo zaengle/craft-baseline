@@ -1,0 +1,9 @@
+baseUrl: $ITALIAN_URL
+enabled: '0'
+handle: italian
+hasUrls: true
+language: it
+name: 'G O L D E N - Italian'
+primary: false
+siteGroup: 12103b78-4726-4c36-9ee1-687ea17c4c15 # Sites
+sortOrder: 4

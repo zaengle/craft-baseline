@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: text
+handle: productShortDesc
+instructions: 'Enter a sentence or two that describes this product. This content will appear on any category pages that you have associated this entry with so that the end-user gets a feel for the product prior to clicking to see more details.'
+name: 'Short Description'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: text
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

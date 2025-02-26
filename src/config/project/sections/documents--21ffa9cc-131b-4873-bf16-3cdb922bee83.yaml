@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 53aba0fa-85d5-4631-9f35-098327f69df4 # Documents
+handle: documents
+name: Documents
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: capabilities/_entry
+    uriFormat: '{documentCategory.orderBy(''level ASC'').one.slug}/{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: af7a9a82-cf00-4caf-b62e-aadc00cd37cc
+type: structure

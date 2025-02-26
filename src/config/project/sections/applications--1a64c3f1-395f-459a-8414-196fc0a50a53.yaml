@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 745d5dfc-8089-4164-80c2-f01626efc0b0 # Applications
+handle: applications
+name: Applications
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: capabilities/_entry
+    uriFormat: '{applicationCategory.orderBy(''level ASC'').one.slug}/{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: 34637055-cd93-432b-8048-aba6d4aa5792
+type: structure

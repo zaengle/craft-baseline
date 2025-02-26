@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: a58e9d09-3822-4b62-b1a0-9e7d9d760d00 # ProMach Brands
+handle: promachBrands
+name: 'ProMach Brands'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: singles/_promach-brands
+    uriFormat: about/promach-brands
+type: single

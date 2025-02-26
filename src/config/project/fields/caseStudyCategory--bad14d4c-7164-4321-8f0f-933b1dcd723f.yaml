@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: caseStudyCategory
+instructions: null
+name: 'Case Study Category'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:08714e93-7806-45e8-800d-6213de3f09ce' # Case Studies
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

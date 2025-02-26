@@ -1,0 +1,11 @@
+columnSuffix: null
+contentColumnType: integer
+handle: pasForm
+instructions: 'Helper text'
+name: Form
+searchable: false
+settings:
+  forms: '*'
+translationKeyFormat: null
+translationMethod: site
+type: Solspace\Freeform\FieldTypes\FormFieldType

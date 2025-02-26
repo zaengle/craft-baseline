@@ -1,0 +1,85 @@
+color: null
+fieldLayouts:
+  81cdd481-2ed5-4ef4-856e-4705a761d893:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 6dec0167-11e4-4726-8b30-b5538574fd03
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Heading
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0bdab3cd-66f7-4a3f-ac1d-4b6ef797e5bb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 6caae921-c0a3-4c1b-86b4-48563a05c98b
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Image
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3db9a5b4-d195-4788-aa40-59c614d07cdf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 92aa2cfa-3574-46bf-bc6a-e2f0703f0e11
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Overview
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ddd22168-84ac-44fb-a75c-750d86a8017b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 5e1a9403-4d52-4c55-b29b-1734715f5b27
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'List Items'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4cb0b8eb-ea01-416c-9447-e241ac4d9ff1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9f7ba3fa-f8fa-4027-a0fd-ff3c9bc12e5a
+        userCondition: null
+handle: multicolList
+hasTitleField: false
+icon: null
+name: 'Multicol List'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

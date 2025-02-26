@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 1f31d8cf-2b54-4bee-b782-1379d83d716a # Trade Show
+handle: tradeShows
+name: 'Trade Shows'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: 'trade-shows/{slug}'
+type: channel

@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: productTabs
+instructions: 'The tabbed content will show up below the main text, images/videos/360 assets and content that appears with a green background (if this content is available). You can add paragraphs of text, bulleted lists or downloads (which are typically the product brochures). Simple drag & drop from top to bottom will allow you to order how they appear on the product page itself. Double click on the text associated with Downloads to edit/update the text in the link when viewing on the product page (Title field is where you edit this).'
+name: Tabs
+searchable: true
+settings:
+  entryTypes:
+    -
+      uid: 9eebd244-beb3-4226-80dd-6b6ff32a6aa3
+    -
+      uid: 5a610231-0291-4f86-99b6-4b67fdf42124
+    -
+      uid: 4d940d39-f426-4333-8a12-f87f1a7f09fc
+  maxEntries: null
+  minEntries: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

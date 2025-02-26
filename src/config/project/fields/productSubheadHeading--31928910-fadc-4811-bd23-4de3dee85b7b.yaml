@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: text
+handle: productSubheadHeading
+instructions: 'This will have a green background on the product page, reside directly under the main copy and image/video/360 assets. The idea behind this area is to replicate the Typical Product Specifications that are on the brochures.'
+name: 'Subhead Heading'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: text
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

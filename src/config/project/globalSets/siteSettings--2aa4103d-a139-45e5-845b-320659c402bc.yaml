@@ -1,0 +1,96 @@
+fieldLayouts:
+  d10d019e-8c91-4028-a9ce-b714a7b792f9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 647c8703-4abc-4812-829e-0760969468b0 # Brand Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 518e69b2-7236-4100-9102-d96e7f498471
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 863fbf87-4801-4c57-bbe6-c1230b4c34df # Media Boilerplate
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d51a4d24-90c0-41d8-925b-1db7e58bf39f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1970cb69-1239-4767-9bbe-84411bb02f70 # Media Contact
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b9b87622-c766-4d75-888f-224934cf4a6e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: df95d1a0-04c4-4754-b01c-e4b8d484af25 # General Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a4f8fa3-3bbf-45e6-9718-048cc15aafe6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 69ceb1c7-d4d4-46ed-9307-28748a29edda # Default Hero Background Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: deaa09b6-0cad-4351-9bd5-06e89d9a5620
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 43a0299a-adc1-43e1-b419-4ce8ee89b992 # Show Language Switcher
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c257e8a-d325-4a95-a170-cec6b62530bb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 22aabc61-9e15-49bd-b21e-5d966bd87881 # Enable Language
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a06e2c07-b52d-452b-b498-2eed3f5836a4
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Site Settings'
+        uid: 5ac6e659-9a1f-4650-bc3e-dcd87c55df9d
+        userCondition: null
+handle: siteSettings
+name: 'Site Settings'
+sortOrder: 1

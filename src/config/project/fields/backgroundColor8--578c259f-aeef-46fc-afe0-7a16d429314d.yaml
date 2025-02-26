@@ -1,0 +1,66 @@
+columnSuffix: null
+handle: backgroundColor8
+instructions: null
+name: 'Page Builder - 2/3/4 Across - Background Color'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - White
+        -
+          - value
+          - white
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Gray
+        -
+          - value
+          - gray
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Aqua
+        -
+          - value
+          - aqua
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Green
+        -
+          - value
+          - green
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Blue
+        -
+          - value
+          - blue
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\RadioButtons

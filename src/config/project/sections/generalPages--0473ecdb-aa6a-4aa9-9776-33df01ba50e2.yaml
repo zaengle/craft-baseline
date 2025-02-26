@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 98358c4e-372a-451c-be23-81a0451f763f # General Page
+handle: generalPages
+name: 'General Pages'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: general/_entry
+    uriFormat: '{slug}'
+structure:
+  maxLevels: 1
+  uid: b45735fe-7fc7-45d6-9665-106f1ac481c1
+type: structure

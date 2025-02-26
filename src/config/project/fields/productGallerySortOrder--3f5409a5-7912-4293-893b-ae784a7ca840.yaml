@@ -1,0 +1,78 @@
+columnSuffix: ghzmdrov
+contentColumnType: string
+handle: productGallerySortOrder
+instructions: null
+name: 'Product Gallery Sort Order'
+searchable: false
+settings:
+  columnType: string
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Images, Videos, 360º Viewers'
+        -
+          - value
+          - imagesVideosThreeSixtyViewers
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Images, 360º Viewers, Videos'
+        -
+          - value
+          - imagesThreeSixtyViewersVideos
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Videos, Images, 360º Viewers'
+        -
+          - value
+          - videosImagesThreeSixtyViewers
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Videos, 360º Viewers, Images'
+        -
+          - value
+          - videosThreeSixtyViewersImages
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '360º Viewers, Images, Videos'
+        -
+          - value
+          - threeSixtyViewersImagesVideos
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - '360º Viewers, Videos, Images'
+        -
+          - value
+          - threeSixtyViewersVideosImages
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\RadioButtons

@@ -1,0 +1,23 @@
+defaultPlacement: end
+handle: searchModalLinks
+instructions: null
+maxNodes: null
+name: 'Search Modal Links'
+propagationMethod: none
+siteSettings:
+  4fd61ef3-0957-4d1e-a593-dc93e645b835: # G O L D E N - Portuguese
+    enabled: true
+  45d82af1-444b-4ef0-ae83-293ade46f8b3: # G O L D E N - Italian
+    enabled: true
+  683aac47-3f36-4506-a033-58905fd2de87: # G O L D E N - German
+    enabled: true
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabled: true
+  e30f07eb-6153-416d-af2e-07c687e0a2f3: # G O L D E N - Spanish
+    enabled: true
+  fc467f8d-ea71-4951-b9a2-a1cdd4163498: # G O L D E N - French
+    enabled: true
+sortOrder: 3
+structure:
+  maxLevels: null
+  uid: a5ca611e-aec5-477e-ab30-d2c2ecf32988
