@@ -1,0 +1,42 @@
+<footer id="footer">
+	<div class="container">
+		<div class="row-holder">
+			<div class="column-sm-5 column-lg-6">
+				<strong class="logo">
+					<a href="/">
+						<img src="https://files-hub.promachbuilt.com/product-brands/pm-logo-{{ alias('@shortName') }}.svg" alt="brand logo" width="178" height="34" style="width: 60%;">
+					</a>
+				</strong>
+			</div><!-- /.column-sm-5 column-lg-6 -->
+			<div class="column-sm-7 column-lg-6 menu-holder">
+				<nav>
+					{{ craft.navigation.render('footerLinks', { ulClass: 'footer-menu' }) }}
+				</nav>
+				<div class="info-holder">
+					<strong class="info">
+						{{ 'Come work with us! We are always looking for great talent to join our teams.' | t }}
+					</strong>
+					<div class="btn-box">
+						<a href="{{ "#{alias('@englishUrl')}/about/careers/" | t }}" class="btn btn-outline-success">
+							{{ 'see jobs' | t }}
+						</a>
+					</div><!-- /.btn-box -->
+				</div><!-- /.info-holder -->
+			</div><!-- /.column-sm-7.column-lg-6.menu-holder -->
+			<div class="text-holder">
+				<p>{{ 'brandDesc' | t }}</p>
+			</div><!-- /.text-holder -->
+		</div><!-- /.row-holder -->
+		<div class="btn-holder">
+			{%- set footerLinks = craft.navigation.nodes('footerLinks').all() -%}
+			{%- nav link in footerLinks -%}
+				<a href="{{ link.url }}" class="btn btn-link">{{ link }}</a>
+			{%- endnav -%}
+		</div><!-- /.btn-holder -->
+		<ul class="policy-holder">
+			<li><a href="{{ "#{alias('@englishUrl')}/privacy/" | t }}">{{ 'Disclaimer & Privacy Policy' | t }}</a></li>
+			<li><a href="{{ "#{alias('@englishUrl')}/info/" | t }}">{{ 'Site Information' | t }}</a></li>
+			<li>&copy; {{ now | date('Y') }} {{ alias('@legalName') }}. {{ 'All rights reserved.' | t }}</li>
+		</ul>
+	</div><!-- /.container -->
+</footer>

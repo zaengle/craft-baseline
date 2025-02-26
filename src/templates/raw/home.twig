@@ -1,0 +1,45 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Home' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Content</th>
+      </tr>
+      {% for entry in craft.entries.section('home').all() %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <td>
+            <h5><strong><< heroHeadline >></strong></h5>
+            {{ entry.heroHeadline }}
+            <hr>
+
+            <h5><strong><< wideSectionHeading >></strong></h5>
+            <p>{{ entry.wideSectionHeading }}</p>
+            <a href="{{ entry.wideSectionLinkUrl }}" target="_blank">
+              {{ entry.wideSectionLinkText }}
+            </a>
+            <hr>
+
+            <h5><strong><< buttonGroup >></strong></h5>
+            {% for item in entry.buttonGroup.all() %}
+              <a href="{{ item.buttonUrl }}" target="_blank">
+                {{ item.buttonText }}
+              </a>
+            {% endfor %}
+            <br>
+
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
+

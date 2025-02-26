@@ -1,0 +1,65 @@
+{# VARIABLES #}
+{%- set pressReleasesUrls = {
+    'DE': "#{alias('@germanUrl')}/pressemitteilung/",    
+    'EN': "#{alias('@englishUrl')}/press-releases/",
+    'ES': "#{alias('@spanishUrl')}/comunicados-de-prensa/",
+    'FR': "#{alias('@frenchUrl')}/communiques-de-presse/",
+    'IT': "#{alias('@italianUrl')}/rassegna-stampa/",
+    'PT': "#{alias('@portugueseUrl')}/comunicados-a-imprensa/"
+  }
+-%}
+
+{%- set tradeShowUrls = {
+    'DE': "#{alias('@germanUrl')}/messen/",
+    'EN': "#{alias('@englishUrl')}/trade-shows/",
+    'ES': "#{alias('@spanishUrl')}/ferias/",
+    'FR': "#{alias('@frenchUrl')}/salons/",
+    'IT': "#{alias('@italianUrl')}/prossime-fiere/",
+    'PT': "#{alias('@portugueseUrl')}/feiras/"
+}
+-%}
+{%- set absoluteUrl = craft.app.request.absoluteUrl -%}
+{# END VARIABLES #}
+
+{# ELEMENT #}
+{%- if (element | length) -%}
+
+  {# PRESS RELEASE ENTRY #}
+  {%- if element.section.handle is defined and element.section.handle == 'pressReleases' -%}
+    {%- for enabledLang in siteSettings.enableLanguage -%}
+      {%- if (currentSite.language | upper) != enabledLang.langAbbrev -%}
+        <li><a href="{{ pressReleasesUrls[enabledLang.langAbbrev] }}">{{ enabledLang.langAbbrev }}</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+  {# NON PRESS RELEASE ENTRY ELEMENTS #}
+    {%- for enabledLang in siteSettings.enableLanguage -%}
+      {%- if (currentSite.language | upper) != enabledLang.langAbbrev -%}
+        <li><a href="{{ siteSwitcher((enabledLang.langName | lower), element) }}">{{ enabledLang.langAbbrev }}</a></li>
+      {%- endif -%}
+    {%- endfor %}
+  {%- endif -%}
+
+{%- else -%}
+{# NON ELEMENT #}
+
+  {# PRESS RELEASES INDEX #}
+  {%- if absoluteUrl in pressReleasesUrls -%}
+    {%- for enabledLang in siteSettings.enableLanguage -%}
+      {%- if (currentSite.language | upper) != enabledLang.langAbbrev -%}
+        <li><a href="{{ pressReleasesUrls[enabledLang.langAbbrev] }}">{{ enabledLang.langAbbrev }}</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {# TRADE SHOWS INDEX #}
+  {%- if absoluteUrl in tradeShowUrls  -%}
+    {%- for enabledLang in siteSettings.enableLanguage -%}
+      {%- if (currentSite.language | upper) != enabledLang.langAbbrev -%}
+        <li><a href="{{ tradeShowUrls[enabledLang.langAbbrev] }}">{{ enabledLang.langAbbrev }}</a></li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+{# END IF/ELSE ELEMENT #}
+{%- endif -%}

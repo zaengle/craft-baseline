@@ -1,0 +1,63 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Capabilities Assets' %}
+
+{% block content %}
+	<table class="table is-striped is-narrow is-fullwidth">
+		<tbody class="content">
+			<tr>
+				<th>EID</th>
+				<th>Title</th>
+				<th>Section</th>
+				<th>Thumbnail</th>
+			</tr>
+			{% for entry in craft.entries.section(['applications', 'caseStudies', 'documents', 'industries', 'whitePapers']).all() %}
+				<tr>
+					<td>{{ entry.id }}</td>
+					<td>
+						<a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a>
+					</td>
+					<td>{{ entry.section }}</td>
+					<td>
+						{%- if entry.capThumbnail | length -%}
+							<table class="table is-striped is-narrow is-fullwidth">
+								<tr>
+									<th>ID</th>
+									<td>{{ entry.capThumbnail.one.id }}</td>
+								</tr>
+								<tr>
+									<th>Title</th>
+									<td>
+										<a href="{{ entry.capThumbnail.one.url }}" target="_blank">
+											{{ entry.capThumbnail.one.title }}
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<th>Filename</th>
+									<td>{{ entry.capThumbnail.one.filename }}</td>
+								</tr>
+								<tr>
+									<th>Kind</th>
+									<td>{{ cat.pageHeroBgImage.one.kind }}</td>
+								</tr>
+								<tr>
+									<th>Width</th>
+									<td>{{ entry.capThumbnail.one.width }}</td>
+								</tr>
+								<tr>
+									<th>Height</th>
+									<td>{{ entry.capThumbnail.one.height }}</td>
+								</tr>
+								<tr>
+									<th>Caption</th>
+									<td>{{ entry.capThumbnail.one.imageCaption }}</td>
+								</tr>
+							</table>
+						{% endif %}
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw SEO' %}
+
+{% block content %}
+
+  {%- set filterSection = craft.app.request.getQueryParam('section') -%}
+
+    {%- set defaultSections = [
+        'not',
+        'threeSixtyViewers',
+        'productBrands',
+        'salespersonCanadianProvinces',
+        'salespersonCountries',
+        'salespersonTerritories',
+        'salespersonUsStates',
+        'thankYouPages',
+        'tradeShows',
+      ] 
+    -%}
+
+    {%- set params = filterSection ?? defaultSections -%}
+    
+    {%- set seoEntries = craft.entries.section(params).limit(1000).orderBy('title').all() -%}
+
+    {%- set sects = [] -%}
+    {%- for sec in craft.entries.section(defaultSections).all() -%}
+      {%- set sects = sects | merge([sec.section]) -%}
+    {%- endfor -%}
+
+    {%- set sects = sects | unique -%}
+
+  <h2 class="title is-title is-4">Section Entries</h2>
+
+      <div class="select" style="margin-bottom: 30px;">
+        <select>
+            <option> Filter by Section</option>
+        {%- for s in (sects) -%}
+          <option value="{{ s.handle }}">{{ s.name }}</option>
+        {%- endfor -%}
+        </select>
+      </div>
+
+      <a href="/raw/seo/" class="button">Reset</a>
+      <a href="/raw/seo/#categories" class="button">View Categories</a>
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>SEO Title</th>
+        <th>Meta Desc</th>
+        <th>Canonical</th>
+        <th>Robots Noindex</th>
+      </tr>
+      {% for entry in seoEntries %}
+        {% if entry.url | length %}
+          <tr>
+            <td>{{ entry.id }}</td>
+            <td>
+              <span style="font-size: 13px; text-transform: uppercase; color: #aaa; display: block;">{{ entry.section }}</span>
+              <a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+            <td>{% if entry.seoPageTitle | length %}{{ entry.seoPageTitle }}{% endif %}</td>
+            <td>{% if entry.seoMetaDesc | length %}{{ entry.seoMetaDesc }}{% endif %}</td>
+            <td>{% if entry.seoCanonical | length %}{{ entry.seoCanonical }}{% endif %}</td>
+            <td>{% if entry.seoRobotsNoindex | length %}{{ entry.seoRobotsNoindex }}{% endif %}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+{%- if filterSection == '' %}
+
+
+  <h2 id="categories" class="title is-title is-4">Categories</h2>
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>SEO Title</th>
+        <th>Meta Desc</th>
+        <th>Canonical</th>
+        <th>Robots Noindex</th>
+      </tr>
+      {%- set filterCat = craft.app.request.getQueryParam('category') -%}
+
+      {% for cat in craft.categories.group('not businessLines').limit(1000).orderBy('id').all() %}
+        {% if cat.url | length %}
+          <tr>
+            <td>C{{ cat.id }}</td>
+            <td>
+            <span style="font-size: 13px; text-transform: uppercase; color: #aaa; display: block;">CAT › {{ cat.group }}</span>
+              <a href="{{ cat.url }}" target="_blank">{{ cat.title }}</a>
+            </td>
+            <td>{% if cat.seoPageTitle | length %}{{ cat.seoPageTitle }}{% endif %}</td>
+            <td>{% if cat.seoMetaDesc | length %}{{ cat.seoMetaDesc }}{% endif %}</td>
+            <td>{% if cat.seoCanonical | length %}{{ cat.seoCanonical }}{% endif %}</td>
+            <td>{% if cat.seoRobotsNoindex | length %}{{ cat.seoRobotsNoindex }}{% endif %}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endif %}
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+    crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        var select = $('.select select');
+        select.html(select.find('option').sort(function(x, y) {
+          return $(x).text() > $(y).text() ? 1 : -1;
+        }));
+
+        $('.select select').change(function() {
+          window.location = window.location.href.split('?')[0] + '?section=' + this.value
+        });
+      });
+    </script>
+{% endblock %}
+

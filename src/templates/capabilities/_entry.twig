@@ -1,0 +1,26 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'capabilities-entry' %}
+
+{% block content %}
+
+  <main id="main">
+    <section class="main-content-section">
+      <div class="container">
+        {%- include '_includes/breadcrumbs' -%}
+        <div class="text-holder">
+          <h1>{{ entry.title }}</h1>
+          {%- if entry.capSubheading | length -%}
+            <h2>{{ entry.capSubheading }}</h2>
+          {%- endif -%}
+          {%- if entry.capShowDateAndAuthor | length -%}
+            <span class="info">{{ entry.postDate | date("M d, Y") }} | {{ entry.author }}</span>
+          {%- endif -%}
+          {{ entry.capBody }}
+        </div><!-- /.text-holder -->
+      </div><!-- /.container-sm -->
+
+      {%- include '_includes/page-builder' -%}
+    </section>
+  </main>
+{% endblock %}

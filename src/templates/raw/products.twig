@@ -1,0 +1,71 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Products' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Desc</th>
+        <th>Subheading</th>
+        <th>Tabs</th>
+      </tr>
+      {% for entry in craft.entries.section('products').orderBy('title').all() %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <td>{{ entry.productDesc }}</td>
+          <td>
+            {%- if entry.productSubheadHeading | length -%}
+              <h5>{{ entry.productSubheadHeading }}</h5>
+              <ul>
+                {%- for listItem in entry.productSubheadList -%}
+                  <li>
+                    <strong>{{ listItem.name }}:</strong> 
+                    {{ listItem.content }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </td>
+          <td>
+            <!-- TABS -->
+            {%- set productTabs = entry.productTabs.all() -%}
+            {%- if productTabs | length -%}
+              {%- for content in productTabs -%}
+                {# TAB - LIST #}
+                {%- if content.type == 'tabList' -%}
+                  <ul class="feature-list">
+                    {%- for item in content.tabItem -%}
+                      <li>
+                        <strong class="title">{{ item.name }}</strong>
+                        <div class="description">
+                          <p>{{ item.content }}</p>
+                        </div><!-- /.description -->
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+
+                {# TAB - RICH TEXT #}
+                {%- if content.type == 'tabRichText' -%}
+                  <span class="tab-rich-text">
+                    {{ content.tabContent | raw }}
+                  </span>
+                {%- endif -%}
+
+              {%- endfor -%}
+            {%- endif -%}
+            <!-- /TABS -->
+          </td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
+

@@ -1,0 +1,12 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'landing' %}
+
+{% block content %}
+  <main id="main">
+    {% include '_includes/hero' with { element: entry } %}
+    <section class="main-content-section">
+      {%- include '_includes/page-builder' -%}
+    </section>
+  </main>
+{% endblock %}

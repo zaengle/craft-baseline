@@ -1,0 +1,41 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Product WebP' %}
+
+{% block content %}
+
+
+{% if craft.app.images.supportsWebP() %}
+  <h3>THIS BROWSER SUPPORTS WEBP!</h3>
+{% else %}
+  <h3>THIS BROWSER DOES NOT SUPPORT WEBP!</h3>
+{% endif %}
+
+{% for prod in craft.entries.section('products').orderBy('id').limit(3).all() %}
+
+  <h2 class="title is-2">{{ prod.title }}</h2>
+  {%- for image in prod.productImages.all() -%}
+
+    <div style="max-width: 816px">
+      <picture class="image">
+        <source
+          type="image/webp"
+          srcset="{{ image.getUrl({
+          transform: 'product432w',
+          format: 'webp' }) }} 432w, {{ image.getUrl({
+          transform: 'product816w',
+          format: 'webp' }) }} 816w"
+          sizes="(max-width: 768px) 432px, 816px"
+        >
+        <img
+          src="{{ image.getUrl('product816w') }}"
+          srcset="{{ image.getUrl('product432w') }} 432w, {{ image.getUrl('product816w') }} 816w"
+          sizes="(max-width: 768px) 432px, 816px"
+        >
+      </picture>
+    </div>
+
+  {%- endfor -%}
+{%- endfor -%}
+
+{% endblock %}

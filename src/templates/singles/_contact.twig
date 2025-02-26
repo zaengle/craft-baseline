@@ -1,0 +1,134 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'contact' %}
+
+{%- set people = craft.entries.section('salespersonDirectory').all() -%}
+
+{%- set countries = craft.entries.section('salespersonCountries').relatedto(people).orderBy('title asc').all() -%}
+
+{%- set states = craft.entries.section('salespersonUsStates').orderBy('title asc').all() -%}
+{%- set provinces = craft.entries.section('salespersonCanadianProvinces').orderBy('title asc').all() -%}
+
+{% block content %}
+  <main id="main">
+
+    <section class="main-content-section space-extra">
+      <div class="container">
+        {% include '_includes/breadcrumbs' %}
+
+        {{ entry.pageOverview }}
+
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="info-box">
+              <strong class="info-title">{{ entry.contactCalloutHeading }}</strong>
+              {{ entry.contactCalloutBody }}
+            </div><!-- /.info-box -->
+            <div class="address-holder">
+              {{ entry.contactContactInfo }}
+            </div><!-- /.address-holder -->
+          </div><!-- /.col-lg-5 -->
+          <div class="col-lg-7">
+            {% if entry['formIframe'] is defined and entry['formIframe'] is not null %}              
+              {{ include(template_from_string(entry.formIframe)) | raw }}              
+            {% else %}
+              {{ entry.contactForm.render() }}
+            {% endif %}
+          </div><!-- /.col-lg-7 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+
+    {% include '_includes/pagelinks' %}
+
+    {%- if people | length -%}
+      <section id="sales-reps" style="margin-top: 50px;">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <h2 class="text-success">{{ 'Sales Reps' | t }}</h2>
+            </div><!-- /.col-md-5 -->
+            <div class="col-md-3">
+              <select id="dropdown-countries" name="dropdown-countries" class="form-control">
+                <option value="">{{ 'Filter by Country' | t }}</option>
+                {%- for country in countries -%}
+                  <option value="{{ country.title | kebab }}">{{ country.title }}</option>
+                {%- endfor -%}
+              </select>
+            </div><!-- /.col-md-3 -->
+            <div class="col-md-3">
+              <select id="dropdown-states-provinces" name="dropdown-states-provinces" class="form-control">
+                <option value="">{{ 'Filter by State/Province' | t }}</option>
+                  {%- for state in states -%}
+                    <option value="{{ state.title | kebab }}" data-chained="united-states-of-america">{{ state.title }}</option>
+                  {%- endfor -%}
+                </optgroup>
+                {%- for province in provinces -%}
+                  <option value="{{ province.title | kebab }}" data-chained="canada">{{ province.title }}</option>
+                {%- endfor -%}
+              </select>
+            </div><!-- /.col-md-3 -->
+            <div class="col-md-2">
+              <a href="#" class="btn btn-outline-success btn-reset">{{ 'Reset' | t }}</a>
+            </div><!-- /.col-md-1 -->
+
+          </div><!-- /.row -->
+
+          <div class="row">
+            {%- for person in people -%}
+              
+              <div class="col-md-6 sales-rep {% for state in person.sdUsStates.all() %}{{ state.title | kebab }}{% if loop.index != loop.last %} {% endif %}{% endfor %} {% for province in person.sdCanadianProvinces.all() %}{{ province.title | kebab }}{% if loop.index != loop.last %} {% endif %}{% endfor %} {% for country in person.sdCountries.all() %}{{ country.title | kebab }}{% if loop.index != loop.last %} {% endif %}{% endfor %}{%- if person.sdFallbackContact | length %} fallback-contact{%- endif -%}">
+                <div class="row">
+                  <div class="col-md-5">
+                    {%- if person.sdPhoto | length -%}
+                      <img src="{{ person.sdPhoto.one.url | default('') }}" alt="{{ person.sdFirstName }} {{ person.sdLastName }} headshot" style="max-width: 100%;">
+                    {%- endif -%}
+                  </div><!-- /.col-md-5 -->
+                  <div class="col-md-7 person-desc">
+                    {%- if person.sdFirstName | length -%}
+                      <strong class="name">
+                        {{ person.sdFirstName }} {{ person.sdLastName }}
+                      </strong>
+                    {%- endif -%}
+
+                    {%- if person.sdFirstName | length -%}
+                      <strong class="position">
+                        {{ person.sdJobTitle }}
+                      </strong>
+                    {%- endif -%}
+
+                    <address>
+                      {%- if person.sdProductLine  | length -%}
+                        <strong>{{ person.sdProductLine }}</strong><br>
+                      {%- endif -%}
+
+                      {%- if person.sdTerritoryDesc | length -%}
+                        <strong>{{ person.sdTerritoryDesc | raw }}</strong><br>
+                      {%- endif -%}
+
+                      <br>
+                      
+                      {%- if person.sdPhoneWork | length -%}
+                        {{ 'Direct' | t }}: <a href="tel:{{ person.sdPhoneWork }}">{{ person.sdPhoneWork }}</a><br>
+                      {%- endif -%}
+
+                      {%- if person.sdPhoneMobile | length -%}
+                        {{ 'Mobile' | t }}: <a href="tel:{{ person.sdPhoneMobile }}">{{ person.sdPhoneMobile }}</a><br>
+                      {%- endif -%}
+
+                      {%- if person.sdEmail | length -%}
+                        <a href="mailto:{{ person.sdEmail }}">{{ person.sdEmail }}</a><br>
+                      {%- endif -%}
+                    </address>
+
+                  </div><!-- /.col-md-7 -->
+                </div><!-- /.row -->
+              </div><!-- /.col-md-6 -->
+            {%- endfor -%}
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section>
+    {%- endif -%}
+  </main>
+{% endblock %}

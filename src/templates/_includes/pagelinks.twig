@@ -1,0 +1,33 @@
+{%- if entry.pageLinks | length -%}
+  {%- set bg = entry.pageLinks.one.backgroundColor -%}
+  {%- set btn = entry.pageLinks.one.buttonColor -%}
+  {%- switch bg -%}
+    {%- case 'aqua' -%}
+      {%- set secCssClass = 'bg-info color-aqua' -%}
+    {%- case 'gray' -%}
+      {%- set secCssClass = 'bg-light color-gray' -%}
+    {%- default -%}
+      {%- set secCssClass = 'color-white' -%}
+  {%- endswitch -%}
+  <section class="nav-section {{ secCssClass }}">
+    <div class="container">
+      {%- if entry.pageLinks.one.heading | length -%}
+        <h2 class="text-blue">
+          {{ entry.pageLinks.one.heading }}
+        </h2>
+      {%- endif -%}
+      {%- if entry.pageLinks.one.instructions | length -%}
+        <p>{{ entry.pageLinks.one.instructions }}</p>
+      {%- endif -%}
+      <div class="row">
+        {%- for link in entry.pageLinks.one.links -%}
+          <div class="{{ entry.pageLinks.one.links | length < 3 ? 'col-md-6' : 'col-md-4' }}">
+            <a href="{{ link.linkUrl }}" style="width: 100%;" class="btn btn-lg {{ (btn == 'green') ? 'btn-success' : 'btn-primary' }}" {{ link.linkNewWindow ? 'target="_blank"' }}>
+              {{ link.linkText }}
+            </a>
+          </div><!-- /.col-md-6.col-lg-4 -->
+        {%- endfor -%}
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section>
+{%- endif -%}

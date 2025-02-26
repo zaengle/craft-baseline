@@ -1,0 +1,96 @@
+{% extends '_layouts/default' %}
+
+{%- set ytv = (entry.videoYouTubeAsset | length) ? craft.embeddedAssets.get(entry.videoYouTubeAsset.one) : '' -%}
+
+{% do seomatic.meta.setAttributes({
+    'seoImage': ytv.image,
+    'ogImage': ytv.image,
+    'twitterImage': ytv
+  })
+%}
+
+{% set pageType = 'videos-entry' %}
+
+{% block content %}
+
+  {% set videoJsonLd = seomatic.jsonLd.create({
+      'type': 'VideoObject',
+      'name': entry.title,
+      'description': entry.videoShortDesc ?? seomatic.meta.seoDescription,
+      'thumbnailUrl': ytv.image,
+      'embedUrl': ytv.url,
+      'datePublished': (entry.postDate | date('Y-m-d')),
+      'uploadDate': (entry.postDate | date('Y-m-d')),
+      'author': {
+        'type': 'Organization',
+        'name': siteName
+      }
+  }) %}
+
+	<main id="main">
+		<section class="video-section">
+			<div class="container-sm">
+        {% include '_includes/breadcrumbs' %}
+				<h1>{{ entry.title }}</h1>
+		
+        <div class="resp-container">
+          {%- if entry.videoYouTubeAsset | length -%}
+            {%- set ytv = craft.embeddedAssets.get(entry.videoYouTubeAsset.one) -%}    
+            <iframe
+              class="resp-iframe"
+              src="{{ ytv.getIframeSrc(['autoplay=0', 'controls=1', 'rel=0', 'playsinline=1']) }}"
+              allow="autoplay"
+              allow="encrypted-media"
+              allowfullscreen
+            >
+            </iframe>
+            {%- endif -%}
+        </div><!-- /.resp-container -->
+
+				<br>
+				{{ entry.videoLongDesc }}  
+			</div><!-- /.container-sm -->
+		</section>
+
+    <!-- ADDITIONAL VIDEOS -->
+    {%- set lastCat = entry.videoCats.inReverse().one() -%}
+    {%- set additionalEntries = craft.entries.section('videos').relatedTo(lastCat).id('not ' ~ entry.id).all() -%}
+    {%- if additionalEntries | length -%}
+      <div class="carousel-section">
+        <div class="container">
+          <h5>{{ 'Additional Videos' | t }}</h5>
+          <div class="slick-slider card-slider">
+            {%- for addlEntry in additionalEntries -%}
+
+              {%- if addlEntry.videoYouTubeAsset | length -%}
+                {%- set addEntryYtv = craft.embeddedAssets.get(addlEntry.videoYouTubeAsset.one) -%}
+                {%- set addlEntryVideoThumb = addEntryYtv.image -%}
+              {%- endif -%}
+
+              <div>
+                <div class="card">
+                  <div class="card-img-top">
+                    <img 
+                      src="{{ addlEntryVideoThumb }}"
+                      alt="{{ addlEntry.title }} thumbnail"
+                    >
+                    <a href="{{ addlEntry.url }}" class="btn btn-outline-light">{{ 'view' | t }}</a>
+                  </div><!-- /.card-img-top -->
+                  <div class="card-body">
+                    <div class="card-header">
+                      <h4 class="card-title">
+                        <a href="{{ addlEntry.url }}">
+                          {{ addlEntry.title }}</h4>
+                        </a>
+                    </div><!-- /.card-header -->
+                    <p>{{ addlEntry.videoShortDesc }}</p>
+                  </div><!-- /.card-body -->
+                </div><!-- /.card -->
+              </div>
+            {%- endfor-%}
+          </div><!-- /.slick-slider.card-slider -->
+        </div><!-- /.container -->
+      </div><!-- /.carousel-section -->
+    {%- endif -%}
+	</main>
+{% endblock %}

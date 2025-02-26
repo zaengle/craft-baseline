@@ -1,0 +1,149 @@
+{% extends '_layouts/default' %}
+
+{%- set heading = ('Trade Shows' | t ) -%}
+{%- set overview =  ("Visit the {systemName} team in person and see our various products and solutions firsthand." | t(params = { systemName: alias('@siteName') }) ) -%}
+
+{%- set hreflangMap = {
+    'english': {
+      'hreflangLang': 'en',
+      'hreflangUrl': "#{alias('@englishUrl')}/trade-shows/"
+    },
+    'spanish': {
+      'hreflangLang': 'es',
+      'hreflangUrl': "#{alias('@spanishUrl')}/ferias/"
+    },
+    'french': {
+      'hreflangLang': 'fr',
+      'hreflangUrl': "#{alias('@frenchUrl')}/salons/"
+    },
+    'italian': {
+      'hreflangLang': 'it',
+      'hreflangUrl': "#{alias('@italianUrl')}/prossime-fiere/"
+    },
+    'portuguese': {
+      'hreflangLang': 'pt',
+      'hreflangUrl': "#{alias('@portugueseUrl')}/feiras/"
+    },
+    'german': {
+      'hreflangLang': 'de',
+      'hreflangUrl': "#{alias('@germanUrl')}/messen/"
+    }    
+  }
+-%}
+
+{%- set sites = craft.app.sites.getAllSites() -%}
+
+{%- set hreflangLangs = [] -%}
+{%- set hreflangUrls = [] -%}
+{%- for site in craft.app.sites.getAllSites() -%}
+  {%- set hreflangLangs = hreflangLangs | merge([site.primary ? 'x-default' : hreflangMap[site.handle].hreflangLang]) -%}
+  {%- set hreflangUrls = hreflangUrls | merge([hreflangMap[site.handle].hreflangUrl]) -%}
+{%- endfor -%}
+
+{%- if craft.app.sites.totalSites > 1 -%}
+  {% set alt = seomatic.link.get('alternate') %}
+  {% do alt.href(hreflangUrls).hreflang(hreflangLangs) %}
+{%- endif -%}
+
+{% do seomatic.meta.setAttributes({
+  'seoTitle': heading,
+  'seoDescription': overview
+  })
+%}
+
+{% set pageType = 'trade-shows-index' %}
+
+{% block content %}
+
+  <main id="main">
+    <section class="collapse-section">
+      <div class="container">
+
+        {% include '_includes/breadcrumbs' %}
+
+        <div class="info-holder">
+          <h1>{{ heading }}</h1>
+          <p>{{ overview }}</p>
+        </div>
+        <ul class="accordion-holder category-list">
+          <li class="active">
+            <a href="#" class="opener">
+              <h2>{{ 'Upcoming Trade Shows' | t }}</h2>
+            </a>
+            {%- set upcoming = craft.entries.section('tradeShows').orderBy('expiryDate').all() -%}
+            <div class="slide">
+              <ul class="upcoming-events">
+                {%- for tradeShow in upcoming -%}
+                  <li class="row-holder" id="{{ tradeShow.id }}">
+                    <div class="info-box">
+                      <h3>{{ tradeShow.title }}</h3>
+                      {{ tradeShow.tsBody }}
+
+                      <ul class="data-list">
+                        <li>
+                          <strong class="title">{{ 'Date' | t }}:</strong>
+                          <div class="data-box">
+                            <p>
+                              <time datetime="{{ tradeShow.tsTime.one.tsStartTime | date('Y-m-d') }}">{{ tradeShow.tsTime.one.tsStartTime | date }}</time> - <time datetime="{{ tradeShow.tsTime.inReverse().one.tsEndTime | date('Y-m-d') }}">{{ tradeShow.tsTime.inReverse().one.tsEndTime | date }}</time>
+                            </p>
+                          </div><!-- /.data-box -->
+                        </li>
+                        <li>
+                          <strong class="title">{{ 'Time' | t }}:</strong>
+                          {%- for day in tradeShow.tsTime.all() %}
+                            <div class="data-box" style="margin-bottom: 15px;">
+                              <p>{{ day.tsDayDesc }}</p>
+                              <p>{{ day.tsStartTime | date('g:i a', false) }} - {{ day.tsEndTime | date('g:i a', false) }}</p>
+                            </div><!-- /.data-box -->
+                          {%- endfor -%}
+                        </li>
+                        <li>
+                          <strong class="title">{{ 'Location' | t }}:</strong>
+                          <div class="data-box">
+                            <p>{{ tradeShow.tsLocation | replace('&lt;br&gt;', '') }}</p>
+                          </div><!-- /.data-box -->
+                        </li>
+                        {%- for booth in tradeShow.tsBooth.all() -%}
+                          <li>
+                            <strong class="title">{{ 'Booth' | t }}:</strong>
+                            <div class="data-box">
+                              <p>{{ booth.boothNum }}</p>
+                              <p>{{ booth.boothDesc }}</p>
+                              <p>{{ booth.boothOffer }}</p>
+                            </div><!-- /.data-box -->
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div><!-- /.info-box -->
+                    <div>
+                      <img src="{{ tradeShow.tsLogo }}" alt="{{ tradeShow.title }} logo">
+                    </div>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div><!-- /.slide -->
+          </li>
+          <li>
+            <a href="#" class="opener">
+              <h2>{{ 'Past Trade Shows' | t }}</h2>
+            </a>
+            {%- set past = craft
+                            .entries
+                              .section('tradeShows')
+                                .status('expired')
+                                  .all() 
+            -%}
+            <div class="slide">
+              <ul class="events-list">
+                {%- for tradeShow in past -%}
+                  <li>{{ tradeShow.title }}</li>
+                {%- endfor -%}
+              </ul>
+            </div><!-- /.slide -->
+          </li>
+        </ul>
+      </div><!-- /.container -->
+    </section>
+  </main>
+
+{% endblock %}

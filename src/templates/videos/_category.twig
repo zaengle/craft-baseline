@@ -1,0 +1,81 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'videos-category' %}
+
+{% block content %}
+	<main id="main">
+    {% include '_includes/hero' with { element: category } %}
+
+			<section class="catalog-section">
+				<div class="container">
+
+        	{% include '_includes/breadcrumbs' %}
+
+					<div class="products-list">
+						<div class="info-box">
+							{{ category.catBody }}
+						</div><!-- /.info-box -->
+
+						{%- if category.hasDescendants() -%}
+							<!-- subcategories -->
+							{%- for subcat in category.descendants.descendantDist(1).all() -%}
+								<div class="card">
+									<div class="card-img-top">
+										<img data-src="{{ subcat.catThumb.one.url | default('') }}" class="lazyload" alt="{{ subcat.title }}">
+										<a href="{{ subcat.url }}" class="btn btn-outline-light">{{ 'view' | t }}</a>
+									</div><!-- /.card-img-top -->
+									<div class="card-body">
+										<div class="card-header">
+											<h4 class="card-title">
+												<a href="{{ subcat.url }}">
+													{{ subcat.title }}
+												</a>
+											</h4>
+										</div><!-- /.card-header -->
+										<p>{{ subcat.catDesc }}</p>
+									</div><!-- /.card-body -->
+								</div><!-- /.card -->
+							{%- endfor -%}
+						{%- else -%}
+							<!-- videos -->
+							{%- for vid in craft.entries.section('videos')
+																	.relatedTo(category)
+																			.all() -%}
+
+								{%- set youTubeVid = craft.embeddedAssets.get(vid.videoYouTubeAsset.one) -%}
+								{%- set vidThumb = youTubeVid.image -%}
+
+								<div class="card">
+									<div class="card-img-top">
+										<img data-src="{{ vidThumb | default('') }}" class="lazyload" alt="{{ vid.title }}">
+										<a href="{{ vid.url }}" class="btn btn-outline-light">{{ 'view' | t }}</a>
+									</div><!-- /.card-img-top -->
+									<div class="card-body">
+										<div class="card-header">
+											<h4 class="card-title">
+												<a href="{{ vid.url }}">
+													{{ vid.title }}
+												</a>
+											</h4>
+										</div><!-- /.card-header -->
+										<p>{{ vid.videoShortDesc }}</p>
+									</div><!-- /.card-body -->
+								</div><!-- /.card -->
+
+							{%- endfor -%}
+						{%- endif -%}{# end hasDescendants #}
+					</div><!-- /.products-list -->
+
+					{%- if category.catLinks | length -%}
+						<div class="btn-block">
+							{%- for link in category.catLinks -%}
+								<a href="{{ link.linkUrl }}" class="btn btn-lg btn-success">
+									{{ link.linkText }}
+								</a>
+							{%- endfor -%}
+						</div><!-- /.btn-block -->
+					{%- endif -%}
+				</div><!-- /.container -->
+			</section>
+	</main>
+{% endblock %}

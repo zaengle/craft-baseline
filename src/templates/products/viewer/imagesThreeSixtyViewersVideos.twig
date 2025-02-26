@@ -1,0 +1,19 @@
+<!-- MAIN CAROUSEL -->
+<div id="main-carousel" class="carousel" data-media-order="{{ entry.productGallerySortOrder }}">
+  {# IMAGES #}
+  {% include 'products/viewer/_productImages' %}
+  {# 360 #}
+  {% include 'products/viewer/_threeSixtyViewers' %}
+  {# VIDEOS (YOUTUBE) #}
+  {% include 'products/viewer/_productVideoYouTubeAssets' %}
+</div><!-- /#main-carousel -->
+
+<!-- THUMB CAROUSEL -->
+<div id="thumb-carousel" class="carousel">
+  {# IMAGES (THUMBNAIL) #}
+  {% include 'products/viewer/_thumbProductImages' %}
+  {# 360 (THUMBNAIL) #}
+  {% include 'products/viewer/_thumbThreeSixtyViewers' %}
+  {# VIDEOS (THUMBNAIL) #}
+  {% include 'products/viewer/_thumbProductVideoYouTubeAssets' %}
+</div><!-- /#thumb-carousel -->

@@ -1,0 +1,43 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'press-releases-entry' %}
+
+
+
+
+
+{% block content %}
+  <main id="main">
+
+    <section class="main-content-section">
+      <div class="container-sm">
+        {% include '_includes/breadcrumbs' %}
+
+        <div class="text-holder">
+          <h1 class="pr-title">{{ entry.title }}</h1>
+          <span class="info">{{ entry.postDate | date('M d, Y', false) }}</span>
+          {{ entry.prBody }}
+
+          {%- if entry.prPressClippingUrl | length -%}
+            <p>
+              <a href="{{ entry.prPressClippingUrl }}" target="_blank" rel="noopener noreferrer">
+                {{ 'View Press Clipping' | t }} &rarr;
+              </a>
+            </p>
+          {%- endif -%}
+
+          <h6>{{ 'About' | t }} {{ alias('@siteName') }}</h6>
+          {{ siteSettings.mediaBoilerplate | raw }}
+
+          <h6>{{ 'Media Contact' | t }}</h6>
+          {{ siteSettings.mediaContact }}
+
+          <br><br>
+          <a href="{{ "#{alias('@englishUrl')}/press-releases/" | t }}">&larr; {{ 'Back to Press Releases' | t }}</a>
+          <br><br>
+        </div><!-- /.text-holder -->
+      </div><!-- /.container-sm -->
+    </section>
+  </main>
+{% endblock %}
+

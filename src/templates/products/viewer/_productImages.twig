@@ -1,0 +1,21 @@
+{%- if entry.productImages | length -%}
+  {%- for img in entry.productImages.all() -%}
+    <div
+      data-main-carousel-product-image-index="{{ loop.index }}"
+      data-main-carousel-product-image-filename="{{ img.filename }}"
+      class="main-carousel-product-image carousel__slide slide-product-image extension-{{ img.extension }}"
+      data-fancybox="product-gallery"
+      data-src="{{ (img.extension == 'webp') ? img.url : img.getUrl({ transform: 'product816w' }) }}"
+      data-srcset="{{ (img.extension == 'webp') ? img.url : img.getUrl({ transform: 'product432w' }) }} 432w, {{ (img.extension == 'webp') ? img.url : img.getUrl({ transform: 'product816w' }) }} 816w"
+      data-sizes="(max-width: 768px) 432px, 816px"
+      data-caption="{{ img.imageCaption | default('') }}"
+    >
+      <img
+        src="{{ (img.extension == 'webp') ? img.url : img.getUrl({ transform: 'product816w' }) }}"
+        srcset="{{ (img.extension == 'webp') ? img.url : img.getUrl({ transform: 'product432w' }) }} 432w, {{ (img.extension == 'webp') ? img.url : img.getUrl({ transform: 'product816w' }) }} 816w"
+        sizes="(max-width: 768px) 432px, 816px"
+        alt="{{ img.imageCaption | default(entry.title ~ ' - Product Image #' ~ loop.index) }}"
+      >
+    </div><!-- /carousel__slide-->
+  {%- endfor -%}
+{%- endif -%}

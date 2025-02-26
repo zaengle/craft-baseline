@@ -1,0 +1,234 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'homepage' %}
+
+{% block head_hook %}
+
+<style>
+.hero-video-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero-video-bg__video video {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  max-width: none;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .hero-video-bg__video video {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover)) and (-ms-ime-align: auto) {
+  .hero-video-bg__video video {
+    height: auto;
+    width: auto;
+  }
+}
+.hero-video-bg__video img {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-bg__video video {
+    visibility: hidden;
+  }
+  .hero-video-bg__video img {
+    display: block;
+    position: absolute;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.hero-video-bg__play-btn {
+  --btn-size: 80px;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  display: inline-flex;
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.85);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.hero-video-bg__play-btn .icon {
+  display: block;
+  margin: auto;
+  color: var(--color-bg);
+  font-size: 32px;
+  transition: -webkit-transform 0.3s var(--ease-out-back);
+  transition: transform 0.3s var(--ease-out-back);
+  transition: transform 0.3s var(--ease-out-back), -webkit-transform 0.3s var(--ease-out-back);
+}
+.hero-video-bg__play-btn:hover {
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 1);
+}
+.hero-video-bg__play-btn:hover .icon {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+{% set heroBgVid = entry.heroBackgroundVideo %}
+
+  <main id="main">
+    <section class="intro-block" {% if not (heroBgVid | length) %}style="background-image: url('{{ entry.heroBackgroundImage.one.url ?? '' }}');"{% endif %}>
+      <div class="container-sm">
+        <div class="row">
+          <div class="col-sm-9 offset-sm-1 offset-lg-0 col-xl-10">
+            <h1>{{ entry.heroHeadline }}</h1>
+            {%- if entry.heroButtonText | length -%}
+              <a href="{{ entry.heroButtonLink }}" class="btn btn-primary" style="margin-bottom: 80px;">
+                {{ entry.heroButtonText }}
+              </a>            
+            {%- endif -%}
+          </div><!-- /.col-sm-9.offset-sm-1.offset-lg-0.col-xl-10 -->
+        </div><!-- /.row -->
+        <div class="img-holder">
+          <img src="{{ entry.businessLine.one.url ?? '' }}" alt="" class="img-fluid">
+        </div><!-- /.img-holder -->
+      </div><!-- /.container-sm -->
+
+      {%- if heroBgVid | length -%}
+        <figure class="hero-video-bg__video" aria-hidden="true">
+          <img 
+            src="{{ entry.heroBackgroundImage.one.url }}"
+            alt="Video Preview"
+          >
+          <video 
+            autoplay="" 
+            loop="" 
+            muted="" 
+            playsinline="" 
+            src="{{ heroBgVid.one.url }}">
+          </video>
+        </figure>
+      {%- endif -%}
+    </section>
+    <div class="info-block">
+      <div class="container-sm">
+        <div class="row">
+          {% for cat in craft.categories().group('productCats').level(2).all() %}
+            <div class="col-sm-9 col-lg-6 offset-lg-0">
+              <a href="{{ cat.url }}" class="btn btn-corner">{{ cat.title }}<i class="icon-long-arrow-right"></i></a>
+            </div><!-- /col-sm-9.col-lg-6.offset-lg-0 -->
+          {% endfor %}
+        </div><!-- /.row -->
+      </div><!-- /.container-sm -->
+    </div><!-- /.info-block -->
+    <section class="visual-section" style="background-image: url('{{ entry.wideSectionBackgroundImage.one.url ?? '' }}');">
+      <div class="container-sm">
+        <h1>{{ entry.wideSectionHeading }}</h1>
+        <a href="{{ entry.wideSectionLinkUrl }}" class="btn btn-outline-light">{{ entry.wideSectionLinkText }}</a>
+      </div><!-- /.container-sm -->
+    </section>
+    <div class="nav-block">
+      <div class="container">
+        <div class="row">
+          {% for item in entry.buttonGroup.all() %}
+            {% set itemCount = entry.buttonGroup.all() | length %}
+            {% switch itemCount %}
+              {% case '1' %}
+                {% set lgCol = '12' %}
+              {% case '2' %}
+                {% set lgCol = '6' %}
+              {% case '3' %}
+                {% set lgCol = '4' %}
+              {% case '4' %}
+                {% set lgCol = '3' %}
+            {% endswitch %}
+            <div class="col-sm-9 col-lg-{{ lgCol }} offset-lg-0">
+              <a href="{{ item.buttonUrl }}" class="btn btn-outline-primary">{{ item.buttonText }}</a>
+            </div><!-- /col-sm-9.col-lg-4.offset-lg-0 -->
+          {% endfor %}
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.nav-block -->
+    <section class="news-section">
+
+      <div class="container">
+
+        {%- set tradeShows = craft
+                              .entries
+                                .section('tradeShows')
+                                  .limit(3)
+                                    .orderBy('expiryDate asc')
+                                    .all() 
+        -%}
+
+        {%- if tradeShows | length -%}
+          <strong class="title">{{ 'UPCOMING TRADE SHOWS & EVENTS' | t }}</strong>
+          <div class="row">
+            {%- switch (tradeShows | length ) -%}
+              {%- case 3 -%}
+                {%- set tsColClass = 'col-sm-9 col-lg-4' -%}
+              {%- default -%}
+                {%- set tsColClass = 'col-sm-9 col-lg-6 offset-lg-0' -%}
+            {%- endswitch -%}
+
+            {%- for tradeShow in tradeShows -%}
+              <div class="{{ tsColClass }} article-item">
+                <a href="{{ "#{alias('@englishUrl')}/trade-shows/" | t }}#{{ tradeShow.id }}">
+                  <div class="text-holder">
+                    <strong class="category">{{ 'TRADE SHOW' | t }}</strong>
+                    <h3>{{ tradeShow.title }}</h3>
+                    <span class="time-info">{{ 'Join us' | t }} 
+                      <time datetime="{{ tradeShow.tsTime.one.tsStartTime | date('Y-m-d') }}">{{ tradeShow.tsTime.one.tsStartTime | date }}</time> - <time datetime="{{ tradeShow.tsTime.inReverse().one.tsEndTime | date('Y-m-d') }}">{{ tradeShow.tsTime.inReverse().one.tsEndTime | date }}</time>
+                    </span>
+                  </div><!-- /.text-holder -->
+                </a>
+              </div><!-- /.{{ tsColClass }}.article-item -->
+            {%- endfor -%}
+          </div><!-- /.row -->
+        {%- endif -%}
+
+        {%- set pressReleases = craft
+                              .entries
+                                .section('pressReleases')
+                                  .limit(3)
+                                    .orderBy('postDate desc')
+                                    .all() 
+        -%}
+
+        {%- if pressReleases | length -%}
+          <strong class="title">{{ 'latest news' | t }}</strong>
+          <div class="row">
+            {%- for pressRelease in pressReleases -%}
+              <div class="col-sm-9 col-lg-6 col-xl-4 offset-lg-0">
+                <a href="{{ pressRelease.url }}">
+                  <div class="text-holder">
+                    <strong class="category">{{ 'PRESS RELEASE' | t }}</strong>
+                    <p>{{ pressRelease.title }}</p>
+                  </div><!-- /.text-holder -->
+                </a>
+              </div><!-- /.col-sm-9.col-lg-6.col-xl-4.offset-lg-0 -->
+            {%- endfor -%}
+          </div><!-- /.row -->
+        {%- endif -%}
+
+      </div><!-- /.container -->
+    </section>
+  </main>
+
+{% endblock %}

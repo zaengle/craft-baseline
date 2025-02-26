@@ -1,0 +1,34 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Capabilities' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>Section</th>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Subheading</th>
+        <th>Body</th>
+        <th>Page Builder</th>
+      </tr>
+      {% for entry in craft.entries.section(['applications', 'caseStudies', 'documents', 'industries', 'whitePapers']).all() %}
+        <tr>
+          <td>{{ entry.section }}</td>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <td>{{ entry.capSubheading }}</td>
+          <td style="width: 33%;">{{ entry.capBody }}</td>
+          <td>
+            {%- include '_includes/page-builder' -%}
+          </td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
+

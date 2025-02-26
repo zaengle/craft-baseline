@@ -1,0 +1,11 @@
+{%- if entry.productImages | length -%}
+  {%- for img in entry.productImages.all() -%}
+    <div 
+      data-thumb-carousel-product-image-index="{{ loop.index }}"
+      data-thumb-carousel-product-image-filename="{{ img.filename }}"    
+      class="carousel__slide has-thumb has-image"
+    >
+      <div class="fancybox__thumb" style="background-image: url('{{ (img.extension == 'webp') ? img.url : img.getUrl({ transform: 'product432w' }) }}');" ></div>
+    </div><!-- /.carousel__slide.has-thumb.has-image -->
+  {%- endfor -%}
+{%- endif -%}

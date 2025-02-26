@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEBP TEST</title>
+</head>
+<body>
+  <h1>Craft Object Params</h1>
+
+  <ul>
+    <li>clientOs: {{ craft.app.request.clientOs }}</li>
+    <li>userAgent: {{ craft.app.request.userAgent }}</li>
+    <li>
+      acceptableContentTypes:<br>
+      {{ dump(craft.app.request.acceptableContentTypes) }}
+    </li>
+    <li>supportsWebP: {{ craft.app.images.supportsWebP }}</li>
+  </ul>
+
+
+  {% if (craft.app.images.supportsWebP) %}
+    <h3>THIS BROWSER SUPPORTS WEBP!</h3>
+    <img src="https://files.ossid.com/_816xAUTO_crop_center-center_none/5255/ReeMaster-series-fully-automatic-tray-sealer-system-75nhm2sj0.webp?mtime=20200320010729&focal=none&tmtime=20210702130630" alt="">
+    <ul>
+    </ul>
+  {% else %}
+    <h3>THIS BROWSER DOES NOT SUPPORT WEBP!</h3>
+    <img src="https://files.ossid.com/_816xAUTO_crop_center-center_none/5255/ReeMaster-series-fully-automatic-tray-sealer-system-75nhm2sj0.webp?mtime=20200320010729&focal=none&tmtime=20210702130630" alt="">
+  {% endif %}
+</body>
+</html>

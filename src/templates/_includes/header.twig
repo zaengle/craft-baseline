@@ -1,0 +1,307 @@
+{%- if currentSite.language != 'en' -%}
+  {% block head_hook %}
+    <style>
+      .navbar-nav .nav-item,
+      .extra-nav {
+        margin-left: .66rem;
+      }
+      .navbar-nav .nav-item.drop-lg {
+        padding-left: 0;
+      }
+    </style>
+  {% endblock %}
+{%- endif -%}
+
+{%- if notificationBar.notificationBar | length -%}
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+    <p>{{ notificationBar.notificationBar }}</p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+  </div><!-- /.alert.alert-info.alert-dismissible.fade.show -->
+{%- endif -%}
+
+<header id="header" class="info-holder">
+  <div class="top-header">
+    <div class="container-fluid">
+      <strong class="logo">
+        <img src="{{ alias('@filesCDN') }}/assets/dist/images/promach-logo.png" width="138" height="26" alt="ProMach Logo">
+      </strong>
+      <a href="#" class="info-open md-hidden">performance, packaged <i class="icon-arrow-down"></i></a>
+    </div><!-- /.container-fluid -->
+  </div><!-- /.top-header -->
+  <div class="main-header">
+    <div class="container-fluid">
+      <div class="logo-holder">
+        <a href="{{ siteUrl }}" style="display: block; width: 250px;">
+          <img src="https://files-hub.promachbuilt.com/product-brands/pm-logo-{{ alias('@shortName') }}.svg" alt="{{ siteName }} Logo">
+        </a>
+        <a href="#" class="nav-opener"><span>{{ 'Menu' | t }}</span></a>
+      </div><!-- /.logo-holder -->
+      <nav class="navbar navbar-light">
+        <a href="#" class="info-open desktop-hidden">performance, packaged <i class="icon-arrow-down"></i></a>
+        <div class="navbar-box search-holder">
+          <ul class="tabnav">
+            <li><a href="#tab-phone"><i class="icon-phone"></i></a></li>
+            <li><a href="#tab-search"><i class="icon-search"></i></a></li>
+            <li><a href="#tab-earth"><i class="icon-earth"></i></a></li>
+          </ul>
+          <div class="nav-holder">
+            <ul class="navbar-nav">
+              {%- set contact = craft.navigation.nodes.title('Contact' | t).one() -%}
+              <li class="nav-item d-lg-none">
+                <a class="btn btn-primary" href="{{ contact.url }}">
+                  {{ contact.title }}
+                </a>
+              </li>
+              <li class="nav-item drop-lg">
+                <a class="nav-link" href="#">{{ 'Products' | t }}</a>
+                <div class="drop-holder">
+                  <div class="tab-panel">
+                    <ul class="tab-menu">
+                      {%- set cats = craft.categories
+                                      .group('productCats')
+                                        .level(2) -%}
+                      {%- nav cat in cats.all() -%}
+                        <li>
+                          <a href="#{{ cat.slug }}">
+                            {{ cat.title }}
+                          </a>
+                        </li>
+                      {%- endnav -%}
+                    </ul>
+                    <div class="tab-content">
+                      {%- for cat in cats.all() -%}
+
+                        {%- if cat.hasDescendants -%}
+                          {%- set items = craft.categories()
+                                                  .descendantOf(cat)
+                                                    .all() -%}
+                        {%- else -%}
+                          {%- set items = craft.entries
+                                                .section('products')
+                                                  .relatedTo(cat)
+                                                    .all() -%}
+                        {%- endif -%}
+
+                        {%- if items | length -%}
+                          <div id="{{ cat.slug }}">
+                            <ul class="nav-list">
+                              {%- for item in items -%}
+                                <li>
+                                  <a href="{{ item.url }}">
+                                    {{ item.title }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                              <li>
+                                <a href="{{ cat.url }}">
+                                  {{ 'View All' | t }}
+                                </a>
+                              </li>
+                            </ul>
+                            <div class="text-holder">
+                              {%- if cat.catThumb | length -%}
+                                <a href="{{ cat.url }}">
+                                  <img
+                                    src="{{ cat.catThumb.one.url | default('') }}"
+                                    width="250"
+                                    height="250"
+                                    class="megamenu-thumb"
+                                    alt="{{ cat.title }}"
+                                    style="width: auto;"
+                                  >
+                                </a>
+                              {%- endif -%}
+                              {%- if cat.catDesc | length -%}
+                                <p>{{ cat.catDesc }}</p>
+                              {%- endif -%}
+                            </div><!-- /.text-holder -->
+                          </div><!-- /.{{ cat.slug }} -->
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div><!-- /.tab-content -->
+                  </div><!-- /.tab-panel -->
+                </div><!-- /.drop-holder -->
+              </li>
+              {%- set cap = craft.navigation.nodes.title('Capabilities' | t).one() -%}
+              {%- set capNodes = craft.navigation
+                                .nodes()
+                                  .handle('main')
+                                    .descendantOf(cap)
+                                      .all() -%}
+              <li class="nav-item">
+                <a class="nav-link" href="#">{{ cap.title }}</a>
+                <div class="drop-holder">
+                  <ul class="drop">
+                    {% nav node in capNodes %}
+                      <li>{{ node.link }}</li>
+                    {% endnav %}
+                  </ul>
+                </div><!-- /.drop-holder -->
+              </li>
+
+              {%- set customerSupport = craft.navigation.nodes.title('Customer Support' | t).one() -%}
+              {%- set designAndSupport = craft.navigation.nodes.title('Design & Support' | t).one() -%}
+              {%- if customerSupport | length -%}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ customerSupport.url }}">
+                    {{ customerSupport.title }}
+                  </a>
+                </li>
+              {%- elseif designAndSupport | length -%}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ designAndSupport.url }}">
+                    {{ designAndSupport.title }}
+                  </a>
+                </li>
+              {%- else -%}              
+              
+              {%- set parts = craft.navigation.nodes.title('Parts & Service' | t).one() -%}
+              {%- set partsNodes = craft.navigation
+                                .nodes()
+                                  .handle('main')
+                                    .descendantOf(parts)
+                                      .all() -%}
+              <li class="nav-item">
+                {# P&S CHILD NAV IS OPTIONAL #}
+                {%- if partsNodes | length -%}               
+                <a class="nav-link" href="#">{{ parts.title }}</a>               
+                  <div class="drop-holder">
+                    <ul class="drop">
+                      {% nav node in partsNodes %}
+                        <li>{{ node.link }}</li>
+                      {% endnav %}
+                    </ul>
+                  </div><!-- /.drop-holder -->
+                {%- else -%}
+                  <a class="nav-link" href="{{ parts.url }}">{{ parts.title }}</a> 
+                {%- endif -%}
+              </li>
+              {%- endif -%}
+
+              {%- set co = craft.navigation.nodes.title('Company' | t).one() -%}
+              {%- set coNodes = craft.navigation
+                                .nodes()
+                                  .handle('main')
+                                    .descendantOf(co)
+                                      .all() -%}
+              <li class="nav-item">
+                <a class="nav-link" href="#">{{ co.title }}</a>
+                <div class="drop-holder">
+                  <ul class="drop">
+                    {% nav node in coNodes %}
+                      <li>{{ node.link }}</li>
+                    {% endnav %}
+                  </ul>
+                </div><!-- /.drop-holder -->
+              </li>
+              {%- set news = craft.navigation.nodes.title('News & Events' | t).one() -%}
+              {%- set newsNodes = craft.navigation
+                                .nodes()
+                                  .handle('main')
+                                    .descendantOf(news)
+                                      .all() -%}
+              {# NEWS IS OPTIONAL #}
+              {%- if news | length -%}
+                <li class="nav-item">
+                  <a class="nav-link" href="#">{{ news.title }}</a>
+                  <div class="drop-holder">
+                    <ul class="drop">
+                      {% nav node in newsNodes %}
+                        <li>{{ node.link }}</li>
+                      {% endnav %}
+                    </ul>
+                  </div><!-- /.drop-holder -->
+                </li>
+              {%- endif -%}
+              <li class="nav-item d-none d-lg-block d-xl-block">
+                <a class="btn btn-primary" href="{{ contact.url }}">
+                  {{ contact.title }}
+                </a>
+              </li>
+            </ul>
+            <ul class="extra-nav">
+              <li class="mw-hidden">
+                <a href="#" class="search-open"><i class="icon-search"></i></a>
+              </li>
+              <!-- LANGUAGE SWITCHER -->
+              {%- if siteSettings['showLanguageSwitcher'] is defined and siteSettings['showLanguageSwitcher'] == true -%}
+                <li class="lang-item">
+                  <a href="#" class="lang-open"><i class="icon-earth
+                    "></i></a>
+                  <div class="drop-holder">
+                    <ul class="drop">
+                      {%- set element = (category ?? entry ?? null) -%}
+                      {% include '_includes/lang-links' %}
+                    </ul>
+                  </div><!-- /.drop-holder -->
+                </li>
+              {%- endif -%}
+            </ul>
+          </div><!-- /.nav-holder -->
+          <!-- SEARCH MODAL -->
+          <div class="tab-content popup-search">
+            <a href="#" class="back-to-menu widescreenlg-hidden"><i class="icon-arrow-right"></i>{{ 'Menu' | t }}</a>
+            <div id="tab-phone" class="widescreenlg-hidden">
+              <ul class="menu-list">
+                {%- if alias('@phone') | default('') -%}
+                  <li>
+                    <strong class="subtitle">{{ 'phone' | t }}</strong>
+                    <p><a href="tel:{{ alias('@phone') }}">{{  alias('@phone') }}</a></p>
+                  </li>
+                {%- endif -%}
+                {%- if alias('@phoneTollFree') | default('') -%}
+                  <li>
+                    <strong class="subtitle">{{ 'toll-free' | t }}</strong>
+                    <p><a href="tel:{{ alias('@phoneTollFree') }}">{{ alias('@phoneTollFree') }}</a></p>
+                  </li>
+                {%- endif -%}
+              </ul>
+            </div><!-- /#tab-phone.widescreenlg-hidden -->
+            <div id="tab-search" class="popup-box">
+              <a href="#" class="search-close mwlg-hidden"></a>
+              <form action="{{ url('search/results') }}" class="search-form">
+                <input id="search-input" type="search" class="form-control" placeholder="{{ 'Search' | t }}" name="q">
+              </form>
+              <strong class="subtitle">{{ 'Additional Links' | t }}</strong>
+              {{ craft.navigation.render('searchModalLinks', { ulClass: 'unstyled-list' }) }}
+              <strong class="subtitle">{{ 'Contact Us' | t }}</strong>
+              <ul class="unstyled-list">
+
+                {%- if  alias('@phone') | default('') -%}
+                  <li>{{ 'Phone' | t }}: <a href="tel:{{ alias('@phone') }}">{{  alias('@phone') }}</a></li>
+                {%- endif -%}
+
+                {%- if alias('@phoneTollFree') | default('') -%}
+                  <li>{{ 'Toll-Free' | t }}: <a href="tel:{{ alias('@phoneTollFree') }}">{{ alias('@phoneTollFree') }}</a></li>
+                {%- endif -%}
+
+                {%- if alias('@europePhone') | default('') -%}
+                  <li>{{ 'Europe' | t }}: <a href="tel:{{ alias('@europePhone') }}">{{ alias('@europePhone') }}</a></li>
+                {%- endif -%}
+
+                {%- if alias('@fax') | default('') -%}
+                  <li>{{ 'Fax' | t }}: {{ alias('@fax') }}</li>
+                {%- endif -%}
+
+                {%- if alias('@email') | default('') -%}
+                  <li>{{ 'Email' | t }}: <a href="mailto:{{ alias('@email') }}">{{ alias('@email') }}</a></li>
+                {%- endif -%}
+              </ul>
+            </div><!-- /#tab-search.popup-box -->
+            <div id="tab-earth" class="widescreenlg-hidden">
+              {%- if siteSettings['showLanguageSwitcher'] is defined and siteSettings['showLanguageSwitcher'] ==true -%}
+                <ul class="menu-list">
+                  {# ELEMENT VAR SET ON DESKTOP INVOCATION #}
+                  {% include '_includes/lang-links' %}
+                </ul>
+              {%- endif -%}
+            </div><!-- /#tab-earth.widescreenlg-hidden -->
+          </div><!-- /.tab-content.popup-search -->
+        </div><!-- /.navbar-box.search-holder -->
+      </nav>
+    </div><!-- /.container-fluid -->
+  </div><!-- /.main-header -->
+
+  {% include '_includes/related-brands' %}
+
+</header>

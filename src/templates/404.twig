@@ -1,0 +1,32 @@
+{% extends '_layouts/default' %}
+
+{%- set notFound = ('Page not found' | t) -%}
+{%- set notPackaged = ('The page you requested was not packaged correctly.' | t) -%}
+
+{% do seomatic.meta.setAttributes({
+  'seoTitle': notFound,
+  'seoDescription': notPackaged
+  })
+%}
+
+{% set pageType = '404' %}
+
+{% block content %}
+  <main id="main">
+		<section class="hero-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-xl-8">
+						<h1>{{ notFound }}</h1>
+						<p>{{ notPackaged }}</p>
+							<a href="/" class="btn btn-outline-light">
+								{{ 'Return to Our Homepage' | t }}
+							</a>
+					</div><!-- /.col-lg-9.col-xl-8 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section>
+  </main>
+{% endblock %}
+
+

@@ -1,0 +1,81 @@
+{% extends '_layouts/default' %}
+
+{% set title = ('ProMach Product Brands' | t) %}
+{% set pageType = 'promach-brands' %}
+
+{% block content %}
+
+	<main id="main">
+		<section class="hero-section" style="background-image: url('https://files.promachbuilt.com/intro-img-01.jpg')">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-xl-8">
+						<h1>{{ title }}</h1>
+						<p>{{ "What's on the line? Everything. Because the moment a consumer opens a package is the moment that product fulfills its promise. So every one of those moments must be perfectly consistent, and packaged to perform." | t }}</p>
+						<p>{{ 'ProMach is performance, and the proof is in every package.' | t }}</p>
+					</div>
+					<!-- /.col-lg-9.col-xl-8 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+
+		<section class="main-content-section space-extra">
+			<div class="container">
+				{% include '_includes/breadcrumbs' %}
+
+				<div class="row">
+					<div class="col-lg-6 flex-col">
+						<div class="col-content">
+							<div class="text-holder text-success">
+								<p>{{ "{systemName} is a ProMach product brand. ProMach is a family of best-in-class packaging solution brands serving manufacturers of all sizes and geographies in the food, beverage, pharmaceutical, personal care, and household and industrial goods industries." | t(params = { systemName: alias('@siteName') }) }}</p>
+							</div>
+							<!-- /.text-holder.text-success -->
+							<p>{{ "ProMach brands operate across the entire packaging spectrum: filling and capping, flexibles, pharma, product handling, labeling and coding, and end of line. ProMach also provides Performance Services including integrated solutions, design/build, engineering services, and productivity software to optimize packaging line design and deliver maximum uptime." | t }}</p>
+							<p>{{ "ProMach designs, manufactures, integrates, and supports the most sophisticated and advanced packaging solutions in the global marketplace. Its diverse customer base, from Fortune 500 companies to smaller, privately-held businesses worldwide, depends on reliable, flexible, technologically advanced equipment and integrated solutions. ProMach is headquartered near Cincinnati, Ohio, with manufacturing facilities and offices throughout the United States, Canada, Mexico, Brazil, Europe, United Arab Emirates and China." | t }}</p>
+							<div class="btn-holder">
+								<a href="https://www.promachbuilt.com" class="btn btn-outline-success" target="_blank">{{ 'Visit' | t }}
+									ProMachBuilt.com</a>
+							</div>
+							<!-- /.btn-holder -->
+						</div>
+						<!-- /.col-content -->
+					</div>
+					<!-- /.col-lg-6.flex-col -->
+
+					<div class="col-lg-6 flex-col text-sm">
+						<div class="flex-holder">
+							{%- set businessLines = craft.categories.group('businessLines').all() -%}
+							{%- for businessLine in businessLines -%}
+								<div class="bizline">
+									<h4>{{ businessLine.title }}</h4>
+									<p>{{ businessLine.blBoilerplate | raw }}</p>
+									<div class="row image-row">
+										{%- for productBrand in businessLine.blProductBrands.all() -%}
+											<div class="col-md-6">
+												<a href="{{ productBrand.pbWebsite }}" target="_blank" rel="noopener noreferrer">
+													<img src="{{ productBrand.pbLogoFullColor }}" alt="{{ productBrand.title }} logo" loading="lazy">
+												</a>
+											</div>
+											<!-- /.col-md-6 -->
+										{%- endfor -%}
+									</div>
+									<!--  ./row.image-row -->
+								</div>
+								<!-- /.bizline -->
+							{%- endfor -%}
+						</div>
+						<!-- /.flex-holder -->
+					</div>
+					<!-- /.col-lg-6.flex-col.text-sm -->
+
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+
+	</main>
+
+{% endblock %}

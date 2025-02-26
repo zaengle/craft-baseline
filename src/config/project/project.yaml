@@ -1,4 +1,4 @@
-dateModified: 1740574093
+dateModified: 1740578962
 email:
   fromEmail: $SYSTEM_EMAIL_ADDRESS
   fromName: $SENDER_NAME
@@ -181,6 +181,7 @@ meta:
     b8dc01c2-2201-4a45-b4d0-30c59f98c916: 'Thank You Pages' # Thank You Pages
     b10dfe6d-a3cf-4c0a-b62f-b6630c3b1f4a: 'Wide Section Heading' # Wide Section Heading
     b7592cfd-db93-4b1d-af2b-991535d19a8e: 'Salesperson Canadian Provinces' # Salesperson Canadian Provinces
+    ba72b5dd-9e9f-4b11-b3d3-2c5cb5bfa144: Simple # Simple
     bad14d4c-7164-4321-8f0f-933b1dcd723f: 'Case Study Category' # Case Study Category
     bc14dcb1-95fb-4824-9a5f-93a2927b88ef: 'Salesperson U.S. States' # Salesperson U.S. States
     bcaf43d6-0a78-4d23-983d-b0c2cc60d59c: Thumbnail # Thumbnail
@@ -245,6 +246,14 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: '2.0'
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  conventions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   cookie-consent-banner:
     edition: standard
     enabled: true
@@ -683,6 +692,14 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 0.0.0
+  toolbelt:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true

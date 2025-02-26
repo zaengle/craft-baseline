@@ -1,0 +1,527 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'products-entry-fancybox' %}
+
+{% block head_hook %}
+<link rel="stylesheet" href="/assets/dist/fancybox.css">
+
+<style>
+#main-carousel {
+  border: 1px solid #d7d8d6;
+  border-radius: 10px;
+}
+
+.carousel,
+.fancybox__nav {
+  color: #fff;
+  --carousel-slide-width: 100%;
+  --carousel-button-bg: #009a76;
+  --carousel-button-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%),
+    0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  --carousel-button-svg-width: 20px;
+  --carousel-button-svg-height: 20px;
+  --carousel-button-svg-stroke-width: 2.5;
+}
+
+.carousel .carousel__button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #A78BFA;
+}
+
+.carousel .carousel__button.is-prev {
+  left: -1.5rem;
+}
+
+.carousel .carousel__button.is-next {
+  right: -1.5rem;
+}
+
+#main-carousel .carousel__slide picture img,
+#thumb-carousel .carousel__slide picture div {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  /* 
+    caused FF/Brave bug
+    top: 50%; 
+    transform: translateY(-50%);  
+  */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#thumb-carousel .carousel__slide {
+  width: 150px;
+  padding: .5rem;
+  margin-top: .5rem;
+}
+
+.fancybox__container {
+  --fancybox-thumbs-width: 160px;
+}
+
+#thumb-carousel .carousel__slide div {
+  border: 1px solid #d7d8d6;
+}
+
+#thumb-carousel .carousel__slide.is-nav-selected div {
+  box-shadow: 0 0 0 4px #A78BFA;
+}
+
+.has-thumb h6 {
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.button-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.button-overlay svg {
+  width: 100px;
+  height: 100px;
+}
+
+#thumb-carousel .button-overlay svg,
+.has-video .button-overlay.overlay-video svg,
+.has-iframe .button-overlay.overlay-360 svg {
+  width: 60px;
+  height: 60px;
+}
+
+.button-overlay svg path {
+  fill: #009a76;
+}
+
+.overlay-360,
+.overlay-video {
+  display: none;
+}
+
+.has-video .overlay-video,
+.has-iframe .overlay-360 {
+  display: flex;
+}
+
+.carousel__slide img {
+  max-width: 100%;
+  display: block;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+  <main id="main">
+    <!-- TITLE/DESC/VIEWER -->
+    <section class="slider-content">
+      <div class="container">
+      
+        {% include '_includes/breadcrumbs'%}
+
+        <div class="row">
+
+          <!-- TITLE & DESC -->
+          <div id="product-desc-col" class="col-lg-4">
+            <h1 style="margin-bottom: 0;">{{ entry.title }} {% if entry.productNew %}<span class="badge badge-pill badge-warning">NEW</span>{% endif %}</h1>
+            {%- if entry.productForm | length -%}
+              <a href="#" data-toggle="modal" data-target="#product-form" style="display: block; margin: 1rem 0;">{{ 'Request More Information' | t }} &rsaquo;</a>
+            {%- endif -%}             
+            {{ entry.productDesc }}
+            {# PRODUCT FORM CTA #}
+            {%- if entry.productForm | length -%}
+              <div class="product-primary-cta">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#product-form">
+                {{ 'Request More Information' | t }}
+                </button>
+              </div><!-- /.product-primary-cta -->
+            {%- endif -%}            
+          </div><!-- /.col-lg-4 -->
+
+          <!-- VIEWER -->
+          <div class="col-lg-8">
+            {% include ['products/viewer/' ~ entry.productGallerySortOrder, 'products/viewer/imagesVideosThreeSixtyViewers'] %}
+          </div><!-- /.col-lg-8 -->
+
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- MAIN INFO BLOCK -->
+    <div class="main-info-block">
+      <div class="container">
+        {%- if entry.productSubheadHeading | length -%}
+          <!-- SUBHEAD -->
+          <div id="product-subhead-block" class="subhead-block">
+            <h5>{{ entry.productSubheadHeading }}</h5>
+            <div class="row">
+              <div class="col-md-12">
+                 <ul class="bob-list">
+                    {%- for listItem in entry.productSubheadList -%}
+                      <li>
+                        {%- if listItem.name | length -%}
+                          <strong>{{ listItem.name }}</strong>
+                        {%- endif -%}
+                        {{- listItem.content -}}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+              </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+          </div><!-- /.subhead-block -->
+          <!-- /SUBHEAD -->
+        {%- endif -%}
+
+        <!-- TABS -->
+        {%- set productTabs = entry.productTabs.all() -%}
+        {%- if productTabs | length -%}
+          <div class="tab-block">
+            <div class="tab-scroll">
+              <ul class="tabset">
+                {%- for label in productTabs -%}
+                  <li>
+                    <a href="#{{ label.tabLabel | kebab }}">
+                      <span>{{ label.tabLabel }}</span>
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div><!-- /.tab-scroll -->
+            <div id="product-tab-content" class="tab-content" style="overflow-x: visible;">
+              {%- for content in productTabs -%}
+                <div id="{{ content.tabLabel | kebab }}">
+                  {# TAB - LIST #}
+                  {%- if content.type == 'tabList' -%}
+                    <ul class="feature-list">
+                      {%- for item in content.tabItem -%}
+                        <li>
+                          <strong class="title">{{ item.name }}</strong>
+                          <div class="description">
+                            <p>{{ item.content }}</p>
+                          </div><!-- /.description -->
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+
+                  {# TAB - RICH TEXT #}
+                  {%- if content.type == 'tabRichText' -%}
+                    <span class="tab-rich-text">
+                      <div class="row">
+                        <div class="col-md-12">
+                          {{ content.tabContent | raw }}
+                        </div><!--/.col-md-12 -->
+                      </div><!-- /.row -->
+
+                    <div class="row">
+                      <!-- tabRelatedProductCats -->
+                      {%- if content.tabRelatedProductCats | length -%}
+                          {%- for tabRelProdCat in content.tabRelatedProductCats.level('>= 2').all() -%}
+                            <div class="card">
+                              <div class="card-img-top" style="padding-top: 6rem;">
+                                  <img
+                                    data-src="{{ tabRelProdCat.catThumb.one.url | default('') }}"
+                                    width="{{ tabRelProdCat.catThumb.one.width | default('') }}"
+                                    height="{{ tabRelProdCat.catThumb.one.height | default('') }}"
+                                    class="lazyload case-subcategories"
+                                    alt="{{ tabRelProdCat.title }}"
+                                  >
+                                <a href="{{ tabRelProdCat.url }}" class="btn btn-outline-light">
+                                  {{ 'view' | t }}
+                                </a>
+                              </div><!-- /.card-img-top -->
+                              <div class="card-body">
+                                <div class="card-header">
+                                  <h4 class="card-title">
+                                    <a href="{{ tabRelProdCat.url }}">
+                                      {{ tabRelProdCat.title }}
+                                    </a>
+                                  </h4>
+                                </div><!-- /.card-header -->
+                                <p>{{ tabRelProdCat.catDesc }}</p>
+                              </div><!-- /.card-body -->
+                            </div><!-- /.card -->
+                          {%- endfor -%}
+                      {%- endif -%}
+
+                      <!-- tabRelatedVideoCats -->
+                      {%- if content.tabRelatedVideoCats | length -%}
+                        {%- for tabRelVidCat in content.tabRelatedVideoCats.level('>= 2').all() -%}
+                          <div class="card">
+                            <div class="card-img-top" style="padding-top: 6rem;">
+                                <img
+                                  data-src="{{ tabRelVidCat.catThumb.one.url | default('') }}"
+                                  width="{{ tabRelVidCat.catThumb.one.width | default('') }}"
+                                  height="{{ tabRelVidCat.catThumb.one.height | default('') }}"
+                                  class="lazyload case-subcategories"
+                                  alt="{{ tabRelVidCat.title }}"
+                                >
+                              <a href="{{ tabRelVidCat.url }}" class="btn btn-outline-light">
+                                {{ 'view' | t }}
+                              </a>
+                            </div><!-- /.card-img-top -->
+                            <div class="card-body">
+                              <div class="card-header">
+                                <h4 class="card-title">
+                                  <a href="{{ tabRelVidCat.url }}">
+                                    {{ tabRelVidCat.title }}
+                                  </a>
+                                </h4>
+                              </div><!-- /.card-header -->
+                              <p>{{ tabRelVidCat.catDesc }}</p>
+                            </div><!-- /.card-body -->
+                          </div><!-- /.card -->
+                        {%- endfor -%}
+                      {%- endif -%}
+
+                      <!-- tabRelatedEntries -->
+                      {%- if content.tabRelatedEntries | length -%}
+                        {%- for tabRelEntry in content.tabRelatedEntries.all() -%}
+                          <div class="card">
+                            <div class="card-img-top" style="padding-top: 6rem;">
+                              {% switch tabRelEntry.type %}
+                                {% case 'product' %}
+                                  <img
+                                    data-src="{{ tabRelEntry.productImages.one.url | default('') }}"
+                                    width="{{ tabRelEntry.productImages.one.width | default('') }}"
+                                    height="{{ tabRelEntry.productImages.one.height | default('') }}"
+                                    class="lazyload case-subcategories"
+                                    alt="{{ tabRelEntry.title }}"
+                                  >
+                                {% case 'productAlt' %}
+                                  <img
+                                    data-src="{{ tabRelEntry.productThumbnail.one.url | default('') }}"
+                                    width="{{ tabRelEntry.productThumbnail.one.width | default('') }}"
+                                    height="{{ tabRelEntry.productThumbnail.one.height | default('') }}"
+                                    class="lazyload case-subcategories"
+                                    alt="{{ tabRelEntry.title }}"
+                                  >
+                                {% case 'videos' %}
+                                  {%- set ytv2 = (tabRelEntry.video.one.pbYouTubeVideo | length) ? craft.embeddedAssets.get(tabRelEntry.video.one.pbYouTubeVideo.one) : '' -%}                                  
+                                  <img
+                                    data-src="{{ ytv2.image }}"
+                                    width="{{ ytv2.image.width }}"
+                                    height="{{ ytv2.image.height }}"
+                                    class="lazyload case-subcategories"
+                                    alt="{{ tabRelEntry.title }}"
+                                  >
+                                {% default %}
+                                  <img
+                                    data-src="{{ tabRelEntry.capThumbnail.one.url | default('') }}"
+                                    width="{{ tabRelEntry.capThumbnail.one.width | default('') }}"
+                                    height="{{ tabRelEntry.capThumbnail.one.height | default('') }}"
+                                    class="lazyload case-subcategories"
+                                    alt="{{ tabRelEntry.title }}"
+                                  >
+                              {% endswitch %}
+                              <a href="{{ tabRelEntry.url }}" class="btn btn-outline-light">
+                                {{ 'view' | t }}
+                              </a>
+                            </div><!-- /.card-img-top -->
+                            <div class="card-body">
+                              <div class="card-header">
+                                <h4 class="card-title">
+                                  <a href="{{ tabRelEntry.url }}">
+                                    {{ tabRelEntry.title }}
+                                  </a>
+                                </h4>
+                              </div><!-- /.card-header -->
+                              <p>{{ tabRelEntry.catDesc }}</p>
+                            </div><!-- /.card-body -->
+                          </div><!-- /.card -->
+                        {%- endfor -%}
+                      {%- endif -%}
+                    
+                    </div><!-- /row -->
+
+                    </span>
+                  {%- endif -%}
+
+                  {# TAB - DOWNLOADS #}
+                  {%- if content.type == 'tabDownloads' -%}
+                    <ul class="feature-list">
+                      {%- for asset in content.tabDownloadFile.all() -%}
+                        <li>
+                          <a href="{{ asset.url }}" target="_blank">
+                            <strong class="title" style="width: 100%;">
+                              {{ asset.title }} ({{ asset.kind | upper }}) &nbsp;
+                              <i class="icon-download"></i>
+                            </strong>
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+
+                </div><!-- /#{{ content.tabLabel | kebab }} -->
+              {%- endfor -%}
+            </div><!-- /.tab-content -->
+          </div><!-- /.tab-block -->
+        {%- endif -%}
+        <!-- /TABS -->
+      </div><!-- /.container -->
+    </div><!-- /.main-info-block -->
+
+    <!-- ADDITIONAL PRODUCTS -->
+    {%- if not entry.productsDisableAdditional -%}
+      {%- set lastCat = entry.productCats.inReverse().one() -%}
+      {%- set additionalEntries = craft.entries.section('products').relatedTo(lastCat).id('not ' ~ entry.id).all() -%}
+      {%- if additionalEntries | length -%}
+        <div class="carousel-section">
+          <div class="container">
+            <h5>{{ 'Additional Products' | t }}</h5>
+            <div class="slick-slider card-slider">
+              {%- for addlEntry in additionalEntries -%}
+                <div>
+                  <div class="card">
+                    <div class="card-img-top">
+                      <img data-src="{{ addlEntry.productImages.one.url ?? '' }}" alt="" class="lazyload">
+                      <a href="{{ addlEntry.url }}" class="btn btn-outline-light">{{ 'view' | t }}</a>
+                    </div><!-- /.card-img-top -->
+                    <div class="card-body">
+                      <div class="card-header">
+                        <h4 class="card-title">
+                          <a href="{{ addlEntry.url }}">
+                            {{ addlEntry.title }}
+                          </a>
+                        </h4>
+                      </div><!-- /.card-header -->
+                      <p>
+                        {{ addlEntry.productShortDesc }}
+                      </p>
+                    </div><!-- /.card-body -->
+                  </div><!-- /.card -->
+                </div>
+              {%- endfor-%}
+            </div><!-- /.slick-slider.card-slider -->
+          </div><!-- /.container -->
+        </div><!-- /.carousel-section -->
+      {%- endif -%}
+    {%- endif -%}
+
+  </main>
+
+  {%- if entry.productForm | length -%} 
+    <div class="modal fade" id="product-form" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-full" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title offset-lg-3">{{ 'formCallToAction' | t | raw }}</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+          </div><!-- /.modal-header -->
+          <div class="modal-body p-4">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                {% if entry['formIframe'] is defined and entry['formIframe'] is not null %}
+                  {{ include(template_from_string(entry.formIframe)) | raw }}
+                {% else %}
+                {{ entry.productForm.render({
+                      attributes: {
+                        id: 'product-rfi-form',
+                        class: 'dark-form',
+                      },
+                      fields: {
+                        'source': {
+                          value: "#{entry.title} (EID: #{entry.id})"  
+                        }
+                      }   
+                    })                     
+                  }}
+                {% endif %}
+              </div><!-- /.col-lg-6.offset-lg-3 -->
+            </div><!-- /.row -->
+          </div><!-- /.modal-body -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog.modal-full -->
+    </div><!-- /.modal.fade#product-form -->
+
+    {% js at endBody %}
+      const rfiForm = document.getElementById('product-rfi-form');
+      if (rfiForm) {
+        rfiForm.addEventListener('freeform-ready', function(event) {
+          const freeform = event.target.freeform;
+          freeform.setOption('ajax', true);
+          freeform.addOnSuccessfulAjaxSubmit(function(event, form, response) {
+            window.location.href = response.returnUrl;
+          });
+        });
+      }
+    {% endjs %}
+    
+  {%- endif -%}
+
+  {%- for img in entry.productImages.all() -%}
+    <!-- product-image-{{ loop.index }} -->
+    <div id="product-image-{{ loop.index }}" style="display: none;">
+      <picture>
+        <source
+          type="image/jpeg"
+          srcset="{{ img.getUrl({
+          transform: 'product432w',
+          format: 'jpeg' }) }} 432w, {{ img.getUrl({
+          transform: 'product816w',
+          format: 'jpeg' }) }} 816w"
+          sizes="(max-width: 768px) 432px, 816px"
+        >
+        <img
+          src="{{ img.getUrl('product816w') }}"
+          srcset="{{ img.getUrl('product432w') }} 432w, {{ img.getUrl('product816w') }} 816w"
+          sizes="(max-width: 768px) 432px, 816px"
+          alt="{{ img.imageCaption | default(entry.title ~ ' - Product Image #' ~ loop.index) }}"
+        >
+      </picture>
+    </div><!-- /#product-image-{{ loop.index }} -->
+  {%- endfor -%}
+
+  <script src="/assets/dist/fancybox.umd.js"></script>
+
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+      Html: {
+        video: {
+          autoplay: false,
+        },
+        // youtube: {
+        //   autohide: 1,
+        //   fs: 1,
+        //   rel: 0,
+        //   hd: 1,
+        //   wmode: "transparent",
+        //   enablejsapi: 1,
+        //   html5: 1
+        // }    
+      },
+      Thumbs: {
+        tpl: `<div class="fancybox__thumb" style="background-image:url('\{\{src\}\}')" data-modal-gallery-thumb="\{\{src\}\}"><span class="button-overlay overlay-video"><?xml version="1.0"?><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M12,2C6.477,2,2,6.477,2,12c0,5.523,4.477,10,10,10s10-4.477,10-10C22,6.477,17.523,2,12,2z M10,15.5v-7 c0-0.412,0.47-0.647,0.8-0.4l4.667,3.5c0.267,0.2,0.267,0.6,0,0.8L10.8,15.9C10.47,16.147,10,15.912,10,15.5z"/></svg></span><span class="button-overlay overlay-360"><svg height="91" viewBox="0 0 64 91" width="64" xmlns="http://www.w3.org/2000/svg"><g><path d="m63.7405867 54.4768c0-3.345408-2.6760534-6.0212907-6.0212907-6.0212907-2.1026133 0-4.01408 1.1466752-5.0653867 2.8673707v-.1906688c0-3.345408-2.6760533-6.0212907-6.0212906-6.0212907-2.1026134 0-4.01408 1.1466752-5.0653867 2.7712854v-.1913344c0-3.345408-2.6760533-6.0212907-6.0212907-6.0212907-2.1026133 0-4.01408 1.1466752-5.0653866 2.7712853l.0006666-19.9748266c0-1.6246614-.6693376-3.15392-1.7199787-4.3006294-1.1466752-1.1466752-2.6760533-1.7199786-4.2053973-1.7199786-3.345408 0-6.0212907 2.6760533-6.0212907 6.0212906v37.0824534c0 .3820032-.1913344.6693376-.4780032.764672-.2866688.0953327-.6693376.0953327-.8600064-.1913344l-6.1166933-6.0212907c-2.10261334-2.0073813-5.25670401-2.3893333-7.74126934-.764672-1.43332694.9560064-2.38933334 2.484736-2.58065067 4.2053973-.2866688 1.7199787.2866688 3.44064 1.33799253 4.7786667l15.19598938 18.35008c4.3006293 5.1606187 10.60864 8.2193067 17.3943466 8.2193067h9.4619307c5.256704 0 10.226688-2.1026134 13.954048-5.8299734s5.8299733-8.697344 5.8299733-13.954048z"/><path d="m24.4599467 12.6160213c1.5293269 0 2.7712853-1.2426581 2.7712853-2.7712853v-7.07328c0-1.52932693-1.2426581-2.77128533-2.7712853-2.77128533-1.529327 0-2.7712856 1.24265813-2.7712856 2.77128533v7.07259733c-.0006664 1.52932697 1.2419928 2.77196797 2.7712856 2.77196797z"/><path d="m12.22656 16.05632c.5733376.5733376 1.2426581.764672 1.911296.764672.6693376 0 1.4333269-.2866688 1.911296-.764672 1.0513408-1.0513408 1.0513408-2.8673707 0-3.9186773l-4.9693013-4.96930137c-1.0513408-1.0513408-2.8673707-1.0513408-3.91867737 0-1.0513408 1.0513408-1.0513408 2.86737067 0 3.91867737z"/><path d="m2.7648 27.2384h7.168c1.5293269 0 2.7712853-1.2426581 2.7712853-2.7712853 0-1.529327-1.2426581-2.7712854-2.7712853-2.7712854h-7.07259733c-1.52932694 0-2.77128534 1.2426582-2.77128534 2.7712854s1.24265814 2.7712853 2.67605334 2.7712853z"/><path d="m36.31104 24.4667733c0 1.529327 1.2426581 2.7712854 2.7712853 2.7712854h7.0725974c1.5293269 0 2.7712853-1.2426582 2.7712853-2.7712854 0-1.5293269-1.2426581-2.7712853-2.7712853-2.7712853h-7.0725974c-1.5293269 0-2.7712853 1.2419925-2.7712853 2.7712853z"/><path d="m34.7818667 16.91648c.6693376 0 1.4333269-.2866688 1.911296-.764672l4.969984-4.969984c1.0513408-1.0513408 1.0513408-2.86737067 0-3.91867733-1.0513408-1.05130667-2.8673707-1.0513408-3.9186774 0l-4.8740693 4.87458133c-1.0513408 1.0513408-1.0513408 2.8673707 0 3.9186773.5733376.5733376 1.2419925.8600747 1.911296.8600747z"/></g></svg></span></div>`
+      }
+    });
+
+    const mainCarousel = new Carousel(document.querySelector("#main-carousel"), {
+      Dots: false,
+    });
+
+    const thumbCarousel = new Carousel(document.querySelector("#thumb-carousel"), {
+      Sync: {
+        target: mainCarousel,
+      },
+      Dots: false,
+      Navigation: false,
+      infinite: false,
+      center: true,
+      slidesPerPage: 1      
+    });
+
+
+  </script>
+
+{% endblock %}

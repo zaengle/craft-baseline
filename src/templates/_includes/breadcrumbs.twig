@@ -1,0 +1,38 @@
+{%- if entry is defined -%}
+	{% switch entry.type %}
+		{% case 'products' %}
+			<ol id="breadcrumbs" class="breadcrumb-holder">
+				<li><a href="/">{{ 'Home' | t }}</a></li>
+				<li><a href="/{{ 'products' | translate }}/">{{ 'Products' | t }}</a></li>
+				<li><a href="{{ entry.productCats.inReverse().one.url }}">{{ entry.productCats.inReverse().one }}</a></li>
+				<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+			</ol>
+		{% case 'videos' %}
+			<ol id="breadcrumbs" class="breadcrumb-holder">
+				<li><a href="/">{{ 'Home' | t }}</a></li>
+				<li><a href="/{{ 'videos' | t }}/">{{ 'Videos' | t }}</a></li>
+				<li><a href="{{ entry.videoCats.inReverse().one.url }}">{{ entry.videoCats.inReverse().one }}</a></li>
+				<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+			</ol>
+		{% default %}
+			{%- set crumbList = seomatic.jsonLd.get('breadcrumbList').itemListElement -%}
+			{%- if crumbList | length -%}
+				<ol id="breadcrumbs" class="breadcrumb-holder">
+					{%- for crumb in crumbList -%}
+						<li><a href="{{ crumb.item }}">{{ crumb.name | t }}</a></li>
+					{%- endfor -%}
+				</ol>
+			{%- endif -%}
+	{% endswitch %}
+{%- endif -%}
+
+{%- if category is defined -%}
+	{%- set crumbList = seomatic.jsonLd.get('breadcrumbList').itemListElement -%}
+	{%- if crumbList | length -%}
+		<ol id="breadcrumbs" class="breadcrumb-holder">
+			{%- for crumb in crumbList -%}
+				<li><a href="{{ crumb.item }}">{{ crumb.name | t}}</a></li>
+			{%- endfor -%}
+		</ol>
+	{%- endif -%}
+{%- endif -%}

@@ -1,0 +1,28 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Videos' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Short Desc</th>
+        <th>Long Desc</th>
+      </tr>
+      {% for entry in craft.entries.section('videos').orderBy('title').all() %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <td>{{ entry.videoShortDesc }}</td>
+          <td>{{ entry.videoLongDesc }}</td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
+
