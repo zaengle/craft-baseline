@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: '<% project.handle %>'
-  tagline: Developer documentation for <% project.handle %>
+  name: 'promach-craft-brand-sites'
+  tagline: Developer documentation for promach-craft-brand-sites
 
 features:
   - icon: 🚀

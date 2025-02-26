@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "<% project.handle %>",
-  description: "Developer documentation for <% project.handle %>",
+  title: "promach-craft-brand-sites",
+  description: "Developer documentation for promach-craft-brand-sites",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -26,12 +26,12 @@ export default defineConfig({
         items: [
           {text: '🌐 Production', link: '#todo'},
           {text: '🎭 Staging', link: '#todo'},
-          {text: '🧫 Client Testing', link: 'https://<% project.handle %>.client-testing.com/'},
+          {text: '🧫 Client Testing', link: 'https://promach-craft-brand-sites.client-testing.com/'},
         ]
       }, {
         text: 'Repositories',
         items: [
-          { text: 'Zaengle', link: '<% project.repoUrl %>' },
+          { text: 'Zaengle', link: 'https://github.com/zaengle/promach-craft-brand-sites.git' },
         ]
       }, {
         text: 'Resources',
@@ -39,7 +39,7 @@ export default defineConfig({
       },
     ],
     socialLinks: [
-      { icon: 'github', link: '<% project.repoUrl %>' }
+      { icon: 'github', link: 'https://github.com/zaengle/promach-craft-brand-sites.git' }
     ],
   },
 })

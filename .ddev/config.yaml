@@ -1,4 +1,4 @@
-name: <% project.handle %>
+name: promach-craft-brand-sites
 type: craftcms
 docroot: src/web/
 upload_dir: uploads/

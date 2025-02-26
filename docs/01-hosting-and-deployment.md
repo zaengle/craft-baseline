@@ -10,7 +10,7 @@ The project has N environments:
 
 | Name             | GH Repo + branch                         | URL                                        | Notes                   |
 |------------------|------------------------------------------|--------------------------------------------|-------------------------|
-| `client-testing` | `<% project.repoUrl %>:develop` | https://v2.scottishrite.client-testing.com | u: `XXXXX` p: `zaengle` |
+| `client-testing` | `https://github.com/zaengle/promach-craft-brand-sites.git:develop` | https://v2.scottishrite.client-testing.com | u: `XXXXX` p: `zaengle` |
 
 
 ### Notes
