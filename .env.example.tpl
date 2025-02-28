@@ -10,6 +10,8 @@ CRAFT_ENVIRONMENT=dev
 CRAFT_SECURITY_KEY=<% project.securityKey %>
 # The public URL of the main site
 PRIMARY_SITE_URL=https://<% project.handle %>.ddev.site
+# The human readable name of the site
+PRIMARY_SITE_NAME="<% project.name %>"
 
 ##
 # CRAFT CONFIG FLAGS
