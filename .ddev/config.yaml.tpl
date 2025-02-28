@@ -2,7 +2,7 @@ name: <% project.handle %>
 type: craftcms
 docroot: src/web/
 upload_dir: uploads/
-php_version: "8.2"
+php_version: "8.3"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -10,15 +10,15 @@ xdebug_enabled: false
 additional_hostnames: []
 additional_fqdns: []
 database:
-  type: mariadb
-  version: "10.3"
+  type: mysql
+  version: "8.0"
 nfs_mount_enabled: false
 mutagen_enabled: true
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
-nodejs_version: "18"
-
+nodejs_version: "22"
+disable_upload_dirs_warning: true
 # Key features of ddev's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides
