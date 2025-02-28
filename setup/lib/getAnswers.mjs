@@ -15,10 +15,10 @@ export default async ({ interactive, name, handle, installDeps, installCraft, se
   }
 
   return await inquirer.prompt([{
-    name: 'handle',
+    name: 'name',
     message: 'What is the name of this project?',
     type: 'input',
-    default: name,
+    default: name ?? handle,
     validate: (input) => {
       if (input.length === 0) {
         return 'Please enter a Name'
@@ -29,7 +29,7 @@ export default async ({ interactive, name, handle, installDeps, installCraft, se
     name: 'handle',
     message: 'What is the handle for this project?',
     type: 'input',
-    default: handle,
+    default: handle ?? process.cwd(),
     validate: (input) => {
       if (input.length === 0) {
         return 'Please enter a handle'
