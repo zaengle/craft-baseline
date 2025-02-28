@@ -2,7 +2,7 @@ import makeCli from './lib/makeCli.mjs'
 import getAnswers from './lib/getAnswers.mjs'
 import templatify from './lib/templatify.mjs'
 import installDependencies from './lib/installDependencies.mjs'
-import installCraft from './lib/installCraft.mjs'
+import setupCraft from './lib/setupCraft.mjs'
 import moveFiles from './lib/moveFiles.mjs'
 import cleanup from './lib/cleanup.mjs'
 import commitAllChanges from './lib/commitAllChanges.mjs'
@@ -29,7 +29,7 @@ export default (defaultHandle) => {
     templatify,
     moveFiles,
     installDependencies,
-    installCraft,
+    setupCraft,
     cleanup,
     commitAllChanges,
   )(program.opts())
