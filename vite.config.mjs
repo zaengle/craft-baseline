@@ -1,13 +1,13 @@
 import path from 'path'
 import { defineConfig } from 'vite'
+import 'dotenv/config'
 import copy from 'rollup-plugin-copy'
-import tailwindcss from 'tailwindcss'
-import postcssImport from 'postcss-import'
-import tailwindNesting from 'tailwindcss/nesting'
+import tailwindcss from '@tailwindcss/vite'
 import postcssFocusVisible from 'postcss-focus-visible'
-import autoprefixer from 'autoprefixer'
 import ViteRestart from 'vite-plugin-restart'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+
+const PRIMARY_HOST = new URL(process.env.PRIMARY_SITE_URL).host
 
 export default defineConfig(({ command }) => ({
   base: command === 'serve' ? '' : '/dist/',
@@ -33,15 +33,12 @@ export default defineConfig(({ command }) => ({
       to: 'dist',
       from: 'src/assets/css/app.css',
       plugins: [
-        postcssImport,
-        tailwindNesting,
-        tailwindcss('./tailwind.config.mjs'),
         postcssFocusVisible,
-        autoprefixer,
       ],
     },
   },
   plugins: [
+    tailwindcss(),
     copy({
       hook: 'writeBundle',
       targets: [
@@ -71,6 +68,9 @@ export default defineConfig(({ command }) => ({
   server: {
     port: 3000,
     host: '0.0.0.0',
+    allowedHosts: [
+      PRIMARY_HOST,
+    ],
     strictPort: true,
   },
   test: {
