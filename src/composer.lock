@@ -213,16 +213,16 @@
         },
         {
             "name": "brick/math",
-            "version": "0.12.2",
+            "version": "0.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "901eddb1e45a8e0f689302e40af871c181ecbe40"
+                "reference": "866551da34e9a618e64a819ee1e01c20d8a588ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/901eddb1e45a8e0f689302e40af871c181ecbe40",
-                "reference": "901eddb1e45a8e0f689302e40af871c181ecbe40",
+                "url": "https://api.github.com/repos/brick/math/zipball/866551da34e9a618e64a819ee1e01c20d8a588ba",
+                "reference": "866551da34e9a618e64a819ee1e01c20d8a588ba",
                 "shasum": ""
             },
             "require": {
@@ -261,7 +261,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.12.2"
+                "source": "https://github.com/brick/math/tree/0.12.3"
             },
             "funding": [
                 {
@@ -269,7 +269,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-26T10:21:45+00:00"
+            "time": "2025-02-28T13:11:00+00:00"
         },
         {
             "name": "cakephp/core",
@@ -1028,16 +1028,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.6.10.1",
+            "version": "5.6.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "65939797558ae240238da946949f1691cb2b3527"
+                "reference": "131f86abbd7ff1c932e3ab7eed5c993c4d08f968"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/65939797558ae240238da946949f1691cb2b3527",
-                "reference": "65939797558ae240238da946949f1691cb2b3527",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/131f86abbd7ff1c932e3ab7eed5c993c4d08f968",
+                "reference": "131f86abbd7ff1c932e3ab7eed5c993c4d08f968",
                 "shasum": ""
             },
             "require": {
@@ -1154,7 +1154,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2025-02-25T22:44:26+00:00"
+            "time": "2025-02-26T19:27:31+00:00"
         },
         {
             "name": "craftcms/feed-me",
@@ -16302,10 +16302,10 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.2"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
