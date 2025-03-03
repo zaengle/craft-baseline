@@ -1,0 +1,48 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Trade Shows' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Time</th>
+        <th>Body</th>
+        <th>Booth</th>
+      </tr>
+      {% for entry in craft.entries.section('tradeShows').all() %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <th>
+            <time datetime="{{ entry.tsTime.one.tsStartTime | date('Y-m-d') }}">{{ entry.tsTime.one.tsStartTime | date }}</time> - <time datetime="{{ entry.tsTime.inReverse().one.tsEndTime | date('Y-m-d') }}">{{ entry.tsTime.inReverse().one.tsEndTime | date }}</time>          
+          </th>
+          <td>{{ entry.tsLocation }}</td>
+          <td>
+            {%- for day in entry.tsTime.orderBy('tsStartTime desc').all() %}
+              <div class="data-box">
+                <p>{{ day.tsDayDesc }}</p>
+                <p>{{ day.tsStartTime | date('g:i a', false) }} - {{ day.tsEndTime | date('g:i a', false) }}</p>
+              </div><!-- /.data-box -->
+            {%- endfor -%}
+          </td>
+          <td>{{ entry.tsBody }}</td>
+          <td>
+            {%- for booth in entry.tsBooth.all() -%}
+              <p>{{ booth.boothNum }}</p>
+              <p>{{ booth.boothDesc }}</p>
+              <p>{{ booth.boothOffer }}</p>
+            {%- endfor -%}
+          </td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}

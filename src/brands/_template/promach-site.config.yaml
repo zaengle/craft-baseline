@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=config.schema.json
+name: 'Site Name'
+handle: 'site-handle'
+businessLine: 'systemsAndProcesses'
+licenseKeys:
+  seomatic: 'XXXX-XXXX-XXXX-XXXX-XXXX-XXXX'
+  navigation: 'XXXX-XXXX-XXXX-XXXX-XXXX-XXXX'
+  freeform: 'XXXX-XXXX-XXXX-XXXX-XXXX-XXXX'
+enabledLocales:
+  - en
+  - fr
+flags:
+  multiLang: true

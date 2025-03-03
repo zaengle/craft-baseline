@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+handle: sdPromachEmployee
+instructions: null
+name: 'ProMach Employee?'
+searchable: false
+settings:
+  columnType: string
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Yes'
+        -
+          - value
+          - 'yes'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'No'
+        -
+          - value
+          - 'no'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\RadioButtons

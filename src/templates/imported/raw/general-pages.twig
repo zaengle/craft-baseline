@@ -1,0 +1,30 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw General Pages' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Overview</th>
+        <th>Page Builder</th>
+        <th>Page Links</th>
+      </tr>
+      {% for entry in craft.entries.section('generalPages').all() %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <td>{{ entry.pageOverview }}</td>
+          <td>{%- include '_includes/page-builder' -%}</td>
+          <td>{% include '_includes/pagelinks' %}</td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
+

@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: tabRelatedProductCats
+instructions: null
+name: 'Tabs - Tab - Rich Text - Related Product Categories'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:08f1796d-3ecf-4d0d-9dbb-80e439bdc061' # Products
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

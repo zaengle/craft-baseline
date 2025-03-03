@@ -1,0 +1,101 @@
+color: null
+fieldLayouts:
+  2bd6676d-f9a4-4a1a-bf03-34d3e39c77c4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 6aa3aad0-9c93-4d49-a3b8-c050353d2662
+            handle: tabLabel
+            includeInCards: true
+            instructions: null
+            label: Label
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e7bfd3a4-a20b-4e1b-b999-f9d04ea00110
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 8f00d63c-68e8-4eaf-b1f1-e49d95d6e9f5
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Content
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f81c1ffb-ce88-4498-b77c-3a05e424b00e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 49154bc4-8a1d-4434-82f9-3b7218afd3b2
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Related Product Categories'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bdd0286a-713c-4e33-a437-b0e5771e2beb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 835a9e6f-7c6d-4e94-aca2-61141272095d
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Related Video Categories'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e42a26ed-aa37-4543-b37c-eb4a6ecc7c10
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: df7b88ed-ec5b-429e-bb8a-27fa0db43e27
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Related Entries'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3b54a5a8-f9e9-458f-9e11-32ab00b301b1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: af63066a-44b4-471e-8f07-15ef3e03768e
+        userCondition: null
+handle: tabRichText
+hasTitleField: false
+icon: null
+name: 'Tab - Rich Text'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

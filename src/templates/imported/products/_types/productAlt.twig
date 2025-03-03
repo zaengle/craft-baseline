@@ -1,0 +1,49 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'general-page' %}
+
+{% block head_hook %}
+  <style>
+    .block-two-three-four-across ul:not([class]):not([id]) {
+      margin-left: 1.75em;
+    }
+
+    .block-block-two-three-four-across ul:not([class]):not([id]) li {
+      line-height: 1.75;
+    }
+
+    .block-section-with-form.bg-color-blue .form-control {
+      background-color: #fff;
+    }
+
+    .block-section-with-form.bg-color-blue .btn.btn-outline-primary:before, 
+    .block-section-with-form.bg-color-blue .btn.btn-primary {
+      background-color: #009a76;
+    }
+
+    .block-section-with-form.bg-color-blue .invalid-feedback {
+      color: yellow;
+    }
+
+    :target {
+      scroll-margin-top: 150px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <main id="main">
+    {% include '_includes/hero' with { element: entry, type: 'productAlt' } %}
+    <section class="main-content-section">
+      <div class="container">
+        {%- include '_includes/breadcrumbs' -%}
+        <div class="text-holder">
+          {{ entry.pageOverview }}
+        </div><!-- /.text-holder -->
+      </div><!-- /.container -->
+
+      {%- include '_includes/page-builder' -%}
+      {% include '_includes/pagelinks' %}
+    </section>
+  </main>
+{% endblock %}

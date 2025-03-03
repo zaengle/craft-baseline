@@ -1,0 +1,13 @@
+columnSuffix: null
+contentColumnType: boolean
+handle: capShowDateAndAuthor
+instructions: null
+name: 'Show Date & Author'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Lightswitch

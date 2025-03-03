@@ -1,0 +1,17 @@
+{% set categories = craft.categories()
+  .group('productCats')
+  .orderBy('title asc')
+  .level(2)
+  .all() %}
+
+<categories>
+{%- for cat in categories -%}
+  <cat> 
+    <title>{{ cat.title }}</title>
+    <thumbnail>{{ cat.catThumb.one.url | default('') }}</thumbnail>
+    <url>{{ cat.url }}</url>
+    <dateUpdated>{{ cat.dateUpdated | rss }}</dateUpdated>
+    <id>{{ cat.id }}</id>
+  </cat>
+{%- endfor -%}
+</categories>

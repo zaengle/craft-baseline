@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: whitePaperCategory
+instructions: null
+name: 'White Paper Category'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:f23358bf-80ef-4189-a63f-2cb164cd8ac8' # White Papers
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

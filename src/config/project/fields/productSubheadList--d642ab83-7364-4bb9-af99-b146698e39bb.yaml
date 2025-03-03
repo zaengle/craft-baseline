@@ -1,0 +1,58 @@
+columnSuffix: null
+contentColumnType: text
+handle: productSubheadList
+instructions: 'This is where the specific details/content of the area with the green background is entered. The idea behind this area is to replicate the Typical Product Specifications that are on the brochures.'
+name: 'Subhead List'
+searchable: true
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Name
+            -
+              - handle
+              - name
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Content
+            -
+              - handle
+              - content
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Table

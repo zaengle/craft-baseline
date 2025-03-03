@@ -1,0 +1,150 @@
+{% extends '_layouts/default' %}
+
+{%- set heading = ('Press Releases' | t) -%}
+{%- set overview = ("The latest news from {systemName} is shown below. Please click on an entry to read the entire news release." | t(params = { systemName: alias('@siteName') }) ) -%}
+
+
+{% set pageType = 'press-releases-index' %}
+
+{% block content %}
+
+  <main id="main">
+
+    <section class="hero-section" class="hero-section" style="background-image: url('{{ siteSettings.defaultPageHeroBgImage.one.url | default('') }}')">>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-xl-8">
+            <h1>{{ heading }}</h1>
+            <p>{{ overview }}</p>
+          </div><!-- /.col-lg-9.col-xl-8 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+
+    <section class="category-section">
+      <div class="container">
+        {% include '_includes/breadcrumbs' %}
+
+        {%- set query = craft.entries.section('pressReleases').limit(5) -%}
+        {%- paginate query as pageInfo, pressReleases -%}
+
+        {%- set currentPage = pageInfo.currentPage ?? 1 -%}
+
+        {%- set hreflangMap = {
+            'english': {
+              'hreflangLang': 'en',
+              'hreflangUrl': "#{alias('@baseUrl')}/press-releases/" ~ (currentPage > 1 ? 'page' ~ currentPage ~ '/' : '')
+            },
+            'spanish': {
+              'hreflangLang': 'es',
+              'hreflangUrl': "#{alias('@spanishUrl')}/comunicados-de-prensa/" ~ (currentPage > 1 ? 'page' ~ currentPage ~ '/' : '')
+            },
+            'french': {
+              'hreflangLang': 'fr',
+              'hreflangUrl': "#{alias('@frenchUrl')}/communiques-de-presse/" ~ (currentPage > 1 ? 'page' ~ currentPage ~ '/' : '')
+            },
+            'italian': {
+              'hreflangLang': 'it',
+              'hreflangUrl': "#{alias('@italianUrl')}/rassegna-stampa/" ~ (currentPage > 1 ? 'page' ~ currentPage ~ '/' : '')
+            },
+            'portuguese': {
+              'hreflangLang': 'pt',
+              'hreflangUrl': "#{alias('@portugueseUrl')}/comunicados-a-imprensa/" ~ (currentPage > 1 ? 'page' ~ currentPage ~ '/' : '')
+            },
+            'german': {
+              'hreflangLang': 'de',
+              'hreflangUrl': "#{alias('@germanUrl')}/pressemitteilung/" ~ (currentPage > 1 ? 'page' ~ currentPage ~ '/' : '')
+            }    
+          }
+        -%}
+
+        {%- set sites = craft.app.sites.getAllSites() -%}
+
+        {%- set hreflangLangs = [] -%}
+        {%- set hreflangUrls = [] -%}
+        {%- for site in craft.app.sites.getAllSites() -%}
+          {%- set hreflangLangs = hreflangLangs | merge([site.primary ? 'x-default' : hreflangMap[site.handle].hreflangLang]) -%}
+          {%- set hreflangUrls = hreflangUrls | merge([hreflangMap[site.handle].hreflangUrl]) -%}
+        {%- endfor -%}
+
+        {%- if craft.app.sites.totalSites > 1 -%}
+          {% set alt = seomatic.link.get('alternate') %}
+          {% do alt.href(hreflangUrls).hreflang(hreflangLangs) %}
+        {%- endif -%}
+
+        {% do seomatic.meta.setAttributes({
+          'seoTitle': heading,
+          'seoDescription': overview
+          })
+        %}
+
+        {%- do seomatic.helper.paginate(pageInfo) -%}
+
+					<ul class="category-list">
+            {%- for pressRelease in pressReleases -%}
+              <li {% if loop.index == 1 %}style="padding-top: 0;"{% endif %}>
+                <a href="{{ pressRelease.url }}" class="content-holder">
+                  <div class="text-holder">
+                    <div class="text-wrap">
+                      <span class="month">
+                        {{ pressRelease.postDate | date('M d, Y', false) }}
+                      </span>
+                      <h2>{{ pressRelease.title }}</h2>
+                      {%- if pressRelease.prSummary | length -%}
+                        <p>{{ pressRelease.prSummary | raw }}</p>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </a>
+              </li>
+            {%- endfor -%}
+					</ul>
+
+          <nav aria-label="Pagination" style="margin-top: 50px;">
+            <ul class="pagination" style="justify-content: center;">
+              {%- if pageInfo.prevUrl -%}
+                <li class="page-item">
+                  <a class="page-link" href="{{ pageInfo.prevUrl }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">{{ 'Previous' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- for page, url in pageInfo.getPrevUrls(5) -%}
+                <li class="page-item">
+                  <a class="page-link" href="{{ url }}">
+                    {{ page }}
+                  </a>
+                </li>
+              {%- endfor -%}
+              {%- if pageInfo.currentPage -%}
+                <li class="page-item active">
+                  <a class="page-link" href="#">
+                    {{ pageInfo.currentPage }}
+                    <span class="sr-only">({{ 'current' | t }})</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- for page, url in pageInfo.getNextUrls(5) -%}
+                <li class="page-item">
+                  <a class="page-link" href="{{ url }}">
+                    {{ page }}
+                  </a>
+                </li>
+              {%- endfor -%}
+              {%- if pageInfo.nextUrl -%}
+                <li class="page-item">
+                  <a class="page-link" href="{{ pageInfo.nextUrl }}" aria-label="{{ 'Next' | t }}">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">{{ 'Next' | t }}</span>
+                  </a>
+                </li>
+              {% endif %}
+            </ul>
+          </nav>
+          <br>
+      </div><!-- /.container -->
+    </section>
+
+  </main>
+{% endblock %}

@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: text
+handle: sdChannelPartnerInfo
+instructions: null
+name: 'Channel Partner Company Info'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

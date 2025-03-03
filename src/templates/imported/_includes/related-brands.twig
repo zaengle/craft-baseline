@@ -1,0 +1,43 @@
+{%- set bizLineConfig = alias('@businessLine') -%}
+{%- set currentBizLine = craft.categories.title(bizLineConfig).one -%}
+{%- set relatedBrands = currentBizLine.blProductBrands.all() -%}
+
+	<!-- RELATED BRANDS MODAL -->
+	<div class="info-popup">
+		<div class="popup-head">
+			<strong class="logo">
+				<a href="https://www.promachbuilt.com" target="_blank">
+					<img src="{{ alias('@filesCDN') }}/assets/dist/images/promach-logo.png" alt="ProMach Logo" width="138" height="26">
+				</a>
+			</strong>
+			<a href="#" class="info-close"></a>
+		</div><!-- /.popup-head -->
+		<div class="popup-body">
+			<div class="column">
+				<strong class="title">{{ "RELATED PRODUCT BRANDS" | t }}</strong>
+				<div class="content-holder">
+					<div class="img-holder">
+						<img src="{{ currentBizLine.blVertImgWhiteBlue }}" width="100" height="150" alt="{{ currentBizLine.title }} logo">
+					</div><!-- /.img-holder -->
+					<div class="text-holder">
+						{{ currentBizLine.blBoilerplate | raw }}
+					</div><!-- /.text-holder -->
+				</div><!-- /.content-holder -->
+				<strong class="title">{{ 'EXPLORE OTHER PROMACH BUSINESS LINES' | t }}</strong>
+				<p>{{ 'ProMach is your partner from start to finish. Our product brands are grouped into distinct business lines that make the most sense to our customers, covering every function of the production line: Filling, Bottling & Capping, Decorative Labeling, Flexibles & Trays, Pharma, Handling & Sterilizing, Labeling & Coding, Robotics & End of Line, and Systems & Integration.' | t }}</p>
+				<a href="https://www.promachbuilt.com/our-brands/" class="btn btn-outline-light" target="_blank">{{ 'learn more' | t }}</a>
+			</div><!-- /.column -->
+			<div class="column">
+				<ul class="logo-list">
+          {%- for productBrand in relatedBrands -%}
+						<li>
+							<a href="{{ productBrand.pbWebsite }}" target="_blank">
+								<img src="{{ productBrand.pbLogoFullReversedOut }}" width="230" height="40" style="width: auto;">
+								<i class="icon-long-arrow-right"></i>
+							</a>
+						</li>
+					{%- endfor -%}
+				</ul>
+			</div><!-- /.column -->
+		</div><!-- /.popup-body -->
+	</div><!-- /.info-popup -->

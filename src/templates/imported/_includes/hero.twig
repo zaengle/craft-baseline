@@ -1,0 +1,31 @@
+{%- if element.pageHeroBgImage | length -%}
+  {%- set heroBg = element.pageHeroBgImage.one.url -%}
+{%- elseif siteSettings.defaultPageHeroBgImage | length -%}
+  {%- set heroBg = siteSettings.defaultPageHeroBgImage.one.url -%}
+{%- else -%}
+  {%- set heroBg = '' -%}
+{%- endif -%}
+
+<section id="hero-section" class="hero-section" style="background-image: url('{{ heroBg }}')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-xl-8">
+        <h1>{{ element.catCustomH1 ?: element.title }} {% if element.productNew %}<span class="badge badge-pill badge-warning">NEW</span>{% endif %}</h1>
+
+        {%- if element.pageHeroSubhead | length -%}
+          <p>{{ element.pageHeroSubhead }}</p>
+        {%- endif -%}
+
+        {%- if element.pageHeroButton | length -%}
+          <a href="{{ element.pageHeroButton[0].buttonUrl }}" class="btn btn-outline-light">
+            {{ element.pageHeroButton[0].buttonText }}
+          </a>
+        {%- endif -%}
+
+        {%- if category is defined and category.group.handle not in ['productCats', 'videoCats'] -%}
+          {{ element.catBody | default('') }}
+        {%- endif -%}
+      </div><!-- /.col-lg-9.col-xl-8 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section>

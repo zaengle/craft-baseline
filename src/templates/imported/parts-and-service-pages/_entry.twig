@@ -1,0 +1,18 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'company-page' %}
+
+{% block content %}
+  <main id="main">
+    {% include '_includes/hero' with { element: entry } %}
+    <section class="main-content-section">
+      <div class="container">
+        {%- include '_includes/breadcrumbs' -%}
+        {{ entry.pageOverview }}
+      </div><!-- /.container -->
+      {%- include '_includes/page-builder' -%}
+      {% include '_includes/pagelinks' %}
+    </section>
+  </main>
+{% endblock %}
+

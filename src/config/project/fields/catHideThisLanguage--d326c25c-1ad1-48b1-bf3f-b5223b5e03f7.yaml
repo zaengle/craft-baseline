@@ -1,0 +1,13 @@
+columnSuffix: null
+contentColumnType: boolean
+handle: catHideThisLanguage
+instructions: null
+name: 'Hide this language'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Lightswitch

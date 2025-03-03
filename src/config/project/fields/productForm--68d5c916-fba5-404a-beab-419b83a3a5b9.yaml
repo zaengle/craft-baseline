@@ -1,0 +1,11 @@
+columnSuffix: null
+contentColumnType: integer
+handle: productForm
+instructions: 'Please select the form that you would like to display on the product page here. This is typically the RFI form option.'
+name: Form
+searchable: false
+settings:
+  forms: '*'
+translationKeyFormat: null
+translationMethod: site
+type: Solspace\Freeform\FieldTypes\FormFieldType

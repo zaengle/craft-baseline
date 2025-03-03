@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: f7a30e51-9f1f-41aa-9e22-1544c7d04d3d # Case Studies
+handle: caseStudies
+name: 'Case Studies'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: capabilities/_entry
+    uriFormat: '{caseStudyCategory.orderBy(''level ASC'').one.slug}/{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: b1a8d14b-6120-4cc9-877a-59f9100ce7fa
+type: structure

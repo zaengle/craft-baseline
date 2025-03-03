@@ -1,0 +1,117 @@
+color: null
+fieldLayouts:
+  08317c0b-4780-4f4f-953d-0b90b8dbaf56:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 6a1b85e6-f327-42ff-a472-23d19a94a3ff
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Heading
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 388da4c7-4868-4284-ba5e-09f0e1f53807
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 4f66f493-fa01-4953-ae9f-fa19ebcbfdcf
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Section Body'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42ff1105-20c6-4bbc-bc17-65764576adc0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: e54d2549-4b87-47fe-9a07-63cb6b757747
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Sidebar Heading'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 180387b9-a76e-475a-bcfb-8971cd54977a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 7aeb3ff3-22b9-4a3a-a5f6-38d4cd77c59a
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Sidebar Files'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26409683-6870-4a25-ae48-e324d9b8de9b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 9678fc5a-7d9e-4593-96e0-f30a8d5727ef
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Sidebar Links'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 813c18c5-c279-483e-a6b2-3ef253004128
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 8a1de76e-067c-4423-a792-98e3bb801329
+            handle: backgroundColor
+            includeInCards: false
+            instructions: null
+            label: 'Background Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3af91149-4b50-4f63-abd6-da49485ea5c8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 097a0847-8eab-4eea-b6b5-1001037c8e7e
+        userCondition: null
+handle: sectionWithSidebar
+hasTitleField: false
+icon: null
+name: 'Section with Sidebar'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

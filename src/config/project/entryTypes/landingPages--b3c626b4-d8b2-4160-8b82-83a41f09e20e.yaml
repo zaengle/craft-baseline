@@ -1,0 +1,112 @@
+fieldLayouts:
+  85fa6039-2006-4e22-aeed-34383160bddd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 58eb3931-b17b-479f-8dde-980f7509f766
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 14b10afb-9c39-4ca4-a740-c4bbbd04f101 # Page Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 82076087-317e-4fae-9314-83d24910dc60
+            userCondition: null
+            warning: null
+            width: 100
+        name: Landing
+        uid: dbfc90d2-8332-4d10-8b4f-275dc080acac
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 2d042d9b-af16-4d98-9347-8aadaad910b4 # Page Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7ddc6c38-6e55-4805-9401-cd197303796b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 784189f8-141b-4901-a137-08ab2d5b1a56 # Meta Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 993ec832-5ca4-4cb5-a67c-491e5dd6a695
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2de2c9bb-2614-4aee-92ad-8acc2273975d # Canonical URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7bee01b-c2e6-4c98-b243-aa16b9aa67a1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dda2aa22-ce74-41a0-b919-85a4bc5563a7 # Robots Noindex, Nofollow
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 242777f8-68ac-448c-885f-6046d85ceba8
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: b6b7bdc0-cd9e-48a3-9b04-f7534c5b0b5b
+        userCondition: null
+handle: landingPages
+hasTitleField: true
+name: 'Landing Pages'
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

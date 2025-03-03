@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+handle: sdUsStates
+instructions: null
+name: 'U.S. States'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  sources:
+    - 'section:1bc8ce43-906b-4d67-9732-dab581eb4112' # Salesperson U.S. States
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

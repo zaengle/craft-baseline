@@ -1,0 +1,53 @@
+color: null
+fieldLayouts:
+  87faad1e-dc6d-4528-bd7e-84d61abce024:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: d9ee8dfa-d925-41b0-970d-5cc977fc5074
+            handle: tabLabel
+            includeInCards: true
+            instructions: null
+            label: Label
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 225983e4-e6d5-4d77-a6fb-a7389a4b4771
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 083dce31-1243-4d46-9f8d-0abb119a9497
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: File
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4759d27-0e21-4d61-ae13-b29b0e2da9c2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0931a079-bf1f-41a6-965c-90cde0e8e650
+        userCondition: null
+handle: tabDownloads
+hasTitleField: false
+icon: null
+name: 'Tab - Downloads'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

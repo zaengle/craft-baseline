@@ -1,0 +1,70 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'parts-and-service' %}
+
+{% block content %}
+
+  <main id="main">
+    {% include '_includes/hero' with { element: entry } %}
+
+    <section class="main-content-section space-extra">
+      <div class="container">
+        {% include '_includes/breadcrumbs' %}
+
+        {{ entry.pageOverview }}
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-box">
+              <strong class="info-title">{{ entry.pasCalloutHeading }}</strong>
+              {{ entry.pasCalloutBody }}
+            </div><!-- /.info-box -->
+            <div class="address-holder">
+              {{ entry.pasContactInfo }}
+            </div><!-- /.address-holder -->
+          </div><!-- /.col-lg-6 -->
+          <div class="col-lg-6">
+            {{ entry.pasForm.render() }}
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+    </section>
+
+    {% include '_includes/pagelinks' %}
+
+    {%- if entry.pasMultiColumnListSection | length -%}
+    {%- set listSections = entry.pasMultiColumnListSection.all() -%}
+
+      {%- for listSection in listSections -%}
+        <section class="product-section">
+          <div class="container">
+            {%- if listSection.image | length -%}
+              <div class="img-holder">
+                <img src="{{ listSection.image.one.url }}" alt="">
+              </div><!-- /.img-holder -->
+            {%- endif -%}
+            <div class="text-holder">
+              <div class="text-blue">
+                {%- if listSection.heading | length -%}
+                  <h2>{{ listSection.heading }}</h2>
+                {%- endif -%}
+                {%- if listSection.overview | length -%}
+                  <p>{{ listSection.overview }}</p>
+                {%- endif -%}
+              </div><!-- /.text-blue -->
+              {%- if listSection.listItems | length -%}
+                <ul>
+                  {%- for listItem in listSection.listItems -%}
+                    <li>{{ listItem.listItem }}</li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </div><!-- /.text-holder -->
+          </div><!-- /.container -->
+        </section>
+      {%- endfor -%}
+    {%- endif -%}
+  </main>
+
+{% endblock %}

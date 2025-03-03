@@ -1,0 +1,65 @@
+{% extends '_layouts/default' %}
+
+{% set pageType = 'capabilities-category' %}
+
+{% block content %}
+
+  <main id="main">
+    {% include '_includes/hero' with { element: category } %}
+
+    <section class="industry-section">
+      <div class="container">
+        {% include '_includes/breadcrumbs' %}
+    
+        <ul class="category-list">
+          {%- if category.hasDescendants() -%}
+            <!-- subcategories -->
+            {%- for subcat in category.descendants.descendantDist(1).all() -%}
+              <li>
+                <a href="{{ subcat.url }}" class="content-holder">
+                  <div class="text-holder">
+                    <h2>{{ subcat.catCustomH1 ?: subcat.title }}</h2>
+                    <p>{{ subcat.catDesc }}</p>
+                  </div><!-- /.text-holder -->
+
+                  {%- if subcat.catThumb | length -%}
+                    <div class="img-holder">
+                      <img class="img-fluid lazyload" data-src="{{ subcat.catThumb.one.url }}">
+                    </div><!-- /.img-holder -->
+                  {%- endif -%}
+                </a>
+              </li>
+            {%- endfor -%}
+          {%- else -%}
+            {%- for entry in craft.entries.relatedTo(category).all() -%}
+              <li>
+                <a href="{{ entry.url }}" class="content-holder">
+                  <div class="text-holder">
+                    <h2>{{ entry.title }}</h2>
+                    <p>{{ entry.capDesc }}</p>
+                  </div><!-- /.text-holder -->
+                {%- if entry.capThumbnail | length -%}
+                  <div class="img-holder">
+                    <img class="img-fluid lazyload" data-src="{{ entry.capThumbnail.one.url | default('') }}" alt="{{ entry.title }}">
+                  </div><!-- /.img-holder -->
+                {%- endif -%}
+                </a>
+              </li>
+            {%-  endfor -%}
+          {%- endif -%}
+        </ul>
+
+        {%- if category.catLinks | length -%}
+          <div class="btn-block">
+            {%- for link in category.catLinks -%}
+              <a href="{{ link.linkUrl }}" class="btn btn-lg btn-success">
+                {{ link.linkText }}
+              </a>
+            {%- endfor -%}
+          </div><!-- /.btn-block -->
+        {%- endif -%}
+      </div><!-- /.container -->
+    </section>
+  </main>
+
+{% endblock %}

@@ -1,0 +1,116 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Product Assets' %}
+
+{% block content %}
+	<table class="table is-striped is-narrow is-fullwidth">
+		<tbody class="content">
+			<tr>
+				<th>EID</th>
+				<th>Title</th>
+				<th>Images</th>
+			</tr>
+			{% for prod in craft.entries.section('products').orderBy('id').all() %}
+				<tr>
+          <td>{{ prod.id }}</td>
+					<td>
+            <a href="{{ prod.url }}" target="_blank">{{ prod.title }}</a>
+					</td>
+          <td>
+            {%- if prod.productImages | length -%}
+            <table class="table is-striped is-narrow is-fullwidth">
+              <tr>
+                <th>PRODUCT: Filename/Title/Caption</th>
+                <th>Orig/Size</th>
+                <th>816w</th>
+                <th>432w</th>
+              </tr>
+              {%- for image in prod.productImages.all() -%}
+              <tr>
+              <td>
+                <a href="{{ image.url }}" target="_blank">
+                  {{ image.filename }}
+                </a>
+                <br><small>{{ image.title }}</small>
+                <br><small>{{ image.imageCaption }}</small>
+              </td>
+              <td>
+                {% if image.width != "960" %}
+                  <span style="color: purple; font-weight: bold;">
+                    {{ image.width }}
+                  </span>
+                {% else %}
+                  {{ image.width }}
+                {% endif %}
+                 x
+                {% if image.height != "720" %}
+                  <span style="color: purple; font-weight: bold;">
+                    {{ image.height }}
+                  </span>
+                {% else %}
+                  {{ image.height }}
+                {% endif %}
+                <br><small>{{ (image.size / 1024) | round(2) }} KB</small>
+              </td>
+              <td>
+                {{ image.getWidth('product816w') }} x {{ image.getHeight('product816w') }}
+              </td>
+              <td>
+                {{ image.getWidth('product432w') }} x {{ image.getHeight('product432w') }}
+              </td>
+            </tr>
+              {%- endfor -%}
+            </table>
+            {%- endif -%}
+
+
+            {%- if prod.threeSixtyViewers | length -%}
+              <table class="table is-striped is-narrow is-fullwidth">
+                <tr>
+                  <th>360: Filename/Title/Caption</th>
+                  <th>Orig/Size</th>
+                  <th>816w</th>
+                  <th>432w</th>
+                </tr>
+                {%- for threeSixty in prod.threeSixtyViewers.all() -%}
+                <tr>
+                <td>
+                  {{ threeSixty.threeSixtyThumbnail.one.filename }}
+                  <br><small>{{ threeSixty.threeSixtyThumbnail.one.title }}</small>
+                  <br><small>{{ threeSixty.threeSixtyThumbnail.one.imageCaption }}</small>
+                </td>
+                <td>
+                  {% if threeSixty.threeSixtyThumbnail.one.width != "960" %}
+                    <span style="color: purple; font-weight: bold;">
+                      {{ threeSixty.threeSixtyThumbnail.one.width }}
+                    </span>
+                  {% else %}
+                    {{ threeSixty.threeSixtyThumbnail.one.width }}
+                  {% endif %}
+                  x
+                  {% if threeSixty.threeSixtyThumbnail.one.height != "720" %}
+                    <span style="color: purple; font-weight: bold;">
+                      {{ threeSixty.threeSixtyThumbnail.one.height }}
+                    </span>
+                  {% else %}
+                    {{ threeSixty.threeSixtyThumbnail.one.height }}
+                  {% endif %}
+                  <br><small>{{ (threeSixty.threeSixtyThumbnail.one.size / 1024) | round(2) }} KB</small>
+                </td>
+                <td>
+                  {{ threeSixty.threeSixtyThumbnail.one.getWidth('product816w') }} x {{ threeSixty.threeSixtyThumbnail.one.getHeight('product816w') }}
+                </td>
+                <td>
+                  {{ threeSixty.threeSixtyThumbnail.one.getWidth('product432w') }} x {{ threeSixty.threeSixtyThumbnail.one.getHeight('product432w') }}
+                </td>
+              </tr>
+                {%- endfor -%}
+              </table>
+            {%- endif -%}
+
+          </td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

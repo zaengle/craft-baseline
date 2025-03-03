@@ -1,0 +1,42 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Product Categories' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Desc</th>
+        <th>Body</th>
+        <th>Links</th>
+      </tr>
+      {% for cat in craft.categories.group('productCats').all() %}
+        <tr>
+          <td>{{ cat.id }}</td>
+          <td><a href="{{ cat.url }}" target="_blank">{{ cat.title }}</a></td>
+          <td>{{ cat.catDesc }}</td>
+          <td style="width: 33%;">{{ cat.catBody }}</td>
+          <td>
+					  {%- if cat.catLinks | length -%}
+              <ul>
+                {%- for link in cat.catLinks -%}
+                  <li>
+                    <a href="{{ link.linkUrl }}" target="_blank">
+                      {{ link.linkText }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+					  {%- endif -%}
+          </td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
+

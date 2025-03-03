@@ -1,0 +1,33 @@
+columnSuffix: null
+handle: buttonColor
+instructions: null
+name: 'Links - Options - Button Color'
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Green
+        -
+          - value
+          - green
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Navy
+        -
+          - value
+          - navy
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\RadioButtons

@@ -1,0 +1,21 @@
+{%- set catParent = category is defined ? craft.categories.ancestorOf(category).ancestorDist(1).one.slug | default('') -%}
+
+{%-
+  set gtmDataLayer = {
+    event: (category is defined ? 'view_item_list' : 'view_item'),
+    items: [
+      {
+        google_business_vertical: 'custom',
+        id: (entry.id ??? category.id),
+        location_id: (alias('@shortName') | default('')),
+        slug: (entry.slug ??? category.slug),
+        business_line: (alias('@businessLine') | default('')),
+        parent_category: (entry.applicationCategory.one.slug ??? entry.caseStudyCategory.one.slug ??? entry.documentCategory.one.slug ??? entry.industryCategory.one.slug ??? entry.productCats.one.slug ??? entry.videoCats.one.slug ??? entry.whitePaperCategory.one.slug ??? catParent),
+        category: (entry.applicationCategory.inReverse().one.slug ??? entry.caseStudyCategory.inReverse().one.slug ??? entry.documentCategory.inReverse().one.slug ??? entry.industryCategory.inReverse().one.slug ??? entry.productCats.inReverse().one.slug ??? entry.videoCats.inReverse().one.slug ??? entry.whitePaperCategory.inReverse().one.slug ??? category.slug),
+      }
+    ]
+  }
+-%}
+
+{# set GTM via SEOmatic #}
+{%- do seomatic.script.get('googleTagManager').dataLayer(gtmDataLayer) -%}

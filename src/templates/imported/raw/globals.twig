@@ -1,0 +1,26 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Globals' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>Brand Desc</th>
+        <th>General Email</th>
+        <th>Media Boilerplate</th>
+        <th>Media Contact</th>
+        <th>Notification Bar</th>
+      </tr>
+      <tr>
+        <td>{{ siteSettings.brandDesc }}</td>
+        <td>{{ siteSettings.generalEmail }}</td>
+        <td>{{ siteSettings.mediaBoilerplate }}</td>
+        <td>{{ siteSettings.mediaContact }}</td>
+        <td>{{ siteSettings.notificationBar }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+{% endblock %}

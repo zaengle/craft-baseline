@@ -1,0 +1,46 @@
+fieldLayouts:
+  f810e543-f137-4667-a901-629d4aea91a5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 31924df6-ef47-46cd-be53-592220a84316
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cfd135da-bd62-4c78-a6fb-a910b31fc747
+        userCondition: null
+handle: salespersonUsStates
+hasTitleField: true
+name: 'Salesperson U.S. States'
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,44 @@
+columnSuffix: null
+handle: backgroundColor9
+instructions: null
+name: 'Links - Options - Background Color'
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - White
+        -
+          - value
+          - white
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Aqua
+        -
+          - value
+          - aqua
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Gray
+        -
+          - value
+          - gray
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\RadioButtons

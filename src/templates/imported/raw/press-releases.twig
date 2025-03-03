@@ -1,0 +1,28 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Press Releases' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Summary</th>
+        <th>Body</th>
+      </tr>
+      {% for entry in craft.entries.section('pressReleases').all() %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <td>{{ entry.prSummary }}</td>
+          <td>{{ entry.prBody }}</td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
+

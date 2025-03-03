@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: text
+handle: pbBoilerplate
+instructions: null
+name: Boilerplate
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: text
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

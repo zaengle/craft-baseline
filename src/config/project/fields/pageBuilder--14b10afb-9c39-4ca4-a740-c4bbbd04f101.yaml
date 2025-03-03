@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+handle: pageBuilder
+instructions: null
+name: 'Page Builder'
+searchable: true
+settings:
+  entryTypes:
+    -
+      uid: 73d2c003-3192-47df-9f7f-d3f6ddaf8391
+    -
+      uid: 248e3bcd-70ae-4910-b217-7d470a184e75
+    -
+      uid: 36e73f0f-4465-4a28-ab9c-a346f2cc189b
+    -
+      uid: 5808feb9-1c6f-44b0-91c9-e83522a0eee8
+    -
+      uid: eb637aaa-9aac-4173-979f-0b909728eaab
+    -
+      uid: 455205ce-6f29-4646-a687-ed74dbe9c072
+    -
+      uid: 7d8799d2-8529-4dee-9032-77766a3bdf9c
+    -
+      uid: 2a4ea4e0-db30-4fe0-a72b-fe9a2f8380c6
+    -
+      uid: 1e10fa5c-b03e-4fe1-a40a-15c315e7fae0
+  maxEntries: null
+  minEntries: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

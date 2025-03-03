@@ -1,0 +1,29 @@
+{% extends '_layouts/default' %}
+
+{%- set cookieName = 'exclude_internal_traffic_' ~ alias('@shortName') -%}
+{% do setCookie(cookieName, true, now | date_modify('+30 days').timestamp) %}
+
+{% set pageType = 'exclude-internal-traffic' %}
+
+{% block content %}
+  <main id="main">
+		<section class="hero-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-xl-8">
+						<h1>
+              {%- if getCookie(cookieName) -%}
+                Thanks, you will be excluded from {{ alias('@siteName') }} traffic stats!
+              {%- else -%}
+                {{ alias('@siteName') }} traffic is not being exluded.
+              {%- endif -%}
+            </h1>
+            <br>
+					</div><!-- /.col-lg-9.col-xl-8 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</section>
+  </main>
+{% endblock %}
+
+

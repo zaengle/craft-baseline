@@ -1,0 +1,69 @@
+color: null
+fieldLayouts:
+  c2cc060d-a10b-4aad-ae27-9cc33cdaf665:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 4c735c8b-051d-4e18-a3f7-5167da2bc9fc
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Heading
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 758de284-a080-463c-81fe-3258273d9488
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 1d06e723-360d-4349-8209-c73fcab29711
+            handle: backgroundColor
+            includeInCards: false
+            instructions: null
+            label: 'Background Color'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 289ce5ca-5f7c-4bfc-aa9d-d0aaff025989
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-26T12:47:10+00:00'
+            elementCondition: null
+            fieldUid: 74826133-a2c3-41bc-a228-2021951f9789
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'YouTube Video'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ee3f865c-7a67-4165-aad8-76ba8093cc3a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c48c1a54-8492-4820-8bab-778e9bebd11e
+        userCondition: null
+handle: singleVideo
+hasTitleField: false
+icon: null
+name: 'Single Video'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

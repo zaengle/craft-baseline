@@ -1,0 +1,75 @@
+columnSuffix: null
+handle: links
+instructions: null
+name: 'Links - Options - Links'
+searchable: true
+settings:
+  addRowLabel: 'Add a Link'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Text
+            -
+              - handle
+              - linkText
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - URL
+            -
+              - handle
+              - linkUrl
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - 'New window?'
+            -
+              - handle
+              - linkNewWindow
+            -
+              - width
+              - ''
+            -
+              - type
+              - lightswitch
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+        -
+          - col3
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Table

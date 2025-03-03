@@ -1,0 +1,13 @@
+columnSuffix: null
+contentColumnType: boolean
+handle: sdFallbackContact
+instructions: null
+name: 'Fallback Contact'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Lightswitch

@@ -1,0 +1,24 @@
+columnSuffix: null
+handle: body2
+instructions: null
+name: 'Page Builder - Section with Button - Body'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Standard.json
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: site
+type: craft\redactor\Field

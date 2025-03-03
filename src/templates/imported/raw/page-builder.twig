@@ -1,0 +1,27 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Page Builder Pages' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Page Builder</th>
+      </tr>
+      {% for entry in craft.entries.all() %}
+{% if entry.pageBuilder | length %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <td>{%- include '_includes/page-builder' -%}</td>
+        </tr>
+{% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
+

@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: boothDesc
+instructions: null
+name: 'Booth - Brand Booth - Description'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes:
+    - 70a8ba0e-8bed-49ec-81cb-1ac3937ea5fd # golden-files.pmassets.com
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Standard.json
+  removeEmptyTags: true
+  removeInlineStyles: true
+  removeNbsp: true
+  showHtmlButtonForNonAdmins: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: site
+type: craft\redactor\Field

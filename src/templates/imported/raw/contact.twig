@@ -1,0 +1,34 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Contact' %}
+
+{% block content %}
+
+  <table class="table">
+    <tbody class="content">
+      <tr>
+        <th>EID</th>
+        <th>Title</th>
+        <th>Overview</th>
+        <th>Callout Heading</th>
+        <th>Callout Body</th>
+        <th>Contact Info</th>
+        <th>Page Links</th>
+      </tr>
+      {% for entry in craft.entries.section('contact').all() %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td><a href="{{ entry.url }}" target="_blank">{{ entry.title }}</a></td>
+          <td>{{ entry.pageOverview }}</td>
+          <td>{{ entry.contactCalloutHeading }}</td>
+          <td>{{ entry.contactCalloutBody }}</td>
+          <td>{{ entry.contactContactInfo }}</td>
+          <td>{% include '_includes/pagelinks' %}</td>
+        </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
+

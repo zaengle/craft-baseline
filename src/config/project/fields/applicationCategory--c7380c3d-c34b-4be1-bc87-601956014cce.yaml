@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: applicationCategory
+instructions: null
+name: 'Application Category'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:e47d1b7b-decf-4077-bed6-a8bf61368b9f' # Applications
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

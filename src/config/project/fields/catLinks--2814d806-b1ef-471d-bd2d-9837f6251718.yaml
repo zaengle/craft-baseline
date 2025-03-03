@@ -1,0 +1,58 @@
+columnSuffix: null
+contentColumnType: text
+handle: catLinks
+instructions: null
+name: Links
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Link Text'
+            -
+              - handle
+              - linkText
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Link URL'
+            -
+              - handle
+              - linkUrl
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col2
+          - ''
+        -
+          - col3
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Table

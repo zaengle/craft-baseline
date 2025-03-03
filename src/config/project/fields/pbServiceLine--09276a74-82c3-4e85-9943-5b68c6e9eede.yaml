@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+handle: pbServiceLine
+instructions: null
+name: 'Service Line'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: true
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:1daaa0b3-f427-4b34-b102-b5ffba5325d0' # Service Lines
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

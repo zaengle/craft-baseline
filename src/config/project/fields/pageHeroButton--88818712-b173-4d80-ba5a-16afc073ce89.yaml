@@ -1,0 +1,49 @@
+columnSuffix: null
+contentColumnType: text
+handle: pageHeroButton
+instructions: '--'
+name: 'Hero Button'
+searchable: true
+settings:
+  addRowLabel: 'Add a row'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Button Text'
+            -
+              - handle
+              - buttonText
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Button URL'
+            -
+              - handle
+              - buttonUrl
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  maxRows: 1
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Table

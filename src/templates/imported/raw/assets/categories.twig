@@ -1,0 +1,118 @@
+{% extends 'raw/_layout-raw' %}
+
+{% set tmplName = 'Raw Category Assets' %}
+
+{% block content %}
+	<table class="table is-striped is-narrow is-fullwidth">
+		<tbody class="content">
+			<tr>
+				<th>EID</th>
+				<th>Title</th>
+				<th>Group</th>
+				<th>Hero BG</th>
+				<th>Thumbnail</th>
+			</tr>
+			{% for cat in craft.categories.orderBy('id').all() %}
+				<tr>
+					<td>{{ cat.id }}</td>
+					<td>
+						<a href="{{ cat.url }}" target="_blank">{{ cat.title }}</a>
+					</td>
+					<td>{{ cat.group }}</td>
+					<td>
+						{% if cat.pageHeroBgImage | length %}
+							<table class="table is-striped is-narrow is-fullwidth">
+								<tr>
+									<th>ID</th>
+									<td>{{ cat.pageHeroBgImage.one.id }}</td>
+								</tr>
+								<tr>
+									<th>Title</th>
+									<td>
+										<a href="{{ cat.pageHeroBgImage.one.url }}" target="_blank">
+											{{ cat.pageHeroBgImage.one.title }}
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<th>Filename</th>
+									<td>{{ cat.pageHeroBgImage.one.filename }}</td>
+								</tr>
+								<tr>
+									<th>Kind</th>
+									<td>{{ cat.pageHeroBgImage.one.kind }}</td>
+								</tr>
+								<tr>
+									<th>Width</th>
+									<td>{{ cat.pageHeroBgImage.one.width }}</td>
+								</tr>
+								<tr>
+									<th>Height</th>
+									<td>{{ cat.pageHeroBgImage.one.height }}</td>
+								</tr>
+								<tr>
+									<th>Caption</th>
+									<td>{{ cat.pageHeroBgImage.one.imageCaption }}</td>
+								</tr>
+							</table>
+						{% endif %}
+					</td>
+					<td>
+						{% if cat.catThumb | length %}
+							<table class="table is-striped is-narrow is-fullwidth">
+								<tr>
+									<th>ID</th>
+									<td>{{ cat.catThumb.one.id }}</td>
+								</tr>
+								<tr>
+									<th>Title</th>
+									<td>
+										<a href="{{ cat.catThumb.one.url }}" target="_blank">
+											{{ cat.catThumb.one.title }}
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<th>Filename</th>
+									<td>{{ cat.catThumb.one.filename }}</td>
+								</tr>
+								<tr>
+									<th>Kind</th>
+									<td>{{ cat.catThumb.one.kind }}</td>
+								</tr>
+								<tr>
+									<th>Width</th>
+									<td>
+                    {% if cat.catThumb.one.width != "500" %}
+                      <span style="color: purple; font-weight: bold;">
+                        {{ cat.catThumb.one.width }}
+                      </span>
+                    {% else %}
+                      {{ cat.catThumb.one.width }}
+                    {% endif %}
+                  </td>
+								</tr>
+								<tr>
+									<th>Height</th>
+                  <td>
+                    {% if cat.catThumb.one.height != "375" %}
+                      <span style="color: purple; font-weight: bold;">
+                        {{ cat.catThumb.one.height }}
+                      </span>
+                    {% else %}
+                      {{ cat.catThumb.one.height }}
+                    {% endif %}
+                  </td>
+								</tr>
+								<tr>
+									<th>Caption</th>
+									<td>{{ cat.catThumb.one.imageCaption }}</td>
+								</tr>
+							</table>
+						{% endif %}
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

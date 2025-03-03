@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ siteName }} Entry Count Totals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+</head>
+<body>
+  <section class="section">
+    <div class="container is-fluid">
+      <h1 class="title">{{ siteName }} Entry Count Totals</h1>
+
+      <ul>
+        <li>Applications: {{ craft.entries.section('applications').count() }}</li>
+        <li>Case Studies: {{ craft.entries.section('caseStudies').count() }}</li>
+        <li>Company Pages: {{ craft.entries.section('companyPages').count() }}</li>
+        <li>Contact: {{ craft.entries.section('contact').count() }}</li>
+        <li>Documents: {{ craft.entries.section('documents').count() }}</li>
+        <li>General Pages: {{ craft.entries.section('generalPages').count() }}</li>
+        <li>Home: {{ craft.entries.section('home').count() }}</li>
+        <li>Industries: {{ craft.entries.section('industries').count() }}</li>
+        <li>Landing Pages: {{ craft.entries.section('landingPages').count() }}</li>
+        <li>Parts & Service: {{ craft.entries.section('partsAndService').count() }}</li>
+        <li>Parts & Service Pages: {{ craft.entries.section('partsAndServicePages').count() }}</li>
+        <li>Press Releases: {{ craft.entries.section('pressReleases').count() }}</li>
+        <li>Product Brands: {{ craft.entries.section('productBrands').count() }}</li>
+        <li>Products: {{ craft.entries.section('products').count() }}</li>
+        <li>ProMach Brands: {{ craft.entries.section('promachBrands').count() }}</li>
+        <li>Thank You Pages: {{ craft.entries.section('thankYouPages').count() }}</li>
+        <li>Trade Shows: {{ craft.entries.section('tradeShows').count() }}</li>
+        <li>Videos: {{ craft.entries.section('videos').count() }}</li>
+        <li>White Papers: {{ craft.entries.section('whitePapers').count() }}</li>
+      </ul>
+      
+    </div>
+  </section>
+</body>
+</html>      

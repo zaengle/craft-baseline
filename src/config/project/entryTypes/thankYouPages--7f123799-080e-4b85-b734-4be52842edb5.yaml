@@ -1,0 +1,58 @@
+fieldLayouts:
+  a2fe911d-0d8c-4e74-b4e2-4d1ca40308f8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c1f7b5ed-f779-4759-8fbf-d59fd4d39bce
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 14b10afb-9c39-4ca4-a740-c4bbbd04f101 # Page Builder
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6339cc2d-2f71-42fc-829e-1cb8cddcfd5f
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Thank You Pages'
+        uid: 0a2bcb33-0fbf-4b6f-b5e5-02de453593a8
+        userCondition: null
+handle: thankYouPages
+hasTitleField: true
+name: 'Thank You Pages'
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

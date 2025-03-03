@@ -1,0 +1,18 @@
+columnSuffix: null
+contentColumnType: string
+handle: tsBooth
+instructions: null
+name: Booth
+searchable: true
+settings:
+  entryTypes:
+    -
+      uid: 6d975435-2172-4c13-bd38-f58902761aea
+  maxEntries: null
+  minEntries: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

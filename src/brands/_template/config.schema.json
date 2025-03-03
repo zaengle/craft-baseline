@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/ProMachSite",
+  "definitions": {
+    "ProMachSite": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "handle": {
+          "type": "string"
+        },
+        "businessLine": {
+          "type": "string"
+        },
+        "licenseKeys": {
+          "$ref": "#/definitions/LicenseKeys"
+        },
+        "enabledLocales": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "flags": {
+          "$ref": "#/definitions/Flags"
+        }
+      },
+      "required": [
+        "businessLine",
+        "enabledLocales",
+        "flags",
+        "handle",
+        "licenseKeys",
+        "name"
+      ],
+      "title": "ProMachSite"
+    },
+    "Flags": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "multiLang": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "multiLang"
+      ],
+      "title": "Flags"
+    },
+    "LicenseKeys": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "seomatic": {
+          "type": "string"
+        },
+        "navigation": {
+          "type": "string"
+        },
+        "freeform": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "freeform",
+        "navigation",
+        "seomatic"
+      ],
+      "title": "LicenseKeys"
+    }
+  }
+}

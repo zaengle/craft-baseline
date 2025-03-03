@@ -1,0 +1,247 @@
+<span class="page-builder">
+  {%- for block in entry.pageBuilder.all() -%}
+
+    {#- singleImage -#}
+    {%- if block.type == 'singleImage' -%}
+      <div class="block-single-image bg-color-{{ block.backgroundColor }}">
+        <div class="container">
+          <div class="img-block">
+            <figure>
+              <img src="{{ block.image.one.url }}" class="img-fluid" alt="{{ block.image.one.title }}">
+              {%- if block.caption | length -%}
+                <figcaption>{{ block.caption }}</figcaption>
+              {%- else -%}
+                <figcaption>{{ block.image.one.imageCaption }}</figcaption>
+              {%- endif -%}
+            </figure>
+          </div><!-- /.img-block -->
+        </div><!-- /.container -->
+      </div><!-- /.block-single-image -->
+    {%- endif -%}
+
+    {#- singleVideo -#}
+    {%- if block.type == 'singleVideo' -%}
+      <div class="block-single-video bg-color-{{ block.backgroundColor }}">
+        <div class="container">
+          <h3 class="text-center">{{ block.heading }}</h3>
+          <div class="row">
+            <div class="col-md-8 col-sm-12 mx-auto">
+            
+              <div class="resp-container">
+                {%- if block.pbYouTubeVideo | length -%}
+                  {%- set ytv = craft.embeddedAssets.get(block.pbYouTubeVideo.one) -%}    
+                  <iframe
+                    class="resp-iframe"
+                    src="{{ ytv.getIframeSrc(['autoplay=0', 'controls=1', 'rel=0', 'playsinline=1']) }}"
+                    allow="autoplay"
+                    allow="encrypted-media"
+                    allowfullscreen
+                  >
+                  </iframe>            
+                {%- endif -%}
+              </div><!-- /.resp-container -->
+
+            </div><!-- /.col-md-8 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.block-single-image -->
+
+    {%- endif -%}
+
+    {#- carousel -#}
+    {%- if block.type == 'carousel' -%}
+      <div class="carousel-section block-carousel bg-color-{{ block.backgroundColor }}">
+        <div class="container">
+          {%- if block.subhead | length -%}
+            <h5>{{ block.subhead }}</h5>
+          {%- endif -%}
+          <div class="slick-slider img-slider">
+            {%- for image in block.images.all() -%}
+              <div>
+               <a href="{{ image.getUrl('product816w') }}" data-toggle="lightbox" data-title="{{ image.imageCaption ?? image.title }}">
+                  <img src="{{ image.getUrl('product432w') }}" style="width: 100%;">
+                </a>
+              </div>
+            {%- endfor -%}
+          </div><!-- /.slick-slider.img-slider -->
+        </div><!-- /.container-sm -->
+      </div><!-- /.carousel-section.bg-light -->
+    {%- endif -%}
+
+    {#- sectionWithSidebar -#}
+    {%- if block.type == 'sectionWithSidebar' -%}
+      <div class="text-holder block-section-with-sidebar bg-color-{{ block.backgroundColor }}">
+        <div class="container">
+          <div class="row">
+            <!-- heading/body -->
+            <div class="col-lg-7">
+              <h2>{{ block.heading }}</h2>
+              {{ block.body }}
+            </div><!-- /.col-lg-7 -->
+
+            <!-- sidebar -->
+            <div class="col-lg-4 offset-lg-1">
+              <strong class="subtitle">{{ block.sidebarHeading }}</strong>
+              <ul class="link-list">
+                {%- if block.sidebarFiles | length -%}
+                  {%- for file in block.sidebarFiles.all() -%}
+                    <li>
+                      <a href="{{ file.url }}" target="_blank">
+                        {{ file.title }}
+                        <i class="icon-download"></i>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {%- if block.sidebarLinks | length -%}
+                  {%- for link in block.sidebarLinks.all() -%}
+                    <li>
+                      <a href="{{ link.url }}">
+                        {{ link.title }}
+                        <i class="icon-long-arrow-right"></i>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                {%- endif -%}
+              </ul>
+            </div><!-- /.col-lg-4.offset-lg-1 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.block-section-with-sidebar -->
+    {%- endif -%}
+
+    {#- sectionWithButton -#}
+    {%- if block.type == 'sectionWithButton' -%}
+      <div class="extra-block block-section-with-button bg-color-{{ block.backgroundColor }}">
+        <div class="container text-holder">
+          <div class="row">
+            <div class="col-md-5">
+              <h2>{{ block.heading }}</h2>
+            </div><!-- /.col-md-5 -->
+            <div class="col-md-7">
+              {{ block.body }}
+              <a href="{{ block.buttonUrl }}" class="btn btn-{{ block.backgroundColor }}">
+                {{ block.buttonText }}
+              </a>
+            </div><!-- /.col-md-7 -->
+          </div><!-- /.row -->
+        </div><!-- /.container-sm -->
+      </div><!-- /.extra-block -->
+    {%- endif -%}
+
+    {#- sectionWithText -#}
+    {%- if block.type == 'sectionWithText' -%}
+      <div class="extra-block block-section-with-text bg-color-{{ block.backgroundColor }}">
+        <div class="container text-holder">
+          <h2>{{ block.heading }}</h2>
+          {{ block.body }}
+        </div><!-- /.container-sm -->
+      </div><!-- /.extra-block -->
+    {%- endif -%}
+
+    {#- sectionWithForm -#}
+    {%- if block.type == 'sectionWithForm' -%}
+      <div id="{{ block.heading | kebab }}" class="block-section-with-form bg-color-{{ block.backgroundColor }}">
+        <div class="container text-holder">
+          <h2>{{ block.heading }}</h2>
+          <div class="row">
+            <div class="col-md-6">
+              {{ block.text }}
+            </div><!-- /.col-md-6 -->
+            <div class="col-md-6">
+              {% if block['pbFormIframe'] is defined and block['pbFormIframe'] is not null %}
+                {{ include(template_from_string(block.pbFormIframe)) | raw }}
+              {% else %}
+                {{ block.form.render() }}
+              {% endif %}
+            </div><!-- /.col-md-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container.text-holder -->
+      </div><!-- /.block-section-with-form -->
+    {%- endif -%}
+
+    {#- twoThreeFourAcross -#}
+    {%- if block.type == 'twoThreeFourAcross' -%}
+      <div class="block-two-three-four-across bg-color-{{ block.backgroundColor }}">
+        <div class="container text-holder">
+
+          <div class="row">
+            {%- if (block.image1 | length) or (block.text1 | length) -%}
+              <div class="col-md">
+                {%- if block.image1 | length -%}
+                  <img src="{{ block.image1.one.url }}" alt="{{ block.image1.one.imageCaption ?? block.image1.one.title }}" class="thin-border">
+                {%- endif -%}
+
+                {%- if block.text1 | length -%}
+                  {{ block.text1 }}
+                {%- endif -%}
+              </div><!-- /.col-md ONE -->
+            {%- endif -%}
+
+            {%- if (block.image2 | length) or (block.text2 | length) -%}
+              <div class="col-md">
+                {%- if block.image2 | length -%}
+                  <img src="{{ block.image2.one.url }}" alt="{{ block.image2.one.imageCaption ?? block.image2.one.title }}" class="thin-border">
+                {%- endif -%}
+
+                {%- if block.text2 | length -%}
+                  {{ block.text2 }}
+                {%- endif -%}
+              </div><!-- /.col-md TWO -->
+            {%- endif -%}
+
+            {%- if (block.image3 | length) or (block.text3 | length) -%}
+              <div class="col-md">
+                {%- if block.image3 | length -%}
+                  <img src="{{ block.image3.one.url }}" alt="{{ block.image3.one.imageCaption ?? block.image3.one.title }}" class="thin-border">
+                {%- endif -%}
+
+                {%- if block.text3 | length -%}
+                  {{ block.text3 }}
+                {%- endif -%}
+              </div><!-- /.col-md THREE -->
+            {%- endif -%}
+
+            {%- if (block.image4 | length) or (block.text4 | length) -%}
+              <div class="col-md">
+                {%- if block.image4 | length -%}
+                  <img src="{{ block.image4.one.url }}" alt="{{ block.image4.one.imageCaption ?? block.image4.one.title }}" class="thin-border">
+                {%- endif -%}
+
+                {%- if block.text4 | length -%}
+                  {{ block.text4 }}
+                {%- endif -%}
+              </div><!-- /.col-md FOUR -->
+            {%- endif -%}
+
+          </div><!-- /.row -->
+
+        </div><!-- /.container.text-holder -->
+      </div><!-- /.block-two-three-four-across -->
+    {%- endif -%}
+
+    {#- threeSixtyEmbed -#}
+    {%- if block.type == 'threeSixtyEmbed' -%}
+      {%- set tsv = block.pbThreeSixtyViewer.one -%}
+      <div class="block-three-sixty-embed bg-color-gray">
+
+        <div class="container">
+          <h3 class="text-center">
+            {{ tsv.threeSixtyDesc ?? tsv.title }}
+          </h3>
+          <div class="row">
+            <div class="col-md-8 col-sm-12 mx-auto">
+            
+              <div class="resp-container">
+                <iframe class="resp-iframe three-sixty-iframe" id="" src="{{ tsv.threeSixtyRotatorUrl }}" allow="autoplay" allow="encrypted-media" allowfullscreen></iframe>
+              </div><!-- /.resp-container -->
+
+            </div><!-- /.col-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+
+      </div><!-- /.block-threeSixtyEmbed -->
+    {%- endif -%}
+  {%- endfor -%}
+</span>

@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: bde41eba-ce96-4817-9422-0df9e483d00d # Videos
+handle: videos
+name: Videos
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: videos/_entry
+    uriFormat: 'videos/{slug}'
+structure:
+  maxLevels: 1
+  uid: 3a5dcc9f-d00f-4b55-88ab-8ebfbd6f9431
+type: structure

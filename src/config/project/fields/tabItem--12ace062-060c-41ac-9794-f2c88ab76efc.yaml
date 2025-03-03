@@ -1,0 +1,56 @@
+columnSuffix: null
+handle: tabItem
+instructions: null
+name: 'Tabs - Tab - List - Item'
+searchable: true
+settings:
+  addRowLabel: 'Add a row'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Name
+            -
+              - handle
+              - name
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Content
+            -
+              - handle
+              - content
+            -
+              - width
+              - ''
+            -
+              - type
+              - multiline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: null
+  minRows: null
+  staticRows: false
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Table

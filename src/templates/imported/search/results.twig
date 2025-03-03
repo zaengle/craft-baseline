@@ -1,0 +1,93 @@
+{% extends '_layouts/default' %}
+
+{%- set title = ('Search Results' | t ) -%}
+{%- set pageType = 'search-results' -%}
+
+{%- set searchQuery = craft.app.request.getParam('q') -%}
+{%- set entries = craft.entries()
+    .search(searchQuery)
+    .section('applications, caseStudies, companyPages, contact, documents, generalPages, industries, partsAndService, partsAndServicePages, products, videos, whitePapers')
+    .orderBy('score')
+    .all() -%}
+
+{% block content %}
+  <main id="main">
+    <section class="results-section">
+        <div class="container-sm">
+        
+          {% if entries | length %}
+
+            <h2><span class="light">{{ entries | length }} {{ 'results' | t }}</span></h2>
+  
+            <div class="input-group">
+              <div class="prepend">
+                <span>{{ 'Sort By' | t }}</span>
+              </div><!-- /.prepend -->
+              <span class="fake-select">
+                <select class="search-filter" name="sort-by" class="form-control">
+                  <option selected disabled hidden>{{ 'All' | t }}</option>
+                  {%- set sections = [] -%}
+                  {%- for entry in entries -%}
+                    {%- set sections = sections | merge([entry.section]) -%}
+                  {%- endfor -%}
+                  {%- set uniqueSections = sections | unique -%}
+                  {%- for uSec in uniqueSections -%}
+                    <option value="{{ uSec }}">{{ uSec }}</option>
+                  {%- endfor -%}
+                </select>
+              </span>
+            </div><!-- /.input-group -->
+
+            <ul class="category-list">
+              {%- for entry in entries -%}
+                <li>
+                  <a href="{{ entry.url }}" class="content-holder">
+                    <div class="text-holder">
+                      <h5>{{ entry.title }}</h5>
+                      <span class="extra-title">
+                        {{ entry.section }}
+                      </span>
+                    </div><!-- /.text-holder -->
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {% else %}
+            <h4>{{ 'Your search for "{searchQuery}" didn’t return any results.' | t(params = { searchQuery: "#{searchQuery}" }) }}</h4>
+          {% endif %}
+
+          <br>
+          <strong class="subtitle">{{ 'Additional Links' | t }}</strong>
+          {{ craft.navigation.render('searchModalLinks', { ulClass: 'unstyled-list' }) }}
+          <strong class="subtitle">{{ 'Contact Us' | t }}</strong>
+          <ul class="unstyled-list">
+
+            {%- if  alias('@phone') | default('') -%}
+              <li>{{ 'Phone' | t }}: <a href="tel:{{ alias('@phone') }}">{{  alias('@phone') }}</a></li>
+            {%- endif -%}
+
+            {%- if alias('@phoneTollFree') | default('') -%}
+              <li>{{ 'Toll-Free' | t }}: <a href="tel:{{ alias('@phoneTollFree') }}">{{ alias('@phoneTollFree') }}</a></li>
+            {%- endif -%}
+
+            {%- if alias('@europePhone') | default('') -%}
+              <li>{{ 'Europe' | t }}: <a href="tel:{{ alias('@europePhone') }}">{{ alias('@europePhone') }}</a></li>
+            {%- endif -%}
+
+            {%- if alias('@fax') | default('') -%}
+              <li>{{ 'Fax' | t }}: {{ alias('@fax') }}</li>
+            {%- endif -%}
+
+            {%- if alias('@email') | default('') -%}
+              <li>{{ 'Email' | t }}: <a href="mailto:{{ alias('@email') }}">{{ alias('@email') }}</a></li>
+            {%- endif -%}
+          </ul>
+
+
+
+
+
+        </div><!-- /.container-sm -->
+    </section>
+  </main>
+{% endblock %}

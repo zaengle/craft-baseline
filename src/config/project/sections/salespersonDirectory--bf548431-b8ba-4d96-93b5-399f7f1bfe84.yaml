@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: 46f3b776-94b5-4652-8195-96220edfb1b5 # Salesperson Directory
+handle: salespersonDirectory
+name: 'Salesperson Directory'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: 410de40d-f1f1-4cdb-b40f-e813d512465f
+type: structure

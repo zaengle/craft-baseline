@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: f6374af2-b7e3-4b92-8a6f-fb78d1f17fa7 # Company
+handle: companyPages
+name: 'Company Pages'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: company-pages/_entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: f0cc0110-cce5-4d0e-8dbe-0b3f7affb2e3
+type: structure

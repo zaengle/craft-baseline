@@ -1,17 +1,23 @@
-STOP!! This project template has not yet been configured.
+# promach-craft-brand-sites
 
-You almost certainly want to:
-
-```
-npm i
-npm run setup
-```
-
-And follow the instructions.
-
-You can run `npm run setup -- --help` for more information.
+An opinionated CraftCMS + Tailwind setup
 
 ## Requirements
 
-- Recent version of `node` (>=12)
-- `ddev` with mutagen enabled
+- [DDEV](./docs/ddev-local-development.md)
+
+## Installation
+
+```bash
+ddev composer install
+ddev npm install
+ddev import-db --file=./path-to/database-dump.sql
+```
+
+## Daily development
+
+```bash
+ddev npm run dev
+```
+
+For more, see [the docs](./docs/)

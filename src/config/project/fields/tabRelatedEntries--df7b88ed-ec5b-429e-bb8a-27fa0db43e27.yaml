@@ -1,0 +1,28 @@
+columnSuffix: null
+handle: tabRelatedEntries
+instructions: null
+name: 'Tabs - Tab - Rich Text - Related Entries'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:1a64c3f1-395f-459a-8414-196fc0a50a53' # Applications
+    - 'section:ddfc8bc5-439d-4880-a7b5-2e5649d491dc' # Case Studies
+    - 'section:21ffa9cc-131b-4873-bf16-3cdb922bee83' # Documents
+    - 'section:0215953f-df5e-4f1b-bf8d-de7ee03f90fd' # Industries
+    - 'section:fe343b1e-ebd0-47a8-bd71-808f9c78e074' # Products
+    - 'section:219d285c-1c39-454e-9be3-e7531768723d' # Videos
+    - 'section:989f3a4b-5f59-4162-a7d4-3fd3390d42d0' # White Papers
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

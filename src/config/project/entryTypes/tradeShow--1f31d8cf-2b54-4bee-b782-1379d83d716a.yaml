@@ -1,0 +1,118 @@
+fieldLayouts:
+  58f6ff27-df74-40aa-93e2-066785fcd10b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3378b22c-c15c-4cfb-a943-5a269150e1e6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 95fd1670-1ee2-41c5-8af4-45c427afd079 # Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d95c07c8-ef63-45f9-91a5-7658ef2c500c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4613e5ac-64f0-478a-835f-0b7f6d441bd0 # Body
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bc0904e9-f105-4d87-8e19-c41d4e61fd16
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a77680a5-298f-484f-bebd-28947648a8eb # Trade Show Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 39d9da80-8c7d-430d-8428-4cafb39354b3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 57bad9ba-917c-412f-90a3-461b31e54f66 # Time
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3368f149-e1e6-4a9a-bdf1-deb42a2b452b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0b5bf57d-426a-4229-900b-cfb14f07c53a # Booth
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f17b0299-f49a-43d6-b1ab-517e48af8d00
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 89c5f6f6-851b-4949-9794-207dc8c3849f # Unique ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 322cfa59-8d7d-472b-a9cf-5432d1e7dc1a
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Trade Shows'
+        uid: 04ce7c2f-9026-4277-adc0-1cde31eae814
+        userCondition: null
+handle: tradeShow
+hasTitleField: true
+name: 'Trade Show'
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

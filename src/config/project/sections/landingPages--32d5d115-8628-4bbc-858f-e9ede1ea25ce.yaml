@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: b3c626b4-d8b2-4160-8b82-83a41f09e20e # Landing Pages
+handle: landingPages
+name: 'Landing Pages'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: true
+    template: landing/_entry
+    uriFormat: 'landing/{slug}'
+type: channel

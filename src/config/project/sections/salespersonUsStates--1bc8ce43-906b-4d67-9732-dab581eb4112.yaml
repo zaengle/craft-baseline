@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  -
+    uid: bc14dcb1-95fb-4824-9a5f-93a2927b88ef # Salesperson U.S. States
+handle: salespersonUsStates
+name: 'Salesperson U.S. States'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  c0ea20be-803e-4be3-9775-fc071aa393e1: # G O L D E N
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel
