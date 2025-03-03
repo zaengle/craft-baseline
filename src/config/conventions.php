@@ -5,35 +5,14 @@
  * Craft Conventions
  *
  * @link      https://zaengle.com/
+ * @see      https://craft-conventions.zaengle.com/
  * @copyright Copyright (c) 2022 Zaengle Corp
  */
 
-use zaengle\conventions\resolvers\DefaultResolver;
-/**
- * Conventions config.php
- *
- * This file exists only as a template for the Conventions settings.
- * It does nothing on its own.
- *
- * Don't edit this file, instead copy it to 'craft/config' as 'conventions.php'
- * and make your changes there to override default settings.
- *
- * Once copied to 'craft/config', this file will be multi-environment aware as
- * well, so you can have different settings groups for each environment, just as
- * you do for 'general.php'
- */
+use craft\helpers\App;
 
 return [
-    /**
-     * Pattern Types (Shorthand config)
-     *
-     * A `patterns` associative array where:
-     * - Keys defines the name of the PatternType's template helper ( e.g. `{{ partial('my-partial')`)
-     * - Values define the subdirectory within CRAFT_TEMPLATES_PATH to resolve this pattern type within
-     *
-     * Advanced / options syntax is also available if the shorthand doesn't meet your needs, see
-     * vendor/zaengle/craft-conventions/docs/02-advanced-config.md
-     */
+
     'patterns' => [
         // <PatternTypeHandle> => <TemplateSubDir>
         'partial' => '_partials',
@@ -48,7 +27,10 @@ return [
     'defaults' => [
         'params' => [
             // Named params that *will be created if omitted*  in the ctx passed to the pattern template
-            'ensure' => [],
+            'ensure' => [
+                'data' => [],
+                'opts' => [],
+            ],
             // Named params that *must* be set in the ctx passed to the pattern template,
             // or an error is thrown (in devMode)
             'require' => [],
@@ -56,5 +38,7 @@ return [
             // or an error is thrown (in devMode)
             'reject' => [],
         ],
+//        Output debug comments with paths when a pattern is rendered
+        'outputComments' => App::devMode(),
     ],
 ];
