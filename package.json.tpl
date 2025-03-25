@@ -20,7 +20,6 @@
   },
   "homepage": "<% project.repoUrl %>#README.md",
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.9",
     "dotenv": "^16.4.7",
