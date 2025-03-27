@@ -1,6 +1,3 @@
-import debugScreens from 'tailwindcss-debug-screens'
-import typography from '@tailwindcss/typography'
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -13,8 +10,4 @@ export default {
       colors: (theme) => ({}),
     },
   },
-  plugins: [
-    debugScreens,
-    typography,
-  ],
 }
