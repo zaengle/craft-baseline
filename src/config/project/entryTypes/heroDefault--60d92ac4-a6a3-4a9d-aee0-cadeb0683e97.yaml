@@ -1,6 +1,9 @@
-color: null
+color: green
 fieldLayouts:
   e845b843-3b11-41d6-ab3e-196eb4a841c5:
+    cardView:
+      - 'layoutElement:e5b083f0-8cb0-4d06-9f52-c644500fa585'
+      - 'layoutElement:0d81b342-cf42-4207-85dc-6df797e7fcb4'
     tabs:
       -
         elementCondition: null
@@ -10,7 +13,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: d7fde577-07c5-4dcf-8d55-83ab9d8f846c # Eyebrow
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -26,7 +29,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 5a0b3d75-fc6f-4790-a058-64fb63c26c61 # Heading
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -80,6 +83,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: 'Hero Default'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

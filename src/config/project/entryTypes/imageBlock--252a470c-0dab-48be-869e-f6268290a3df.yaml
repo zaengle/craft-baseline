@@ -1,6 +1,9 @@
 color: green
 fieldLayouts:
   7f5c4c1a-9889-45fb-bed7-9b4b9176965e:
+    cardView:
+      - 'layoutElement:56219224-b47f-4253-9800-2c2d78f62174'
+      - 'layoutElement:73380b41-ecfe-445b-a2ba-72e81ee471d7'
     tabs:
       -
         elementCondition: null
@@ -10,7 +13,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: d04505b0-157c-4c28-8060-158123f299c9 # Image
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
@@ -26,7 +29,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 5a0b3d75-fc6f-4790-a058-64fb63c26c61 # Heading
             handle: caption
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: Caption
             providesThumbs: false
@@ -43,11 +46,11 @@ fieldLayouts:
 handle: imageBlock
 hasTitleField: false
 icon: image
-name: 'Image Block'
+name: Image
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: 'Image Block'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

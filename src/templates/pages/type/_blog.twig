@@ -2,7 +2,10 @@
 
 {% block main %}
 
-{{ entry.title }}
-{{ entry.longContent }}
+  {{ entry.title }}
+
+  {{ field('longContent', {
+    field: entry.longContent,
+  }) }}
 
 {% endblock %}

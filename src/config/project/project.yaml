@@ -1,4 +1,4 @@
-dateModified: 1743114467
+dateModified: 1743178195
 email:
   fromEmail: dev@zaengle.com
   fromName: $PRIMARY_SITE_NAME
@@ -22,12 +22,12 @@ meta:
     6d911a2a-162d-4f6f-ade3-7e274512eb58: Hero # Hero
     32bcee44-6bd1-40fc-b7ec-d119b5c317b3: 'Home Builder' # Home Builder
     60d92ac4-a6a3-4a9d-aee0-cadeb0683e97: 'Hero Default' # Hero Default
-    252a470c-0dab-48be-869e-f6268290a3df: 'Image Block' # Image Block
+    252a470c-0dab-48be-869e-f6268290a3df: Image # Image
     808c8097-ba43-4177-956d-fef5ef87577b: 'Footer Navigation' # Footer Navigation
     1484a1ab-6687-45b3-87ff-06f378cd8069: 'Primary Navigation' # Primary Navigation
     2296980a-ccb9-422a-995b-0f095004234a: 'Long Content' # Long Content
     23003052-0ab6-4232-92d4-3e19fc21d35b: Common # Common
-    a0024fe1-aa05-4698-ba69-3b77bed63fad: 'Text Block' # Text Block
+    a0024fe1-aa05-4698-ba69-3b77bed63fad: Text # Text
     b01b4132-c6e9-4b48-8ab5-e7ac735d0117: 'Blog Index' # Blog Index
     b638da95-68dd-4aef-958a-59d095fd74ec: Homepage # Homepage
     b5737f24-7aff-4ede-a1f9-615e8c880ef2: 'Blog Index' # Blog Index
@@ -38,7 +38,9 @@ meta:
     c3902150-e4bb-44f9-aabc-48fda0c1a340: Blog # Blog
     d04505b0-157c-4c28-8060-158123f299c9: Image # Image
     d7fde577-07c5-4dcf-8d55-83ab9d8f846c: Eyebrow # Eyebrow
+    d765d06e-13db-4c0d-af16-8d6f457889bb: 'Short Content' # Short Content
     d896cae6-461d-428a-acdd-c004a75caceb: Images # Images
+    dbe90f0d-a64e-40f9-9559-a2e0653bf4d8: 'Short Content' # Short Content
     e0ba3b8c-6105-4307-b1a3-89fed57d7634: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
     eb780d86-d1b4-4d24-8d74-343c135ef960: 'Long Content' # Long Content
     ee02dcac-6340-465d-8a93-9594e9e5b8d9: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
@@ -54,12 +56,10 @@ plugins:
   hyper:
     edition: standard
     enabled: true
-    licenseKey: E6F3PBOSCCJLD4WRUM0QFDYK
     schemaVersion: 1.0.0
   navigation:
     edition: standard
     enabled: true
-    licenseKey: W9PDW77RCGX2VC5MTRNDM2WZ
     schemaVersion: 2.1.0
   toolbelt:
     edition: standard

@@ -36,9 +36,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-27T22:08:51+00:00'
+            dateAdded: '2025-03-28T14:00:57+00:00'
             elementCondition: null
-            fieldUid: bf0d099c-51f4-498c-8c1f-7207be1ba990 # Simple Content
+            fieldUid: d765d06e-13db-4c0d-af16-8d6f457889bb # Short Content
             handle: null
             includeInCards: false
             instructions: null
@@ -47,7 +47,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7d421f80-6361-4e96-bc0a-5ed951275b6a
+            uid: 2c475cea-3811-4f8c-bd5e-99cdd9e5e523
             userCondition: null
             warning: null
             width: 100
@@ -57,11 +57,11 @@ fieldLayouts:
 handle: textBlock
 hasTitleField: true
 icon: text
-name: 'Text Block'
+name: Text
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: 'Text Block'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

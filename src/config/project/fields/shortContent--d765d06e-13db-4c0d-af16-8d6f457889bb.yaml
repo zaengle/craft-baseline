@@ -1,20 +1,14 @@
 columnSuffix: null
-handle: longContent
+handle: shortContent
 instructions: null
-name: 'Long Content'
+name: 'Short Content'
 searchable: false
 settings:
   availableTransforms: ''
-  availableVolumes: ''
-  ckeConfig: 2296980a-ccb9-422a-995b-0f095004234a # Long Content
+  availableVolumes: '*'
+  ckeConfig: dbe90f0d-a64e-40f9-9559-a2e0653bf4d8 # Short Content
   createButtonLabel: null
   defaultTransform: null
-  entryTypes:
-    -
-      __assoc__:
-        -
-          - uid
-          - 252a470c-0dab-48be-869e-f6268290a3df # Image
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

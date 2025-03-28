@@ -20,7 +20,7 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  e0ba3b8c-6105-4307-b1a3-89fed57d7634:
+  e0ba3b8c-6105-4307-b1a3-89fed57d7634: # $PRIMARY_SITE_NAME
     enabledByDefault: true
     hasUrls: true
     template: index.twig

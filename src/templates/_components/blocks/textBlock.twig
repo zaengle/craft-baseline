@@ -1,5 +1,9 @@
 {# Text Block #}
 
-{% do defineProps('data', {
-  simpleText: '',
+{% do defineProps(data, {
+  title: '',
+  shortContent: '',
 }) %}
+
+{{ data.title }}
+{{ data.shortContent }}

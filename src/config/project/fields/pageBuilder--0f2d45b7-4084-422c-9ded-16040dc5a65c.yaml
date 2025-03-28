@@ -11,20 +11,20 @@ settings:
       __assoc__:
         -
           - uid
-          - a0024fe1-aa05-4698-ba69-3b77bed63fad # Text Block
+          - a0024fe1-aa05-4698-ba69-3b77bed63fad # Text
     -
       __assoc__:
         -
           - uid
-          - 252a470c-0dab-48be-869e-f6268290a3df # Image Block
+          - 252a470c-0dab-48be-869e-f6268290a3df # Image
   includeTableView: false
   maxEntries: null
   minEntries: null
-  pageSize: 50
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
   showCardsInGrid: false
-  viewMode: cards
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

@@ -1,7 +1,8 @@
 {# Hero Field #}
 
-{% for block in field.eagerly() %}
-  {{ component('blocks/hero/' ~ block.type.handle , {
-    data: block,
+{%- set hero = takeOne(field) %}
+{%- if hero %}
+	{{ component('hero/' ~ hero.type.handle , {
+    data: hero,
   }) }}
-{% endfor %}
+{% endif %}
