@@ -1,0 +1,7 @@
+{# Home Builder Field #}
+
+{% for block in field.eagerly() %}
+  {{ component('blocks/' ~ block.type.handle , {
+    data: block,
+  }) }}
+{% endfor %}

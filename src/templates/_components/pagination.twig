@@ -1,0 +1,50 @@
+{# Pagination Element #}
+
+{% do defineProps(data, {
+  pageInfo: []
+}) %}
+
+{% if data.pageInfo.total > 1 %}
+<nav aria-label="Pagination">
+  <ul class="flex justify-center">
+    {%- if data.pageInfo.prevUrl -%}
+      <li>
+        <a href="{{ data.pageInfo.prevUrl }}" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">{{ 'Previous' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- for page, url in data.pageInfo.getPrevUrls(5) -%}
+      <li>
+        <a href="{{ url }}">
+          {{ page }}
+        </a>
+      </li>
+    {%- endfor -%}
+    {%- if data.pageInfo.currentPage -%}
+      <li>
+        <a class="font-bold" href="#">
+          {{ data.pageInfo.currentPage }}
+          <span class="sr-only">({{ 'current' | t }})</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- for page, url in data.pageInfo.getNextUrls(5) -%}
+      <li>
+        <a href="{{ url }}">
+          {{ page }}
+        </a>
+      </li>
+    {%- endfor -%}
+    {%- if data.pageInfo.nextUrl -%}
+      <li>
+        <a href="{{ data.pageInfo.nextUrl }}" aria-label="{{ 'Next' | t }}">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">{{ 'Next' | t }}</span>
+        </a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}

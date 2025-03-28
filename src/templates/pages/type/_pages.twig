@@ -1,0 +1,15 @@
+{% extends '_layouts/default' %}
+
+{% block main %}
+
+  {{ entry.title }}
+
+  {{ field('hero', {
+    field: entry.hero,
+  }) }}
+
+  {{ field('pageBuilder', {
+    field: entry.pageBuilder,
+  }) }}
+
+{% endblock %}

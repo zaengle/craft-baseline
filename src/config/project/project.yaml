@@ -1,0 +1,84 @@
+dateModified: 1743114467
+email:
+  fromEmail: dev@zaengle.com
+  fromName: $PRIMARY_SITE_NAME
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  localFiles:
+    hasUrls: true
+    name: 'Local Files'
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: /uploads
+meta:
+  __names__:
+    0f2d45b7-4084-422c-9ded-16040dc5a65c: 'Page Builder' # Page Builder
+    1c98edf1-ea19-4049-a89d-fa538aaeb61f: Pages # Pages
+    1cfb3efd-2b62-4198-a828-98f92217c469: Blog # Blog
+    3ab5417c-2f8f-4924-afac-d7bfa0b96b07: Pages # Pages
+    3ef69843-ea50-4c2c-888d-d10430a11f58: Links # Links
+    5a0b3d75-fc6f-4790-a058-64fb63c26c61: Heading # Heading
+    6d911a2a-162d-4f6f-ade3-7e274512eb58: Hero # Hero
+    32bcee44-6bd1-40fc-b7ec-d119b5c317b3: 'Home Builder' # Home Builder
+    60d92ac4-a6a3-4a9d-aee0-cadeb0683e97: 'Hero Default' # Hero Default
+    252a470c-0dab-48be-869e-f6268290a3df: 'Image Block' # Image Block
+    808c8097-ba43-4177-956d-fef5ef87577b: 'Footer Navigation' # Footer Navigation
+    1484a1ab-6687-45b3-87ff-06f378cd8069: 'Primary Navigation' # Primary Navigation
+    2296980a-ccb9-422a-995b-0f095004234a: 'Long Content' # Long Content
+    23003052-0ab6-4232-92d4-3e19fc21d35b: Common # Common
+    a0024fe1-aa05-4698-ba69-3b77bed63fad: 'Text Block' # Text Block
+    b01b4132-c6e9-4b48-8ab5-e7ac735d0117: 'Blog Index' # Blog Index
+    b638da95-68dd-4aef-958a-59d095fd74ec: Homepage # Homepage
+    b5737f24-7aff-4ede-a1f9-615e8c880ef2: 'Blog Index' # Blog Index
+    ba72b5dd-9e9f-4b11-b3d3-2c5cb5bfa144: Simple # Simple
+    bf0d099c-51f4-498c-8c1f-7207be1ba990: 'Simple Content' # Simple Content
+    c2eecb67-e3c1-48ae-abd2-03cf16e1b03e: Homepage # Homepage
+    c29acaf4-1171-46b9-8962-1ecee71ff4ea: Files # Files
+    c3902150-e4bb-44f9-aabc-48fda0c1a340: Blog # Blog
+    d04505b0-157c-4c28-8060-158123f299c9: Image # Image
+    d7fde577-07c5-4dcf-8d55-83ab9d8f846c: Eyebrow # Eyebrow
+    d896cae6-461d-428a-acdd-c004a75caceb: Images # Images
+    e0ba3b8c-6105-4307-b1a3-89fed57d7634: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+    eb780d86-d1b4-4d24-8d74-343c135ef960: 'Long Content' # Long Content
+    ee02dcac-6340-465d-8a93-9594e9e5b8d9: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  conventions:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  hyper:
+    edition: standard
+    enabled: true
+    licenseKey: E6F3PBOSCCJLD4WRUM0QFDYK
+    schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: W9PDW77RCGX2VC5MTRNDM2WZ
+    schemaVersion: 2.1.0
+  toolbelt:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $PRIMARY_SITE_NAME
+  retryDuration: 120
+  schemaVersion: 5.6.0.2
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

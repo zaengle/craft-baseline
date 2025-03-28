@@ -5,6 +5,8 @@
     "craftcms/ckeditor": "^4.0",
     "craftcms/cms": "^5.0",
     "nystudio107/craft-vite": "^5.0",
+    "verbb/hyper": "2.2.4",
+    "verbb/navigation": "3.0.6",
     "vlucas/phpdotenv": "^5.4",
     "zaengle/craft-conventions": "^5.0",
     "zaengle/craft-toolbelt": "^5.0"
@@ -69,5 +71,12 @@
     "post-install-cmd": "@post-craft-update",
     "test": "pest",
     "coverage": "pest --coverage"
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }

@@ -31,6 +31,6 @@ export default (defaultHandle) => {
     installDependencies,
     setupCraft,
     cleanup,
-    commitAllChanges,
+    // commitAllChanges,
   )(program.opts())
 }

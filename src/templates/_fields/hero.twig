@@ -1,0 +1,7 @@
+{# Hero Field #}
+
+{% for block in field.eagerly() %}
+  {{ component('blocks/hero/' ~ block.type.handle , {
+    data: block,
+  }) }}
+{% endfor %}
