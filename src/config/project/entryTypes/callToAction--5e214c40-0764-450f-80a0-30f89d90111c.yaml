@@ -1,0 +1,85 @@
+color: green
+fieldLayouts:
+  f937ccb6-6935-4f95-bf78-168d826af0c6:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-28T20:56:52+00:00'
+            elementCondition: null
+            fieldUid: d7fde577-07c5-4dcf-8d55-83ab9d8f846c # Eyebrow
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c9e4219-1daa-4b98-b680-2f0fbf59e853
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-28T20:56:52+00:00'
+            elementCondition: null
+            fieldUid: 5a0b3d75-fc6f-4790-a058-64fb63c26c61 # Heading
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 44a31ddb-ad28-410c-981a-596be2e0b12a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-28T20:56:52+00:00'
+            elementCondition: null
+            fieldUid: bf0d099c-51f4-498c-8c1f-7207be1ba990 # Simple Content
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d83e105e-5925-4e36-8580-d978be97bdaf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-28T20:56:52+00:00'
+            elementCondition: null
+            fieldUid: 3ef69843-ea50-4c2c-888d-d10430a11f58 # Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 34508ea0-ffec-4e85-8f39-ae4a7967bdb2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 59f84ee0-552a-45a5-a0da-62fbec5b87ca
+        userCondition: null
+handle: callToAction
+hasTitleField: false
+icon: star
+name: 'Call to Action'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: 'Call to Action'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
