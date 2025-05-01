@@ -10,6 +10,7 @@ web/mix-manifest.json
 web/hot
 web/images/
 web/fonts/
+web/uploads/
 
 # Craft
 /storage/*

@@ -1,0 +1,17 @@
+{# Image Block #}
+
+{% do defineProps(data, {
+  image: null,
+  caption: '',
+}) %}
+
+
+{%- set image = data.image.eagerly().one() -%}
+{{ component('tag/image', {
+  data: {
+    image: image,
+  },
+  opts: {}
+} ) }}
+
+{{ data.caption }}

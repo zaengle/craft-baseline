@@ -1,0 +1,119 @@
+{% extends '_layouts/default' %}
+
+{% block main %}
+  
+  <div class="mx-auto max-w-3xl px-4 py-8 prose">
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <p>Lorem ipsum dolor sit amet, <a href="/">consectetur adipiscing elit</a>. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. <strong>Praesent et diam eget libero egestas mattis sit amet vitae augue</strong>. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+    <p><em>Quisque egestas diam in arcu cursus euismod</em>. Donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue. Lectus sit amet est placerat in egestas erat imperdiet. Amet nisl purus in mollis nunc sed id semper risus in hendrerit gravida. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi. Nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed.</p>
+    <p><a href="/" class="btn">Link Button</a></p>
+    <ul>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+    </ul>
+    <ol>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit</li>
+    </ol>
+    <table>
+      <caption>Example Table</caption>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cell 1</td>
+          <td>Cell 2</td>
+          <td>Cell 3</td>
+        </tr>
+        <tr>
+          <td>Cell 4</td>
+          <td>Cell 5</td>
+          <td>Cell 6</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Form Fields</h2>
+    <form class="grid md:grid-cols-2 gap-4">
+      <div>
+        <label for="text">Label</label>
+        <input id="text" type="text" placeholder="Input Text">
+      </div>
+      <div>
+        <textarea placeholder="Textarea"></textarea>
+      </div>
+      <div>
+        <label for="checkbox"><input type="checkbox" id="checkbox">  Checkbox</label>
+      </div>
+      <div>
+        <label for="radio"><input type="radio" id="radio">  Radio</label>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
+      <div>
+        <label for="select">Select</label>
+        <select name="select" id="select">
+          <option value="">Select One</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
+      <div>
+        <label for="file">File Upload</label>
+        <input type="file" id="file">
+      </div>
+      <div>
+        <label for="date">Date</label>
+        <input type="date" id="date">
+      </div>
+      <div>
+        <label for="number">Number</label>
+        <input type="number" id="number">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password">
+      </div>
+      <div>
+        <label for="search">Search</label>
+        <input type="search" id="search">
+      </div>
+      <div>
+        <label for="tel">Telephone</label>
+        <input type="tel" id="tel">
+      </div>
+      <div>
+        <label for="url">URL</label>
+        <input type="url" id="url">
+      </div>
+      <div>
+        <label for="color">Color</label>
+        <input type="color" id="color">
+      </div>
+      <div>
+        <label for="range">Range</label>
+        <input type="range" id="range">
+      </div>
+      <div><button class="btn">Button</button></div>
+    </form>
+    
+  </div> 
+{% endblock %}
