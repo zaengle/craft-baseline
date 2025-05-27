@@ -1,4 +1,4 @@
-dateModified: 1743195505
+dateModified: 1748336647
 email:
   fromEmail: dev@zaengle.com
   fromName: $PRIMARY_SITE_NAME
@@ -83,7 +83,7 @@ system:
   live: true
   name: $PRIMARY_SITE_NAME
   retryDuration: 120
-  schemaVersion: 5.6.0.2
+  schemaVersion: 5.7.0.3
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
