@@ -28,11 +28,11 @@
     "tailwindcss": "^4.0.9"
   },
   "devDependencies": {
-    "@zaengle/eslint-config-base": "^1.0.0",
-    "eslint": "^8.0.0",
+    "@zaengle/eslint-config-base": "^2.0.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-vitest-globals": "^1.5.0",
-    "eslint-plugin-vue": "^9.26.0",
-    "jsdom": "^24.0.0",
+    "eslint-plugin-vue": "^10.0.1",
+    "jsdom": "^26.0.0",
     "postcss": "^8.4.38",
     "postcss-focus-visible": "^10.0.1",
     "rollup-plugin-copy": "^3.5.0",
@@ -40,6 +40,6 @@
     "vite-plugin-restart": "^0.4.0",
     "vite-plugin-svg-icons": "^2.0.1",
     "vitepress": "^1.2.0",
-    "vitest": "^1.6.0"
+    "vitest": "^3.1.4"
   }
 }
