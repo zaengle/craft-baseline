@@ -1,7 +1,11 @@
-@import "vendor.css";
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@import "tailwindcss/base";
+@theme {
+  --color-primary-50: #dbeafe;
+  --color-primary-300: #3b82f6;
+}
 
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";
+@import "./base.css";
+@import "./vendor.css";
+@import "./formie.css";

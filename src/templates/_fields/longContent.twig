@@ -1,0 +1,13 @@
+{# Long Content CKEditor Field #}
+
+{%- for chunk in field %}
+	{%- if chunk.type == 'markup' %}
+		<div class="prose">
+			{{ chunk }}
+		</div>
+	{%- else %}
+    {{ component("blocks/#{chunk.entry.type.handle}" , {
+      data: chunk.entry
+    }) }}
+	{%- endif %}
+{%- endfor %} 

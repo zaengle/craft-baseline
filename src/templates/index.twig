@@ -1,7 +1,9 @@
 {% extends '_layouts/default' %}
 
 {% block main %}
-  <div class="bg-gray-300 h-screen">
-    <h1 class="text-xl mx-auto my-5 p-4 bg-gray-300 text-center max-w-screen-sm">Hello world!</h1>
-  </div>
+  
+  {{ field('homeBuilder', {
+    field: entry.homeBuilder,
+  }) }}
+
 {% endblock %}

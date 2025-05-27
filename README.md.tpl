@@ -1,6 +1,6 @@
 # <% project.handle %>
 
-An opinionated CraftCMS + Tailwind setup
+An opinionated CraftCMS + Tailwind 4 + Vite 6 setup
 
 ## Requirements
 

@@ -1,0 +1,89 @@
+/* @todo: Update Formie variables */
+.fui-i {
+  /* General */
+  --fui-font: inherit;
+  --fui-font-size: 16px;
+  --fui-color: var(--color-gray-800);
+  --fui-primary-color: var(--color-primary-300);
+  --fui-primary-color-hover: var(--color-primary-300);
+  --fui-error: var(--color-red-400);
+  --fui-success: var(--color-green-400);
+  --fui-gray-50: var(--color-gray-50);
+  --fui-gray-100: var(--color-gray-100);
+  --fui-gray-200: var(--color-gray-200);
+  --fui-gray-300: var(--color-gray-300);
+  --fui-gray-400: var(--color-gray-400);
+  --fui-gray-500: var(--color-gray-500);
+  --fui-gray-600: var(--color-gray-600);
+  --fui-gray-700: var(--color-gray-700);
+  --fui-gray-800: var(--color-gray-800);
+  --fui-gray-900: var(--color-gray-900);
+
+  --fui-border: 0 solid var(--fui-gray-500);
+  --fui-border-radius: 0.25rem;
+  --fui-border-color: var(--fui-gray-500);
+  --fui-focus-border-color: var(--fui-gray-800);
+  --fui-focus-shadow: none;
+
+  /* Alerts*/
+  --fui-alert-error-bg-color: var(--color-red-100);
+  --fui-alert-error-color: var(--fui-gray-800);
+  --fui-alert-success-bg-color: var(--color-green-100);
+  --fui-alert-success-color: var(--fui-gray-800);
+  --fui-alert-border-radius: 0;
+
+  /* Field Labels*/
+  --fui-label-font-weight: 600;
+  --fui-label-font-size: 0.875rem;
+  --fui-label-line-height: 1.25;
+  --fui-label-error-color: var(--fui-gray-800);
+  --fui-label-error-border-color: var(--color-red-400);
+
+  /* Field - Checkboxes/Radios*/
+  --fui-check-bg-color: var(--fui-gray-50)
+  --fui-check-label-height: 1.5rem!;
+  --fui-check-label-width: 1.5rem!;
+
+  /* Field - Input*/
+  --fui-input-font-size: 1rem;
+  --fui-input-line-height: 1.5rem;
+  --fui-input-padding: 0.75rem 1rem;
+  --fui-input-background-color: var(--fui-gray-50)
+  --fui-input-error-color: var(--color-red-400);
+  --fui-input-error-border-color: var(--color-red-400);
+  --fui-input-error-box-shadow-focus: none;
+  --fui-input-placeholder-color: var(--fui-gray-500);
+  --fui-input-border: 0.5px solid var(--fui-gray-500);
+
+  /* Field - Button*/
+  --fui-submit-btn-bg-color: var(--color-primary-300);
+  --fui-submit-btn-color: var(--color-white);
+
+  .fui-alert {
+    @apply border-l-4;
+
+    &.fui-alert-error {
+      @apply border-red-400 bg-red-50 text-gray-800;
+    }
+
+    &.fui-alert-success {
+      @apply border-green-400 bg-green-50 text-gray-800;
+    }
+  }
+
+  .fui-error-message {
+    @apply text-sm;
+  }
+
+  /* @todo apply button styles */
+  .fui-btn {
+  }
+
+  .fui-checkbox:focus-within, .fui-radio:focus-within {
+    @apply outline outline-offset-4 outline-primary-300;
+  }
+
+  .fui-checkbox label, .fui-radio label {
+    @apply pt-1;
+  }
+}

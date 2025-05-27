@@ -6,6 +6,10 @@ export default (defaultHandle) => {
   program.summary('Configure a new CraftCMS project')
 
   program
+    .option('-n, --name <char>',
+      'Name to use for the project',
+      defaultHandle
+    )
     .option('-h, --handle <char>',
       'Handle to use for the project',
       defaultHandle

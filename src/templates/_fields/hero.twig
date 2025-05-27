@@ -1,0 +1,8 @@
+{# Hero Field #}
+
+{%- set hero = takeOne(field) %}
+{%- if hero %}
+	{{ component('hero/' ~ hero.type.handle , {
+    data: hero,
+  }) }}
+{% endif %}

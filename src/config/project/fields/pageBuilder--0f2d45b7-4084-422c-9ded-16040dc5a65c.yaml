@@ -1,0 +1,40 @@
+columnSuffix: null
+handle: pageBuilder
+instructions: null
+name: 'Page Builder'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - a0024fe1-aa05-4698-ba69-3b77bed63fad # Text
+    -
+      __assoc__:
+        -
+          - uid
+          - 252a470c-0dab-48be-869e-f6268290a3df # Image
+    -
+      __assoc__:
+        -
+          - uid
+          - 5f52bec5-60be-4ae5-994e-b1e3454b0230 # Form
+    -
+      __assoc__:
+        -
+          - uid
+          - 5e214c40-0764-450f-80a0-30f89d90111c # Call to Action
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

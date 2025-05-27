@@ -2,10 +2,11 @@ import inquirer from 'inquirer'
 
 const toRepoUrl = (handle) => `https://github.com/zaengle/${handle}.git`
 
-export default async ({ interactive, handle, installDeps, installCraft, securityKey }) => {
+export default async ({ interactive, name, handle, installDeps, installCraft, securityKey }) => {
 
   if (!interactive) {
     return {
+      name: name,
       handle: handle,
       repoUrl: toRepoUrl(handle),
       installDeps: Boolean(installDeps),
@@ -14,10 +15,21 @@ export default async ({ interactive, handle, installDeps, installCraft, security
   }
 
   return await inquirer.prompt([{
+    name: 'name',
+    message: 'What is the name of this project?',
+    type: 'input',
+    default: name ?? handle,
+    validate: (input) => {
+      if (input.length === 0) {
+        return 'Please enter a Name'
+      }
+      return true
+    }
+  },{
     name: 'handle',
     message: 'What is the handle for this project?',
     type: 'input',
-    default: handle,
+    default: handle ?? process.cwd(),
     validate: (input) => {
       if (input.length === 0) {
         return 'Please enter a handle'

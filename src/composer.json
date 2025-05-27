@@ -2,15 +2,19 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/ckeditor": "^4.0.0-beta.7",
-    "craftcms/cms": "^5.0.0-beta.5",
-    "nystudio107/craft-vite": "^5.0.0-beta.3",
-    "vlucas/phpdotenv": "^5.4.0",
-    "zaengle/craft-conventions": "^5.0.0-beta.1",
-    "zaengle/craft-toolbelt": "^5.0.0-beta.1"
+    "craftcms/ckeditor": "^4.0",
+    "craftcms/cms": "^5.0",
+    "nystudio107/craft-vite": "^5.0",
+    "verbb/formie": "^3.0.22",
+    "verbb/hyper": "^2.2.4",
+    "verbb/navigation": "3.0.6",
+    "vlucas/phpdotenv": "^5.4",
+    "zaengle/craft-conventions": "^5.0",
+    "zaengle/craft-toolbelt": "^5.0"
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
+    "craftcms/generator": "^2.1",
     "craftcms/phpstan": "dev-main",
     "nystudio107/craft-autocomplete": "^1.11",
     "pestphp/pest": "^2.33.2",
@@ -68,5 +72,12 @@
     "post-install-cmd": "@post-craft-update",
     "test": "pest",
     "coverage": "pest --coverage"
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }

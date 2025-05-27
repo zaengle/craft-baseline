@@ -1,0 +1,25 @@
+{% extends '_layouts/default' %}
+
+{% block main %}
+
+  {{ field('hero', {
+    field: entry.hero,
+  }) }}
+
+  {%- set query = craft.entries.section('blog').limit(5) -%}
+  {%- paginate query as pageInfo, blogPosts -%}
+  {%- for post in blogPosts -%}
+    {{ component('cards/blog', {
+      data: {
+        title: post.title,
+      }
+    }) }}
+  {%- endfor -%}
+
+  {{ component('pagination', {
+    data: {
+      pageInfo: pageInfo
+    }
+  }) }}
+
+{% endblock %}
