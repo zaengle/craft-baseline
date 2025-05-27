@@ -37,6 +37,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-27T21:23:30+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: eb780d86-d1b4-4d24-8d74-343c135ef960 # Long Content
             handle: null
@@ -44,7 +45,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b2ffb207-0d6c-4d8a-90b4-f062181b8466
@@ -58,7 +59,7 @@ handle: blog
 hasTitleField: true
 icon: file
 name: Blog
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

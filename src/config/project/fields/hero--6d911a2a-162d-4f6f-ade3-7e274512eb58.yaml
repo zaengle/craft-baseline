@@ -6,12 +6,13 @@ searchable: false
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - 60d92ac4-a6a3-4a9d-aee0-cadeb0683e97 # Hero Default
+          - 60d92ac4-a6a3-4a9d-aee0-cadeb0683e97 # Hero - Default
   includeTableView: false
   maxEntries: 1
   minEntries: null

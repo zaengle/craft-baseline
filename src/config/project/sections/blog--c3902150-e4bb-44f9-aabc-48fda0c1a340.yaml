@@ -23,6 +23,6 @@ siteSettings:
   e0ba3b8c-6105-4307-b1a3-89fed57d7634: # $PRIMARY_SITE_NAME
     enabledByDefault: true
     hasUrls: true
-    template: pages/_entry.twig
+    template: blog/_entry.twig
     uriFormat: 'blog/{slug}'
 type: channel

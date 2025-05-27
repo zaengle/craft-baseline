@@ -2,16 +2,17 @@ columnSuffix: null
 handle: pageBuilder
 instructions: null
 name: 'Page Builder'
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - a0024fe1-aa05-4698-ba69-3b77bed63fad # Text
+          - a0024fe1-aa05-4698-ba69-3b77bed63fad # Text + Image
     -
       __assoc__:
         -
@@ -26,7 +27,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 5e214c40-0764-450f-80a0-30f89d90111c # Call to Action
+          - 9ee306cc-b8f9-43ca-9e79-ffd332a55686 # Rich Text Block
   includeTableView: false
   maxEntries: null
   minEntries: null

@@ -2,7 +2,9 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 1c98edf1-ea19-4049-a89d-fa538aaeb61f # Pages
+    uid: 1c98edf1-ea19-4049-a89d-fa538aaeb61f # Page - Default
+  -
+    uid: f1f57da7-5da3-406b-981e-5249bc7cbab6 # Page - Text
 handle: pages
 maxAuthors: 1
 name: Pages
@@ -24,7 +26,7 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: pages/_entry.twig
-    uriFormat: 'pages/{slug}'
+    uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: null
   uid: 0de787bb-93ca-4da4-b056-528dcdd5848c

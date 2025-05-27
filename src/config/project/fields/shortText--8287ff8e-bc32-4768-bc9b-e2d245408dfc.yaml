@@ -1,8 +1,8 @@
 columnSuffix: null
-handle: eyebrow
+handle: shortText
 instructions: null
-name: Eyebrow
-searchable: false
+name: 'Short Text'
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

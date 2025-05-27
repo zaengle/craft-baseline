@@ -2,10 +2,11 @@ columnSuffix: null
 handle: longContent
 instructions: null
 name: 'Long Content'
-searchable: false
+searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: ''
+  characterLimit: null
   ckeConfig: 2296980a-ccb9-422a-995b-0f095004234a # Long Content
   createButtonLabel: null
   defaultTransform: null
@@ -20,16 +21,14 @@ settings:
         -
           - uid
           - 5f52bec5-60be-4ae5-994e-b1e3454b0230 # Form
-    -
-      __assoc__:
-        -
-          - uid
-          - 5e214c40-0764-450f-80a0-30f89d90111c # Call to Action
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  showWordCount: false
+  showWordCount: true
   sourceEditingGroups:
     - __ADMINS__
   wordLimit: null

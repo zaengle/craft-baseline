@@ -1,0 +1,20 @@
+{# Text Block #}
+
+{% do defineProps(data, {
+  heading: '',
+  simpleText: '',
+  action: null,
+  image: null
+}) %}
+
+{{ data.heading }}
+{{ data.simpleText }}
+{{ data.action.getLink() }}
+
+{%- set image = data.image.eagerly().one() -%}
+{{ component('tag/image', {
+  data: {
+    image: image,
+  },
+  opts: {}
+} ) }}

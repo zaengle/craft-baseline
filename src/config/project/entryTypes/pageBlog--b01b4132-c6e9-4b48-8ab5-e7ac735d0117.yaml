@@ -1,6 +1,6 @@
-color: green
+color: orange
 fieldLayouts:
-  8b5e36ca-5a67-49ba-a85f-b0453c2b1681:
+  8fb266fc-57f7-4454-a243-b7bbbc9f0a24:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-03-27T20:52:05+00:00'
+            dateAdded: '2025-03-27T22:25:45+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,37 +31,38 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 53aacddc-38ab-4edf-90b7-8ad8036f435c
+            uid: 028d84f4-25a0-4953-bc9e-24801e457c78
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-28T14:00:57+00:00'
+            dateAdded: '2025-03-27T22:27:07+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: d765d06e-13db-4c0d-af16-8d6f457889bb # Short Content
+            fieldUid: 6d911a2a-162d-4f6f-ade3-7e274512eb58 # Hero
             handle: null
             includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2c475cea-3811-4f8c-bd5e-99cdd9e5e523
+            uid: 7c958fb2-fd9a-456a-b2bf-564b6dc1a2eb
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 39967f3f-23ec-4544-af15-18e7a5a72abf
+        uid: a772b1c0-1ab6-4110-8478-5975a1434f0c
         userCondition: null
-handle: textBlock
+handle: pageBlog
 hasTitleField: true
-icon: text
-name: Text
+icon: file
+name: 'Page - Blog'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: 'Text Block'
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

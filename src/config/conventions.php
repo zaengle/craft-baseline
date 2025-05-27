@@ -48,7 +48,10 @@ return [
     'defaults' => [
         'params' => [
             // Named params that *will be created if omitted*  in the ctx passed to the pattern template
-            'ensure' => [],
+            'ensure' => [
+                'data' => [],
+                'opts' => [],
+            ],
             // Named params that *must* be set in the ctx passed to the pattern template,
             // or an error is thrown (in devMode)
             'require' => [],

@@ -1,0 +1,38 @@
+color: green
+fieldLayouts:
+  d563e286-23f6-4359-8d17-abfafd602570:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-05-27T22:05:40+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d765d06e-13db-4c0d-af16-8d6f457889bb # Rich Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ad6e93a4-f991-4c05-9f71-17dcc53a90c3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1d95b897-ea32-49ed-8056-35bf8673543f
+        userCondition: null
+handle: richTextBlock
+hasTitleField: false
+icon: align-center
+name: 'Rich Text Block'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: 'Rich Text Block'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

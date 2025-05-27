@@ -1,13 +1,39 @@
-{# Long Content CKEditor Field #}
+{#
+  Long Content Field - CKEditor with inline content blocks
+#}
+
+{#
+  componentBasePaths: Support multiple source directories, with fallbacks
+  blockTypeClasses: Allow wrapping with classes per block type, for layout control
+  context: landing|default - some blocks need to render differently in a landing page context
+#}
+
+{% do defineProps(opts, {
+  componentBasePaths: [
+    'blocks'
+  ],
+  blockTypeClasses: {
+  },
+  context: 'longContent'
+}) %}
 
 {%- for chunk in field %}
 	{%- if chunk.type == 'markup' %}
-		<div class="prose">
+		<div class="prose md:prose-xl lg:prose-2xl">
 			{{ chunk }}
 		</div>
 	{%- else %}
-    {{ component("blocks/#{chunk.entry.type.handle}" , {
-      data: chunk.entry
-    }) }}
+    {% set block = chunk.entry %}
+
+    <div {{ attr({
+      class: cx(
+        opts.blockTypeClasses[block.type.handle] ?? opts.blockTypeClasses['*'] ?? null,
+      )
+    }) }}>
+      {{ component(opts.componentBasePaths | map((path) => "#{path}/#{block.type.handle}") , {
+        data: block,
+        opts: opts,
+      }) }}
+    </div>
 	{%- endif %}
 {%- endfor %} 

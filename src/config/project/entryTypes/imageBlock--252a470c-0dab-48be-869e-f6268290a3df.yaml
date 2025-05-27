@@ -10,6 +10,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-03-27T22:08:24+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: d04505b0-157c-4c28-8060-158123f299c9 # Image
             handle: null
@@ -17,7 +18,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 56219224-b47f-4253-9800-2c2d78f62174
@@ -26,6 +27,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-27T22:08:24+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5a0b3d75-fc6f-4790-a058-64fb63c26c61 # Heading
             handle: caption

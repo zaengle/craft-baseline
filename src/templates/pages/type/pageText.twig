@@ -1,5 +1,3 @@
-{# Home Page Template #}
-
 {% extends '_layouts/default' %}
 
 {% block main %}
@@ -8,8 +6,8 @@
     field: entry.hero,
   }) }}
 
-  {{ field('pageBuilder', {
-    field: entry.pageBuilder,
+  {{ field('longContent', {
+    field: entry.longContent,
   }) }}
 
 {% endblock %}

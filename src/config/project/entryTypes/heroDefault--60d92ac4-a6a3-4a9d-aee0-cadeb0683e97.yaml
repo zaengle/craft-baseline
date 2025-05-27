@@ -2,30 +2,31 @@ color: green
 fieldLayouts:
   e845b843-3b11-41d6-ab3e-196eb4a841c5:
     cardView:
-      - 'layoutElement:e5b083f0-8cb0-4d06-9f52-c644500fa585'
       - 'layoutElement:0d81b342-cf42-4207-85dc-6df797e7fcb4'
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-03-27T22:12:47+00:00'
+            dateAdded: '2025-05-27T21:41:48+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: d7fde577-07c5-4dcf-8d55-83ab9d8f846c # Eyebrow
-            handle: null
-            includeInCards: true
+            fieldUid: 8287ff8e-bc32-4768-bc9b-e2d245408dfc # Short Text
+            handle: eyebrow
+            includeInCards: false
             instructions: null
-            label: null
+            label: Eyebrow
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e5b083f0-8cb0-4d06-9f52-c644500fa585
+            uid: cf6fd242-c4f7-41fc-968e-6eae4d0f90b4
             userCondition: null
             warning: null
             width: 100
           -
             dateAdded: '2025-03-27T22:12:47+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5a0b3d75-fc6f-4790-a058-64fb63c26c61 # Heading
             handle: null
@@ -33,7 +34,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 0d81b342-cf42-4207-85dc-6df797e7fcb4
@@ -42,8 +43,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-27T22:12:47+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: bf0d099c-51f4-498c-8c1f-7207be1ba990 # Simple Content
+            fieldUid: bf0d099c-51f4-498c-8c1f-7207be1ba990 # Simple Text
             handle: null
             includeInCards: false
             instructions: null
@@ -58,8 +60,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-27T22:12:47+00:00'
+            editCondition: null
             elementCondition: null
-            fieldUid: 3ef69843-ea50-4c2c-888d-d10430a11f58 # Links
+            fieldUid: 3ef69843-ea50-4c2c-888d-d10430a11f58 # Actions
             handle: null
             includeInCards: false
             instructions: null
@@ -78,11 +81,11 @@ fieldLayouts:
 handle: heroDefault
 hasTitleField: false
 icon: mask
-name: 'Hero Default'
-showSlugField: true
+name: 'Hero - Default'
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: 'Hero Default'
+titleFormat: 'Hero Default: {heading}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

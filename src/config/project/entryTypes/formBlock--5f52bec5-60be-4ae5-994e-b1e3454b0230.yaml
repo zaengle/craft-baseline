@@ -6,37 +6,25 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-03-28T20:44:48+00:00'
-            disabled: false
+            dateAdded: '2025-05-27T21:40:29+00:00'
+            editCondition: null
             elementCondition: null
-            id: null
+            fieldUid: 5a0b3d75-fc6f-4790-a058-64fb63c26c61 # Heading
+            handle: null
             includeInCards: false
-            inputType: null
             instructions: null
             label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
             providesThumbs: false
-            readonly: false
-            required: true
-            size: null
-            step: null
+            required: false
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: b05c9fee-a1db-41c6-9485-36dce508ceb0
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc2e926c-2f9b-4105-936f-156f871ef5fb
             userCondition: null
             warning: null
             width: 100
           -
             dateAdded: '2025-03-28T20:46:38+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 9889ed47-5d0f-4810-b306-638137c1baf4 # Form
             handle: null
@@ -44,7 +32,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 80e513a7-3276-4b9d-9c9c-885b45b78a3a
@@ -55,13 +43,13 @@ fieldLayouts:
         uid: c4d1ce3d-8636-44cc-947b-3d3929839a4c
         userCondition: null
 handle: formBlock
-hasTitleField: true
+hasTitleField: false
 icon: input-text
 name: Form
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: 'Form Block'
+titleFormat: 'Form Block: {heading}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -1,4 +1,92 @@
-dateModified: 1748336647
+dateModified: 1748387199
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: singles
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 086b2988-7d5f-4fa5-a94e-962ba6b98680
+            values:
+              - b5737f24-7aff-4ede-a1f9-615e8c880ef2 # Blog Index
+              - b638da95-68dd-4aef-958a-59d095fd74ec # Homepage
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      key: 'custom:f2dc3b32-675e-4168-96e0-1ceee739aea8'
+      label: Singles
+      tableAttributes:
+        - type
+        - dateUpdated
+        - revisionCreator
+        - status
+        - link
+      type: custom
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:3ab5417c-2f8f-4924-afac-d7bfa0b96b07' # Pages
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:c3902150-e4bb-44f9-aabc-48fda0c1a340' # Blog
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
 email:
   fromEmail: dev@zaengle.com
   fromName: $PRIMARY_SITE_NAME
@@ -14,41 +102,43 @@ fs:
 meta:
   __names__:
     0f2d45b7-4084-422c-9ded-16040dc5a65c: 'Page Builder' # Page Builder
-    1c98edf1-ea19-4049-a89d-fa538aaeb61f: Pages # Pages
+    1c98edf1-ea19-4049-a89d-fa538aaeb61f: 'Page - Default' # Page - Default
     1cfb3efd-2b62-4198-a828-98f92217c469: Blog # Blog
     3ab5417c-2f8f-4924-afac-d7bfa0b96b07: Pages # Pages
-    3ef69843-ea50-4c2c-888d-d10430a11f58: Links # Links
+    3ef69843-ea50-4c2c-888d-d10430a11f58: Actions # Actions
+    4e40f8e6-8491-4efc-ab64-ef16317e4fbf: Video # Video
     5a0b3d75-fc6f-4790-a058-64fb63c26c61: Heading # Heading
-    5e214c40-0764-450f-80a0-30f89d90111c: 'Call to Action' # Call to Action
     5f52bec5-60be-4ae5-994e-b1e3454b0230: Form # Form
     6d911a2a-162d-4f6f-ade3-7e274512eb58: Hero # Hero
-    32bcee44-6bd1-40fc-b7ec-d119b5c317b3: 'Home Builder' # Home Builder
-    60d92ac4-a6a3-4a9d-aee0-cadeb0683e97: 'Hero Default' # Hero Default
+    9ee306cc-b8f9-43ca-9e79-ffd332a55686: 'Rich Text Block' # Rich Text Block
+    60d92ac4-a6a3-4a9d-aee0-cadeb0683e97: 'Hero - Default' # Hero - Default
     252a470c-0dab-48be-869e-f6268290a3df: Image # Image
     390a636e-15a5-4b89-aecd-b85c1e6f1b7d: New # New
     808c8097-ba43-4177-956d-fef5ef87577b: 'Footer Navigation' # Footer Navigation
     1484a1ab-6687-45b3-87ff-06f378cd8069: 'Primary Navigation' # Primary Navigation
+    8287ff8e-bc32-4768-bc9b-e2d245408dfc: 'Short Text' # Short Text
     9889ed47-5d0f-4810-b306-638137c1baf4: Form # Form
     2296980a-ccb9-422a-995b-0f095004234a: 'Long Content' # Long Content
     23003052-0ab6-4232-92d4-3e19fc21d35b: Common # Common
-    a0024fe1-aa05-4698-ba69-3b77bed63fad: Text # Text
+    a0024fe1-aa05-4698-ba69-3b77bed63fad: 'Text + Image' # Text + Image
     a3952c9f-ef5b-424e-8c85-40a4e343ceff: 'Contact Form' # Contact Form
-    b01b4132-c6e9-4b48-8ab5-e7ac735d0117: 'Blog Index' # Blog Index
+    b01b4132-c6e9-4b48-8ab5-e7ac735d0117: 'Page - Blog' # Page - Blog
     b638da95-68dd-4aef-958a-59d095fd74ec: Homepage # Homepage
     b5737f24-7aff-4ede-a1f9-615e8c880ef2: 'Blog Index' # Blog Index
     ba72b5dd-9e9f-4b11-b3d3-2c5cb5bfa144: Simple # Simple
-    bf0d099c-51f4-498c-8c1f-7207be1ba990: 'Simple Content' # Simple Content
-    c2eecb67-e3c1-48ae-abd2-03cf16e1b03e: Homepage # Homepage
+    bf0d099c-51f4-498c-8c1f-7207be1ba990: 'Simple Text' # Simple Text
+    c2eecb67-e3c1-48ae-abd2-03cf16e1b03e: 'Page - Home' # Page - Home
     c29acaf4-1171-46b9-8962-1ecee71ff4ea: Files # Files
     c3902150-e4bb-44f9-aabc-48fda0c1a340: Blog # Blog
     d04505b0-157c-4c28-8060-158123f299c9: Image # Image
-    d7fde577-07c5-4dcf-8d55-83ab9d8f846c: Eyebrow # Eyebrow
-    d765d06e-13db-4c0d-af16-8d6f457889bb: 'Short Content' # Short Content
+    d765d06e-13db-4c0d-af16-8d6f457889bb: 'Rich Text' # Rich Text
     d896cae6-461d-428a-acdd-c004a75caceb: Images # Images
-    dbe90f0d-a64e-40f9-9559-a2e0653bf4d8: 'Short Content' # Short Content
+    dbe90f0d-a64e-40f9-9559-a2e0653bf4d8: 'Rich Text' # Rich Text
     e0ba3b8c-6105-4307-b1a3-89fed57d7634: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
     eb780d86-d1b4-4d24-8d74-343c135ef960: 'Long Content' # Long Content
+    eba35f19-2460-442a-a6dd-3af7438f8681: Action # Action
     ee02dcac-6340-465d-8a93-9594e9e5b8d9: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+    f1f57da7-5da3-406b-981e-5249bc7cbab6: 'Page - Text' # Page - Text
 plugins:
   ckeditor:
     edition: standard
