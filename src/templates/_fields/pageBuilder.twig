@@ -1,7 +1,37 @@
-{# Page Builder Field #}
+{# Page Builder field #}
 
-{% for block in field.eagerly() %}
-  {{ component('blocks/' ~ block.type.handle , {
-    data: block,
-  }) }}
-{% endfor %}
+{# Opts
+  ========
+  componentBasePaths: Support multiple source directories, with fallbacks
+  blockTypeClasses: Allow wrapping with classes per block type, for layout control
+  context: landing|default - some blocks need to render differently in a landing page context
+#}
+
+{% do defineProps(opts, {
+  componentBasePaths: [
+    'blocks',
+  ],
+  blockTypeClasses: {
+    '*': '',
+  },
+  context: 'default'
+}) %}
+
+
+<div>
+  {% for block in field.eagerly() %}
+    <div
+      {# Optionally wrap this block with classes based on its type #}
+      {{ attr({
+        class: cx(
+          opts.blockTypeClasses[block.type.handle] ?? opts.blockTypeClasses['*'] ?? null,
+          {}
+        )
+      }) }}>
+      {{ component(opts.componentBasePaths | map((path) => "#{path}/#{block.type.handle}") , {
+        data: block,
+        opts: opts,
+      }) }}
+    </div>
+  {% endfor %}
+</div>

@@ -1,11 +1,11 @@
 {# Form Block #}
 
 {% do defineProps(data, {
-  title: '',
+  heading: '',
   form: null,
 }) %}
 
-{{ data.title }}
+{{ data.heading }}
 
 {% set form = data.form.eagerly().one() %}
 {{ craft.formie.renderForm(form) }}

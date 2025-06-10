@@ -1,6 +1,6 @@
-color: null
+color: orange
 fieldLayouts:
-  8fb266fc-57f7-4454-a243-b7bbbc9f0a24:
+  4c3ca3f6-4084-4437-98cd-aacdd6d81ee0:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-03-27T22:25:45+00:00'
+            dateAdded: '2025-05-27T21:41:22+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,12 +31,13 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 028d84f4-25a0-4953-bc9e-24801e457c78
+            uid: 3fa964ba-0cf2-4961-bdba-d13745fd42f6
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-27T22:27:07+00:00'
+            dateAdded: '2025-05-27T21:42:52+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 6d911a2a-162d-4f6f-ade3-7e274512eb58 # Hero
             handle: null
@@ -44,20 +45,37 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7c958fb2-fd9a-456a-b2bf-564b6dc1a2eb
+            uid: 4c39e40a-7de5-456c-aa82-0df4d5c3a934
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-27T21:42:52+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: eb780d86-d1b4-4d24-8d74-343c135ef960 # Long Content
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9b3f2809-9abd-459c-a225-cb179cfeeced
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: a772b1c0-1ab6-4110-8478-5975a1434f0c
+        uid: b5e30702-879d-4912-aee8-592b2928ee9f
         userCondition: null
-handle: blogIndex
+handle: pageText
 hasTitleField: true
 icon: file
-name: 'Blog Index'
+name: 'Page - Text'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

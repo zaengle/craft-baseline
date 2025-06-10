@@ -1,19 +1,23 @@
 columnSuffix: null
-handle: shortContent
+handle: simpleText
 instructions: null
-name: 'Short Content'
-searchable: false
+name: 'Simple Text'
+searchable: true
 settings:
   availableTransforms: ''
-  availableVolumes: '*'
-  ckeConfig: dbe90f0d-a64e-40f9-9559-a2e0653bf4d8 # Short Content
+  availableVolumes: ''
+  characterLimit: null
+  ckeConfig: ba72b5dd-9e9f-4b11-b3d3-2c5cb5bfa144 # Simple
   createButtonLabel: null
   defaultTransform: null
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  showWordCount: false
+  showWordCount: true
   sourceEditingGroups:
     - __ADMINS__
   wordLimit: null

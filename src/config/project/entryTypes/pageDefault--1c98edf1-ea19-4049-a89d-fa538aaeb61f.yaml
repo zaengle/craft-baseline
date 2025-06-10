@@ -1,4 +1,4 @@
-color: null
+color: orange
 fieldLayouts:
   f87b873d-b391-463a-b154-a4fc2854ed53:
     tabs:
@@ -37,6 +37,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-27T22:09:32+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 6d911a2a-162d-4f6f-ade3-7e274512eb58 # Hero
             handle: null
@@ -44,7 +45,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: bb005cc6-85b2-4d97-9a2b-91038e101a22
@@ -53,6 +54,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-27T21:30:34+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 0f2d45b7-4084-422c-9ded-16040dc5a65c # Page Builder
             handle: null
@@ -70,10 +72,10 @@ fieldLayouts:
         name: Content
         uid: e28df413-63ff-40ea-b613-728809dc5124
         userCondition: null
-handle: pages
+handle: pageDefault
 hasTitleField: true
 icon: file
-name: Pages
+name: 'Page - Default'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

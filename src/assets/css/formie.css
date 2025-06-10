@@ -40,7 +40,7 @@
   --fui-label-error-border-color: var(--color-red-400);
 
   /* Field - Checkboxes/Radios*/
-  --fui-check-bg-color: var(--fui-gray-50)
+  --fui-check-bg-color: var(--fui-gray-50);
   --fui-check-label-height: 1.5rem!;
   --fui-check-label-width: 1.5rem!;
 
@@ -48,7 +48,7 @@
   --fui-input-font-size: 1rem;
   --fui-input-line-height: 1.5rem;
   --fui-input-padding: 0.75rem 1rem;
-  --fui-input-background-color: var(--fui-gray-50)
+  --fui-input-background-color: var(--fui-gray-50);
   --fui-input-error-color: var(--color-red-400);
   --fui-input-error-border-color: var(--color-red-400);
   --fui-input-error-box-shadow-focus: none;

@@ -1,0 +1,9 @@
+{# Rich Text Block #}
+
+{% do defineProps(data, {
+  richText: '',
+}) %}
+
+<div class="prose lg:prose-lg">
+  {{ data.richText }}
+</div>
