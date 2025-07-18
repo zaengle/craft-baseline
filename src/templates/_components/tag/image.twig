@@ -76,7 +76,9 @@
 
   {%- endif %}
   {%- if image.extension == 'svg' %}
-    {{ svg(image) | attr(opts.attrs) }}
+    {{ svg(image) | attr(opts.attrs | merge({
+      'aria-label': data.alt ??? image.alt ??? image.title ??? ''
+    })) }}
   {%- else %}
     {{ tag(opts.tag, attrs | merge({
       src: opts.tag == 'img' ? image.url : null,
