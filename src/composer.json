@@ -10,11 +10,12 @@
     "verbb/navigation": "^3.0.6",
     "vlucas/phpdotenv": "^5.4",
     "zaengle/craft-conventions": "^5.0",
+    "zaengle/craft-phonehome": "^1.1",
     "zaengle/craft-toolbelt": "^5.0"
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
-    "craftcms/generator": "^2.1",
+    "craftcms/generator": "^2.2",
     "craftcms/phpstan": "dev-main",
     "nystudio107/craft-autocomplete": "^1.11",
     "pestphp/pest": "^2.33.2",
