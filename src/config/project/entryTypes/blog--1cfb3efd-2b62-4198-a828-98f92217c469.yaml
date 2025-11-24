@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   69ff4650-27aa-4a77-9b35-266b01e8911c:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -54,6 +56,29 @@ fieldLayouts:
             width: 100
         name: Content
         uid: dbdfb434-3f81-40a6-b856-327f7b045256
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-19T22:17:34+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 05b1884e-af00-4d35-bff4-b294519ad2bd # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60dad4c3-f952-4b2a-9845-83e632654a64
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 91e37755-e9ae-4faa-98e5-53345d16391e
         userCondition: null
 handle: blog
 hasTitleField: true

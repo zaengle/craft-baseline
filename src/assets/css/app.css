@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+@import "./base.css";
+@import "./vendor.css";
+@import "./formie.css";
+
 @plugin "@tailwindcss/typography";
 
 @theme {
@@ -6,6 +11,10 @@
   --color-primary-300: #3b82f6;
 }
 
-@import "./base.css";
-@import "./vendor.css";
-@import "./formie.css";
+@utility prose {
+  /* @todo add overrides if needed */
+}
+
+@utility prose-invert {
+  /* @todo add overrides if needed */
+}

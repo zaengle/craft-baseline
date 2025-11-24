@@ -1,6 +1,8 @@
 color: orange
+description: null
 fieldLayouts:
   f87b873d-b391-463a-b154-a4fc2854ed53:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -71,6 +73,29 @@ fieldLayouts:
             width: 100
         name: Content
         uid: e28df413-63ff-40ea-b613-728809dc5124
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-11-19T22:16:41+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 05b1884e-af00-4d35-bff4-b294519ad2bd # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d5c6f439-caaf-40f4-ad11-82d515ccf720
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: ef439678-f610-4ea8-9692-4223fd4db51f
         userCondition: null
 handle: pageDefault
 hasTitleField: true

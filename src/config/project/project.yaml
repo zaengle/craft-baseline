@@ -1,4 +1,4 @@
-dateModified: 1759427409
+dateModified: 1763590654
 elementSources:
   craft\elements\Entry:
     -
@@ -115,6 +115,7 @@ meta:
     3ef69843-ea50-4c2c-888d-d10430a11f58: Actions # Actions
     4e40f8e6-8491-4efc-ab64-ef16317e4fbf: Video # Video
     5a0b3d75-fc6f-4790-a058-64fb63c26c61: Heading # Heading
+    05b1884e-af00-4d35-bff4-b294519ad2bd: SEO # SEO
     5f52bec5-60be-4ae5-994e-b1e3454b0230: Form # Form
     6d911a2a-162d-4f6f-ade3-7e274512eb58: Hero # Hero
     9ee306cc-b8f9-43ca-9e79-ffd332a55686: 'Rich Text Block' # Rich Text Block
@@ -158,7 +159,7 @@ plugins:
   formie:
     edition: standard
     enabled: true
-    schemaVersion: 3.4.10
+    schemaVersion: 3.4.11
   hyper:
     edition: standard
     enabled: true
@@ -171,6 +172,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.13
   toolbelt:
     edition: standard
     enabled: true
