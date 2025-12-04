@@ -7,7 +7,7 @@ import postcssFocusVisible from 'postcss-focus-visible'
 import ViteRestart from 'vite-plugin-restart'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
-const PRIMARY_HOST = new URL(process.env.PRIMARY_SITE_URL).host
+const PRIMARY_HOST = process.env.PRIMARY_SITE_URL ? new URL(process.env.PRIMARY_SITE_URL).host : 'localhost'
 
 export default defineConfig(({ command }) => ({
   base: command === 'serve' ? '' : '/dist/',
