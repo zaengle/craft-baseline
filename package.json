@@ -24,7 +24,7 @@
     "commander": "^14.0.0",
     "glob": "^13.0.0",
     "inquirer": "^13.0.1",
-    "replace-in-file": "^8.3.0",
+    "replace-in-file": "^8.4.0",
     "uuid": "^13.0.0"
   }
 }
