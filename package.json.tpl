@@ -41,5 +41,11 @@
     "vite-plugin-svg-icons": "^2.0.1",
     "vitepress": "^1.2.0",
     "vitest": "^3.1.4"
+  },
+  "optionalDependencies": {
+    "@esbuild/darwin-arm64": "^0.27.0",
+    "@esbuild/darwin-x64": "^0.27.0",
+    "@esbuild/linux-x64": "^0.27.0",
+    "@esbuild/linux-arm64": "^0.27.0"
   }
 }
