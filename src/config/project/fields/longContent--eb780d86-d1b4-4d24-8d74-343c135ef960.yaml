@@ -4,25 +4,74 @@ instructions: null
 name: 'Long Content'
 searchable: true
 settings:
+  advancedLinkFields:
+    - target
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
-  ckeConfig: 2296980a-ccb9-422a-995b-0f095004234a # Long Content
-  createButtonLabel: null
+  css: null
+  cssFile: null
   defaultTransform: null
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
   entryTypes:
     -
       __assoc__:
         -
           - uid
           - 252a470c-0dab-48be-869e-f6268290a3df # Image
+        -
+          - expanded
+          - false
     -
       __assoc__:
         -
           - uid
           - 5f52bec5-60be-4ae5-994e-b1e3454b0230 # Form
-  expandEntryButtons: false
-  fullGraphqlData: false
+        -
+          - expanded
+          - false
+  fullGraphqlData: true
+  headingLevels:
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+  imageEntryTypeUid: 252a470c-0dab-48be-869e-f6268290a3df # Image
+  imageFieldUid: 56219224-b47f-4253-9800-2c2d78f62174
+  imageMode: img
+  js: null
+  jsFile: null
+  options:
+    __assoc__:
+      -
+        - link
+        -
+          __assoc__:
+            -
+              - decorators
+              -
+                __assoc__:
+                  -
+                    - openInNewTab
+                    -
+                      __assoc__:
+                        -
+                          - attributes
+                          -
+                            __assoc__:
+                              -
+                                - rel
+                                - 'noopener noreferrer'
+                              -
+                                - target
+                                - _blank
+                        -
+                          - label
+                          - 'Open in a new tab'
+                        -
+                          - mode
+                          - manual
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -31,6 +80,21 @@ settings:
   showWordCount: true
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - heading
+    - createEntry
+    - '|'
+    - bold
+    - italic
+    - link
+    - bulletedList
+    - todoList
+    - numberedList
+    - '|'
+    - blockQuote
+    - insertTable
+    - '|'
+    - sourceEditing
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

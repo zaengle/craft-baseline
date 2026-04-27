@@ -1,4 +1,4 @@
-dateModified: 1763590654
+dateModified: 1777333641
 elementSources:
   craft\elements\Entry:
     -
@@ -126,14 +126,12 @@ meta:
     1484a1ab-6687-45b3-87ff-06f378cd8069: 'Primary Navigation' # Primary Navigation
     8287ff8e-bc32-4768-bc9b-e2d245408dfc: 'Short Text' # Short Text
     9889ed47-5d0f-4810-b306-638137c1baf4: Form # Form
-    2296980a-ccb9-422a-995b-0f095004234a: 'Long Content' # Long Content
     23003052-0ab6-4232-92d4-3e19fc21d35b: Common # Common
     a0024fe1-aa05-4698-ba69-3b77bed63fad: 'Text + Image' # Text + Image
     a3952c9f-ef5b-424e-8c85-40a4e343ceff: 'Contact Form' # Contact Form
     b01b4132-c6e9-4b48-8ab5-e7ac735d0117: 'Page - Blog' # Page - Blog
     b638da95-68dd-4aef-958a-59d095fd74ec: Homepage # Homepage
     b5737f24-7aff-4ede-a1f9-615e8c880ef2: 'Blog Index' # Blog Index
-    ba72b5dd-9e9f-4b11-b3d3-2c5cb5bfa144: Simple # Simple
     bf0d099c-51f4-498c-8c1f-7207be1ba990: 'Simple Text' # Simple Text
     c2eecb67-e3c1-48ae-abd2-03cf16e1b03e: 'Page - Home' # Page - Home
     c29acaf4-1171-46b9-8962-1ecee71ff4ea: Files # Files
@@ -141,7 +139,6 @@ meta:
     d04505b0-157c-4c28-8060-158123f299c9: Image # Image
     d765d06e-13db-4c0d-af16-8d6f457889bb: 'Rich Text' # Rich Text
     d896cae6-461d-428a-acdd-c004a75caceb: Images # Images
-    dbe90f0d-a64e-40f9-9559-a2e0653bf4d8: 'Rich Text' # Rich Text
     e0ba3b8c-6105-4307-b1a3-89fed57d7634: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
     eb780d86-d1b4-4d24-8d74-343c135ef960: 'Long Content' # Long Content
     eba35f19-2460-442a-a6dd-3af7438f8681: Action # Action
@@ -151,7 +148,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 5.0.0.1
   conventions:
     edition: standard
     enabled: true
@@ -189,7 +186,7 @@ system:
   live: true
   name: $PRIMARY_SITE_NAME
   retryDuration: 120
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
