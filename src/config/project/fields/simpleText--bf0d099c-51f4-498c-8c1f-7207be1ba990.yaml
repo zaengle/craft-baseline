@@ -4,14 +4,53 @@ instructions: null
 name: 'Simple Text'
 searchable: true
 settings:
+  advancedLinkFields:
+    - target
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
-  ckeConfig: ba72b5dd-9e9f-4b11-b3d3-2c5cb5bfa144 # Simple
-  createButtonLabel: null
+  css: null
+  cssFile: null
   defaultTransform: null
-  expandEntryButtons: false
-  fullGraphqlData: false
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
+  headingLevels: false
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  jsFile: null
+  options:
+    __assoc__:
+      -
+        - link
+        -
+          __assoc__:
+            -
+              - decorators
+              -
+                __assoc__:
+                  -
+                    - openInNewTab
+                    -
+                      __assoc__:
+                        -
+                          - attributes
+                          -
+                            __assoc__:
+                              -
+                                - rel
+                                - 'noopener noreferrer'
+                              -
+                                - target
+                                - _blank
+                        -
+                          - label
+                          - 'Open in a new tab'
+                        -
+                          - mode
+                          - manual
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -20,6 +59,13 @@ settings:
   showWordCount: true
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - bold
+    - italic
+    - link
+    - '|'
+    - bulletedList
+    - numberedList
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

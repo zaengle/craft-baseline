@@ -4,14 +4,57 @@ instructions: null
 name: 'Rich Text'
 searchable: true
 settings:
+  advancedLinkFields:
+    - target
   availableTransforms: ''
   availableVolumes: '*'
   characterLimit: null
-  ckeConfig: dbe90f0d-a64e-40f9-9559-a2e0653bf4d8 # Rich Text
-  createButtonLabel: null
+  css: null
+  cssFile: null
   defaultTransform: null
-  expandEntryButtons: false
-  fullGraphqlData: false
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
+  fullGraphqlData: true
+  headingLevels:
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
+  js: null
+  jsFile: null
+  options:
+    __assoc__:
+      -
+        - link
+        -
+          __assoc__:
+            -
+              - decorators
+              -
+                __assoc__:
+                  -
+                    - openInNewTab
+                    -
+                      __assoc__:
+                        -
+                          - attributes
+                          -
+                            __assoc__:
+                              -
+                                - rel
+                                - 'noopener noreferrer'
+                              -
+                                - target
+                                - _blank
+                        -
+                          - label
+                          - 'Open in a new tab'
+                        -
+                          - mode
+                          - manual
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -20,6 +63,18 @@ settings:
   showWordCount: true
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - heading
+    - '|'
+    - bold
+    - italic
+    - link
+    - bulletedList
+    - todoList
+    - numberedList
+    - insertImage
+    - '|'
+    - sourceEditing
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none
