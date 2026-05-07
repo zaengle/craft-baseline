@@ -28,8 +28,8 @@
     "tailwindcss": "^4.0.9"
   },
   "devDependencies": {
-    "@zaengle/eslint-config-base": "^2.0.0",
-    "eslint": "^9.0.0",
+    "@zaengle/eslint-config-base": "^3.1.0",
+    "eslint": "^10.0.0",
     "eslint-plugin-vitest-globals": "^1.5.0",
     "eslint-plugin-vue": "^10.0.1",
     "jsdom": "^27.0.0",
