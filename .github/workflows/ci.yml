@@ -5,9 +5,9 @@ permissions:
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ main ]
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ main ]
 
 jobs:
   build_php:
@@ -16,14 +16,21 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        php: [8.2]
+        php: [8.4]
 
     steps:
       - name: 🛎 Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
-      - name: Validate composer.json and composer.lock
-        run: composer validate --strict
+      - name: 🐘 Set Up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+
+      - name: Validate composer.json
+        working-directory: src
+        run: composer validate --strict --no-check-lock --no-check-publish
 
       - name: Cache Composer packages
         id: composer-cache
@@ -35,23 +42,17 @@ jobs:
             ${{ runner.os }}-php-
 
       - name: 👨‍💻 Install Composer Dependencies
-        uses: php-actions/composer@v6
-        with:
-          php_version: latest
-          args: --profile --ignore-platform-reqs --working-dir=./src --prefer-dist --no-progress
+        run: composer install --working-dir=./src --prefer-dist --no-progress
 
       - name: 🛠 Run PHPStan
-        uses: php-actions/phpstan@v3
-        with:
-          php_version: latest
-          memory_limit: 1G
-          configuration: ./phpstan.neon
+        run: src/vendor/bin/phpstan analyse -c ./phpstan.neon --memory-limit=1G
 
       - name: 🔬 Check ECS
         run: src/vendor/bin/ecs check --ansi --fix --config ./ecs.php
 
       - name: Execute tests (Unit and Feature tests) via PestPHP
-        run: vendor/bin/pest --coverage-clover clover.xml
+        working-directory: src
+        run: vendor/bin/pest
 
   build_node:
     runs-on: ${{ matrix.os }}
@@ -63,7 +64,7 @@ jobs:
 
     steps:
       - name: 🛎 Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
       - name: 🏗 Set Up Node Environment
         uses: actions/setup-node@v6

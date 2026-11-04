@@ -24,6 +24,6 @@ export default async (answers) => {
     return { answers, fileChanges }
   } catch (error) {
     console.error('Error occurred:', error)
-    exit(1)
+    process.exit(1)
   }
 }

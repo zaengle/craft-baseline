@@ -1,89 +1,65 @@
-/* @todo: Update Formie variables */
-.fui-i {
+.formie-form {
   /* General */
-  --fui-font: inherit;
-  --fui-font-size: 16px;
-  --fui-color: var(--color-gray-800);
-  --fui-primary-color: var(--color-primary-300);
-  --fui-primary-color-hover: var(--color-primary-300);
-  --fui-error: var(--color-red-400);
-  --fui-success: var(--color-green-400);
-  --fui-gray-50: var(--color-gray-50);
-  --fui-gray-100: var(--color-gray-100);
-  --fui-gray-200: var(--color-gray-200);
-  --fui-gray-300: var(--color-gray-300);
-  --fui-gray-400: var(--color-gray-400);
-  --fui-gray-500: var(--color-gray-500);
-  --fui-gray-600: var(--color-gray-600);
-  --fui-gray-700: var(--color-gray-700);
-  --fui-gray-800: var(--color-gray-800);
-  --fui-gray-900: var(--color-gray-900);
+  --formie-font-family: inherit;
+  --formie-body-size: 1rem;
+  --formie-color-text: var(--color-gray-800);
+  --formie-color-heading: var(--color-gray-800);
+  --formie-color-primary: var(--color-primary-300);
+  --formie-color-primary-hover: var(--color-primary-300);
+  --formie-color-danger: var(--color-red-600);
+  --formie-color-success: var(--color-green-400);
+  --formie-neutral-50: var(--color-gray-50);
+  --formie-neutral-100: var(--color-gray-100);
+  --formie-neutral-200: var(--color-gray-200);
+  --formie-neutral-300: var(--color-gray-300);
+  --formie-neutral-400: var(--color-gray-400);
+  --formie-neutral-500: var(--color-gray-500);
+  --formie-neutral-600: var(--color-gray-600);
+  --formie-neutral-700: var(--color-gray-700);
+  --formie-neutral-800: var(--color-gray-800);
+  --formie-neutral-900: var(--color-gray-900);
 
-  --fui-border: 0 solid var(--fui-gray-500);
-  --fui-border-radius: 0.25rem;
-  --fui-border-color: var(--fui-gray-500);
-  --fui-focus-border-color: var(--fui-gray-800);
-  --fui-focus-shadow: none;
+  --formie-color-border: var(--color-gray-500);
+  --formie-color-border-control: var(--color-gray-500);
+  --formie-color-focus-ring: var(--color-gray-800);
+  --formie-shadow-focus: none;
+  --formie-shadow-danger-focus: none;
 
-  /* Alerts*/
-  --fui-alert-error-bg-color: var(--color-red-100);
-  --fui-alert-error-color: var(--fui-gray-800);
-  --fui-alert-success-bg-color: var(--color-green-100);
-  --fui-alert-success-color: var(--fui-gray-800);
-  --fui-alert-border-radius: 0;
+  /* Messages and error labels */
+  --formie-color-danger-soft: var(--color-red-50);
+  --formie-color-danger-border: var(--color-red-400);
+  --formie-color-danger-dark: var(--color-gray-800);
+  --formie-color-success-soft: var(--color-green-50);
+  --formie-color-success-border: var(--color-green-400);
+  --formie-color-success-dark: var(--color-gray-800);
 
-  /* Field Labels*/
-  --fui-label-font-weight: 600;
-  --fui-label-font-size: 0.875rem;
-  --fui-label-line-height: 1.25;
-  --fui-label-error-color: var(--fui-gray-800);
-  --fui-label-error-border-color: var(--color-red-400);
+  /* Field - Checkboxes/Radios */
+  --formie-check-label-background-color: var(--color-gray-50);
+  --formie-check-size: 1.5rem;
+  --formie-check-label-padding-left: 2.25rem;
 
-  /* Field - Checkboxes/Radios*/
-  --fui-check-bg-color: var(--fui-gray-50);
-  --fui-check-label-height: 1.5rem!;
-  --fui-check-label-width: 1.5rem!;
+  /* Field - Input */
+  --formie-control-font-size: 1rem;
+  --formie-control-padding-y: 0.75rem;
+  --formie-control-padding-x: 1rem;
 
-  /* Field - Input*/
-  --fui-input-font-size: 1rem;
-  --fui-input-line-height: 1.5rem;
-  --fui-input-padding: 0.75rem 1rem;
-  --fui-input-background-color: var(--fui-gray-50);
-  --fui-input-error-color: var(--color-red-400);
-  --fui-input-error-border-color: var(--color-red-400);
-  --fui-input-error-box-shadow-focus: none;
-  --fui-input-placeholder-color: var(--fui-gray-500);
-  --fui-input-border: 0.5px solid var(--fui-gray-500);
-
-  /* Field - Button*/
-  --fui-submit-btn-bg-color: var(--color-primary-300);
-  --fui-submit-btn-color: var(--color-white);
-
-  .fui-alert {
-    @apply border-l-4;
-
-    &.fui-alert-error {
-      @apply border-red-400 bg-red-50 text-gray-800;
-    }
-
-    &.fui-alert-success {
-      @apply border-green-400 bg-green-50 text-gray-800;
-    }
+  .formie-message {
+    @apply rounded-none border-0 border-l-4;
   }
 
-  .fui-error-message {
-    @apply text-sm;
+  .formie-label, .formie-field-label {
+    @apply font-semibold;
   }
 
-  /* @todo apply button styles */
-  .fui-btn {
+  .formie-input, .formie-textarea, .formie-select {
+    @apply bg-gray-50 leading-6;
   }
 
-  .fui-checkbox:focus-within, .fui-radio:focus-within {
+  .formie-input::placeholder, .formie-textarea::placeholder {
+    @apply text-gray-500;
+  }
+
+  .formie-checkbox-option:focus-within, .formie-radio-option:focus-within {
     @apply outline outline-offset-4 outline-primary-300;
-  }
-
-  .fui-checkbox label, .fui-radio label {
-    @apply pt-1;
   }
 }

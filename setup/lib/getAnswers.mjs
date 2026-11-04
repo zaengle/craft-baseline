@@ -11,6 +11,7 @@ export default async ({ interactive, name, handle, installDeps, installCraft, se
       repoUrl: toRepoUrl(handle),
       installDeps: Boolean(installDeps),
       installCraft: Boolean(installCraft),
+      securityKey: securityKey,
     }
   }
 

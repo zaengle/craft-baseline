@@ -1,29 +1,30 @@
 {
+  "license": "proprietary",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/ckeditor": "^5.0",
-    "craftcms/cms": "^5.0",
-    "nystudio107/craft-seomatic": "^5.1.19",
-    "nystudio107/craft-vite": "^5.0",
-    "verbb/formie": "^3.0.22",
-    "verbb/hyper": "^2.2.4",
-    "verbb/navigation": "^3.0.6",
-    "vlucas/phpdotenv": "^5.4",
-    "zaengle/craft-conventions": "^5.0",
-    "zaengle/craft-phonehome": "^1.1",
-    "zaengle/craft-toolbelt": "^5.0"
+    "craftcms/ckeditor": "^5.9.0",
+    "craftcms/cms": "^5.12.0",
+    "nystudio107/craft-seomatic": "^5.1.22",
+    "nystudio107/craft-vite": "^5.0.2",
+    "verbb/formie": "^4.0.6",
+    "verbb/hyper": "^3.0.3",
+    "verbb/navigation": "^4.0.14",
+    "vlucas/phpdotenv": "^5.8",
+    "zaengle/craft-conventions": "^5.1.1",
+    "zaengle/craft-phonehome": "^1.8.5",
+    "zaengle/craft-toolbelt": "^5.0.10"
   },
   "require-dev": {
     "craftcms/ecs": "dev-main",
     "craftcms/generator": "^2.2",
     "craftcms/phpstan": "dev-main",
-    "nystudio107/craft-autocomplete": "^1.11",
-    "pestphp/pest": "^2.33.2",
-    "phpstan/phpstan": "^1.7",
+    "nystudio107/craft-autocomplete": "^1.12.2",
+    "pestphp/pest": "^5.3.5",
+    "phpstan/phpstan": "^2.3",
     "roave/security-advisories": "dev-latest",
     "symplify/easy-coding-standard": "^10.2",
-    "yiisoft/yii2-shell": "^2.0.3"
+    "yiisoft/yii2-shell": "^2.0.6"
   },
   "autoload": {
     "psr-4": {
@@ -40,18 +41,19 @@
     "allow-plugins": {
       "craftcms/plugin-installer": true,
       "yiisoft/yii2-composer": true,
-      "pestphp/pest-plugin": true
+      "pestphp/pest-plugin": true,
+      "php-http/discovery": false
     },
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.2"
+      "php": "8.4.27"
     }
   },
   "scripts": {
-    "check-cs": "ecs check --ansi",
+    "check-cs": "ecs check --ansi --config ../ecs.php",
     "fix-cs": "ecs check --ansi --fix --config ../ecs.php",
-    "phpstan": "vendor/bin/phpstan analyse --memory-limit=1G",
+    "phpstan": "vendor/bin/phpstan analyse -c ../phpstan.neon --memory-limit=1G",
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
