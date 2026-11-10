@@ -42,6 +42,7 @@ fieldLayouts:
 fs: $FILES_FS
 handle: files
 name: Files
+propagationMethod: custom
 sortOrder: 1
 subpath: files
 titleTranslationKeyFormat: null

@@ -18,10 +18,7 @@ export default defineConfig(({ command }) => ({
     copyPublicDir: false,
     outDir: 'src/web/dist',
     sourcemap: true,
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
-    rollupOptions: {
+    rolldownOptions: {
       input: {
         app: 'src/assets/js/app.js',
         css: 'src/assets/css/app.css',
@@ -47,7 +44,6 @@ export default defineConfig(({ command }) => ({
       ],
     }),
     ViteRestart({
-      restart: ['./tailwind.config.mjs'],
       reload: ['src/templates/**/*', 'src/modules/**/*.php'],
     }),
 
@@ -84,5 +80,8 @@ export default defineConfig(({ command }) => ({
       '**/.{idea,git,cache,output,temp,vscode}/**',
       '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,tailwind}.config.*',
     ],
+    coverage: {
+      include: ['src/assets/js/**'],
+    },
   },
 }))

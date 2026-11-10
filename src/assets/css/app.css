@@ -10,11 +10,3 @@
   --color-primary-50: #dbeafe;
   --color-primary-300: #3b82f6;
 }
-
-@utility prose {
-  /* @todo add overrides if needed */
-}
-
-@utility prose-invert {
-  /* @todo add overrides if needed */
-}

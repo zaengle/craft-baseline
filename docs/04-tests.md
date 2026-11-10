@@ -13,6 +13,8 @@ A Pest harness is provided for testing PHP. Craft Pest is included for your conv
 
 Tests live in `src/tests` and are run via `ddev composer test`
 
+Coverage needs Xdebug: run `ddev xdebug on`, then `ddev exec -d /var/www/html/src XDEBUG_MODE=coverage composer coverage`
+
 ### More information
 
 [Craft Pest Docs](https://craft-pest.com/)

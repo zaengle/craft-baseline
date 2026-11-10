@@ -13,5 +13,5 @@ You can run `npm run setup -- --help` for more information.
 
 ## Requirements
 
-- Recent version of `node` (>=12)
+- Recent version of `node` (^22.13.0 or >=23.5.0)
 - `ddev` with mutagen enabled

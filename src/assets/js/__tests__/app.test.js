@@ -1,4 +1,4 @@
-import { init } from '~/app'
+import { init } from '~/js/app'
 
 beforeEach(() => {
   vi.resetModules()
@@ -11,6 +11,6 @@ describe('app', () => {
 
     init()
 
-    expect(consoleLogSpy).toHaveBeenCalledWith('hello world!')
+    expect(consoleLogSpy).toHaveBeenCalledWith('hello world!', {})
   })
 })

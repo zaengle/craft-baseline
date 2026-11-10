@@ -14,7 +14,7 @@ export default async ({ answers, fileChanges }) => {
     }
     catch (error) {
       console.error('Error occurred:', error)
-      exit(1)
+      process.exit(1)
     }
   })
   try {
@@ -22,7 +22,7 @@ export default async ({ answers, fileChanges }) => {
     copyFileSync(resolve(process.cwd(), '.env.example'), resolve(process.cwd(), '.env'))
   } catch (error) {
     console.error('Error occurred:', error)
-    exit(1)
+    process.exit(1)
   }
 
   return { answers }
